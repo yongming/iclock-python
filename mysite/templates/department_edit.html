@@ -1,0 +1,20 @@
+{% extends "data_edit.html" %}
+
+{% block addjs %}
+$(function(){
+	var pid=$("#id_parent").val()
+	var html='<select name="parent" id="id_parent"><option value="">---------</option>'+
+	{% for row in parent_dept_list %}'<option value="{{ row.DeptID }}" '+({{ row.DeptID }}==pid?'selected':'')+'>{{ row }}</option>'+
+	{% endfor %}'</select>';
+	$("#id_parent").parent().html(html)
+	$('#id_edit_form').validate({
+		rules: {
+			"DeptID": {"digits":true,"minValue":1,"maxLength":5,"maxValue":65534}
+		}
+	});
+{% if not add %}
+	$('#id_DeptID').attr('readonly', true);
+{% endif %}
+
+});
+{% endblock %}

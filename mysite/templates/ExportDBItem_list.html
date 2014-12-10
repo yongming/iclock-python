@@ -1,0 +1,9 @@
+{% extends "data_list.html" %}
+{% block tblHeader %}
+fieldHeaders=["{{ cl.FieldName.id }}","{{ cl.FieldName.expDB }}","{{ cl.FieldName.tableName }}","{{ cl.FieldName.fieldName }}","{{ cl.FieldName.isKeyField }}","{{ cl.FieldName.overwrite }}","{{ cl.FieldName.dbPassword }}","{{ cl.FieldName.contentType }}","{{ cl.FieldName.dataItem }}"
+];
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.id }}","{{ item.expDB }}","{{ item.tableName }}","{{ item.fieldName }}","{{ item.get_isKeyField_display }}","{{ item.get_overwrite_display }}","{{ item.dbPassword }}","{{ item.contentType }}","{{ item.dataItem }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}

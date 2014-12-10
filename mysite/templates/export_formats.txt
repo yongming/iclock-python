@@ -1,0 +1,20 @@
+#format description
+#dataModel_exportFormatName.fileName:Temlate
+employee_Employee Registration Excel.employeeEnroll.csv_Pin,Emp Name,Department Number,Department Name,Sex,Birthday,Nationality,Title,Office Phone,Mobile,ID Card,Registration Device,FP Count,Left:{{ item.PIN }} , {{ item.EName}} , {{ item.Dept.DeptID}} , {{ item.Dept.DeptName}} , {{ item.get_Gender_display }} , {{ item.Birthday}} , {{ item.National }} , {{ item.Title }} , {{ item.Tele }} , {{ item.Mobile }} , {{ item.Card }} , {{ item.Device }} , {{ item.fpCount }} , {{ item.get_OffDuty_display }} 
+
+employee_Employee Registration Txt.employeeEnroll.txt_Pin, Emp Name, Department Number, Department Name, Sex, Birthday, Nationality, Title, Office Phone, Mobile, ID Card,	Registration Device,	FP Count,	Left:{{ item.PIN|ljust:"25" }}, {{ item.EName|ljust:"45"}}		, {{ item.Dept.DeptID|ljust:"20"}}	, {{ item.Dept.DeptName|ljust:"45"}}		, {{ item.get_Gender_display|ljust:"10"}}		, {{ item.Birthday|ljust:"20"}}		, {{ item.National|ljust:"20"}}		, {{ item.Title|ljust:"45"}}		, {{ item.Tele|ljust:"20" }},  {{ item.Mobile|ljust:"20" }},  {{ item.Card|ljust:"30" }} ,  {{ item.Device|ljust:"45" }}		,   {{ item.fpCount|ljust:"10" }} ,  {{ item.get_OffDuty_display|ljust:"20"}}
+
+transaction_Transactions Excel.attlogs.csv_Index,	Pin, Ename, Time, State, Verification, Work Code, Reserved, Device:{% load iclock_tags %}{{ item.id }} , {{ item.employee.PIN }} ,  {{ item.employee.EName }} ,  {{ item.TTime }} ,  {{ item.get_State_display }} ,  {{ item.get_Verify_display }} ,  {{ item.WorkCode }} ,  {{ item.Reserved }} ,  {{ item.SN }} 
+
+transaction_Transactions Txt.attlogs.txt_Index,	Pin,	Ename,	Time,	State,	Verification,	Work Code,	Reserved,	Device:{{ item.id|ljust:"20" }} ,  {{ item.employee.PIN|ljust:"25"}} , {{item.employee.EName|ljust:"45"}}		, {{item.TTime|ljust:"25"}} , {{item.get_State_display|ljust:"20"}}		, {{item.get_Verify_display|ljust:"20"}}, {{item.WorkCode|ljust:"20"}}, {{item.Reserved|ljust:"20"}}, {{item.SN|ljust:"20"}}  
+
+transaction_U disk format Transactions Dat.1_attlog.dat_:{{ item.employee.PIN|ljust:"9"}}	{{item.TTime|ljust:"20"}}	1	{{item.State|ljust:"1"}}	{{item.Verify|ljust:"1"}}
+
+devcmds_List(Comma Separated).devcmds.csv_Device,	CmdContent,	CmdCommitTime,	CmdTransTime,	CmdOverTime,	CmdReturn:{% load iclock_tags %} {{ item.Device }} ,  {{ item.CmdContent|cmdName }} ,  {{ item.CmdCommitTime|isoTime }} ,  {{ item.CmdTransTime|isoTime }} ,  {{ item.CmdOverTime|isoTime }} ,  {{ item.CmdReturn|isoTime }} 
+
+devcmds_List(Tab Separated).devcmds.txt_Device,	CmdContent,	CmdCommitTime,	CmdTransTime,	CmdOverTime,	CmdReturn:{% load iclock_tags %}{{ item.Device }}	{{ item.CmdContent|cmdName }}	{{ item.CmdCommitTime|isoTime }}	{{ item.CmdTransTime|isoTime }}	{{ item.CmdOverTime|isoTime }}	{{ item.CmdReturn|isoTime }}
+
+devlog_List(Comma Separated).devlog.csv_Device,	OpTime,	Op,	Content,	ErrorContent:{% load iclock_tags %} {{ item.Device }} ,  {{ item.OpTime|isoTime }} ,  {{ item.OP }} ,  {{ item.Cnt }} ,  {{ item.ECnt }} 
+
+devlog_List(Tab Separated).devlog.txt_Device,	OpTime,	Op,	Content,	ErrorContent:{% load iclock_tags %}{{ item.Device }}	{{ item.OpTime|isoTime }}	{{ item.OP }}	{{ item.Cnt }}	{{ item.ECnt }}
+

@@ -1,0 +1,339 @@
+﻿{% extends "data_list.html" %}
+{% load i18n %}
+{% load iclock_tags %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.SN }}", "{{ item.Alias }}", {{ item.getDynState }}, getStateStr({{ item.getDynState }}), "{{ item.TransTimes }}", "{{ item.TransInterval }}", "{{ item.LastActivity|shortDTime }}", "{{ item.FWVersion }}", "{{ item.DeviceName }}", "{{ item.UserCount }}","{{ item.FPCount }}","{{ item.TransactionCount }}", getLogLink, "{{ item.DeptID }}","{{ item.getImgUrl }}"]{%if not forloop.last%},{%endif%}
+{% endfor %}
+{% endblock %}
+
+{% block tblHeader %}
+timeoutId=0;
+function getLogLink(data)
+{
+	return "<span style='color: #ccc;'>"+
+		"<a title='{%trans 'transaction'%}' href='../transaction/?SN__SN__exact="+data[0]+"'>L </a>"+
+		"<a title='{%trans 'Employee'%}' href='../employee/?SN__SN__exact="+data[0]+"'>E </a>"+
+		"<a title='{%trans 'Upload data log'%}' href='../devlog/?SN__SN__exact="+data[0]+"'>U </a>"+
+		"<a title='{%trans 'Command log'%}' href='../devcmds/?SN__SN__exact="+data[0]+"'>C </a>"+
+		{% if user|HasPerm:"iclock.monitor_oplog" %}
+		(DEV_STATUS_OK==data[2]?"<a title='{%trans 'Transaction Monitor'%}' href='../_checkoplog_?SN="+data[0]+"'>R </a>":"R ")+
+		{% else %}
+		"R "+	
+		{% endif %}
+		(DEV_STATUS_OK==data[2]?"<a title='{%trans 'File management'%}' href='../../filemng/"+data[0]+"/'>F </a>":"F ")+
+		"<a title='{%trans 'Uploaded pictures'%}' href='../../pics/"+data[0]+"/'>P </a>"+
+		"<span>";
+}
+
+fieldHeaders=["{{ cl.FieldName.SN }}","{{ cl.FieldName.Alias }}", "<th id='thState' width='50px'>{%trans "Status"%}</th>",
+	"{{ cl.FieldName.TransTimes }}", "{{ cl.FieldName.TransInterval }}", "{{ cl.FieldName.LastActivity }}",
+	"{{ cl.FieldName.FWVersion }}","{{ cl.FieldName.DeviceName }}",
+	"{{ cl.FieldName.UserCount }}","{{ cl.FieldName.FPCount }}","{{ cl.FieldName.TransactionCount }}","<th>{%trans "Data"%}</th>", "{{ cl.FieldName.DeptID}}"];
+options.keyFieldIndex="0";
+options.disableCols=[2,14];
+options.showStyle=true;
+
+DEV_STATUS_PAUSE=0
+DEV_STATUS_OK=1
+DEV_STATUS_TRANS=2
+DEV_STATUS_OFFLINE=3
+
+DEV_STATUS=['{%trans "Pause"%}','{%trans "Online"%}','{%trans "Communicating"%}','{%trans "Offline"%}']
+COLOR_DEV_STATUS=['gray','blue','skyblue','#ff8888']
+InfoCount=0;
+lastStamp="";
+inAjax=0;
+
+function updateiClockState(obj)
+{
+	var c=0;
+	for(var i in obj.data)
+	{
+		var o=obj.data[i];
+		if(typeof o=="undefined") break;
+		index=searchKey(o.SN);
+		if(index>=0)
+		{
+			if(data[index][2]!=o.State)
+			{
+				data[index][2]=o.State;
+				data[index][3]=getStateStr(o.State);
+				c+=1;
+			}
+			if(data[index][6]!=o.LastAct)
+			{
+				data[index][6]=o.LastAct;
+				c++;
+			}
+		}
+		else
+		{
+			timeoutId=setTimeout("window.location.reload();", 5000);
+		}
+	}
+	if(c>0)
+		renderTbl(data, $.extend({pagerId:"pages", tblId:"tbl", showSelect: true}, options));
+}
+
+
+$(function()
+{	
+	$("#ulStateSuper").hide();
+});
+function getMoreInfo(index){
+	return 		"{% trans "Device name" %}:"+(data[index][8]=="None"?"":data[index][8])
+				+"<br/>{% trans "Device Alias name" %}:"+data[index][1]
+				+"<br/>{% trans "Transfer time" %}:"+data[index][4]
+				+"<br/>{% trans "Interval" %}:"+data[index][5]
+				+"<br/>{% trans "Last activity" %}:"+data[index][6]
+				+"<br/>{% trans "Fw version" %}:"+(data[index][7]=="None"?"":data[index][7])
+				+"<br/>{% trans "User count" %}:"+(data[index][9]=="None"?"":data[index][9])
+				+"<br/>{% trans "Fp count" %}:"+(data[index][10]=="None"?"":data[index][10])
+				+"<br/>{% trans "Transaction count" %}:"+(data[index][11]=="None"?"":data[index][11])
+			
+}
+
+
+function showBox(data)
+{	
+	var html="";
+	if(data.length>0)
+	{
+		for(var i=0;i<data.length;i++)
+		{	
+			html+="<div id='ic_"+data[i][0]+"' class='AIClockBox'>"
+				
+				+"<div class='iclockButton' >"
+				+"<input type='checkbox' class='class_select' onclick='showSelected();' id='id_row_"+i+"' />"
+				+"<a href='/iclock/data/iclock/"+data[i][0]+"/'><img border='0' src='"+data[i][14]+"' onmouseover='index_tip_info(this);' onmouseout='tip_info_exit();' index='"+i+"'/><br />"+data[i][1]+"</a>"
+				+"</div>"
+				+"<div id='tt_"+data[i][0]+"' class='iclockTT'>"
+					+"<span>"+data[i][0]+"<br/>"
+					+""+data[i][13]+"<br/>"
+					+"{%trans "Status"%}:"+data[i][3]+"<br/>"
+					+"{%trans "Data"%}:"+getLogLink(data[i])+"</span>"
+					
+					
+				+'</div>'
+				+"</div>"
+			}
+	}
+	else
+		html+="<div class='NoIclock'>{%trans "No Device!" %}</div>"
+	return html;
+
+}
+function createFilterList(curState){
+	var html="<option value=-1 "+(curState==-1?" selected":"")+">{%trans "All"%}</option>";
+	for(i=0;i<=3;i++)
+		html+="<option value="+i+(curState==i?" selected":"")+">"+DEV_STATUS[i]+"</option>";
+	return html
+}
+
+function stateFilter(val) {
+	if ($.cookie("stateFilter") != ("" + val)){
+		$.cookie("stateFilter", val, { expires: 7 });
+		showState(val);
+	}
+}
+
+function getStateStr(state)
+{
+	if(state>=0 && state<DEV_STATUS.length)
+	{
+		return '<span style="color: '+COLOR_DEV_STATUS[state]+';">'+DEV_STATUS[state]+'</span>'
+	}
+	return "NONE";
+}
+
+function itemCanBePaused(aData)
+{
+	if(aData[2]!=DEV_STATUS_PAUSE)
+		return 1;
+	return 0;
+}
+
+function itemCanBeResumed(aData)
+{
+	if(aData[2]==DEV_STATUS_PAUSE)
+		return 1;
+	return 0;
+}
+
+function itemIsOnline(aData)
+{
+	return aData[2]!=DEV_STATUS_OFFLINE && aData[2]!=DEV_STATUS_PAUSE;
+}
+
+function pad2(p){p='0'+p; return p.substr(p.length-2, 2)}
+
+function setopt(key, title)
+{
+	var ret=prompt("{%trans "please enter"%}"+title,"")
+	if(ret==null) return "";
+	if(ret=="")
+	{
+		if(key=="COMKey") ret=0;
+		if(key=="FreeTime") ret=65535;
+	}
+	//else if((key=="AutoPowerSuspend") && ret.indexOf(":"))
+	else if((key=="FreeTime") && ret.indexOf(":") != -1)//by super 2010-08-13
+	{
+		ret=ret.split(":");
+		ret=(ret[0]*256+1*ret[1])+"";
+	}
+	return "?action=devoption&name="+key+"&value="+ret;
+}
+
+function upgrade(devList)
+{
+	var action=confirm("{%trans "Device will be conducted as follows firmware update"%}：\n"+devList.ss+"\n\n{%trans "Please ensure that the server installation path"%}\n"
+			+"\"mysite/files/fw/\"\n{%trans "The relevant firmware file be stored in its subdirectory"%} main.gz!\n");
+	if(action)
+		return '?action=upgradefw';
+}
+
+function upack(devList)
+{
+	var action=confirm("{%trans "Device will be conducted as follows firmware update"%}：\n"+devList.ss+"\n\n{%trans "Please ensure that the server installation path"%}\n"
+			+"\"mysite/files/fw/\"\n{%trans "The relevant firmware file be stored in its subdirectory"%} emfw.cfg!\n");
+	if(action)
+		return '?action=upgrade_by_u-pack';
+}
+
+function SetPass(devList)
+{
+	var pin=prompt("请输入人员号码：")
+	if(pin>0)
+	{
+		var action=prompt("将对如下考勤机上的人员“"+pin+"”重置密码：\n"+devList.ss+"\n\n请输入新密码：");
+		if(action)
+			return '?action=resetPwd&PIN='+pin+'&Passwd='+action;
+	}
+}
+
+function copyudata(url)
+{
+	createDialog(url, "?action=copyudata&SN=", "miniData?key=SN", "{%trans "Copy device data to"%}", "{%trans "device"%}", 350, 1);
+}
+extraBatchOp=[
+{action: {% if user|HasPerm:"iclock.pause_iclock" %}'?action=pause'{% else %}''{% endif %}, itemCanBeOperated: itemCanBePaused, title: '{%trans "Pause"%}'},
+{action: {% if user|HasPerm:"iclock.resume_iclock" %}'?action=resume'{% else %}''{% endif %}, itemCanBeOperated: itemCanBeResumed, title: '{%trans "Resume"%}'},
+{action: {% if user|HasPerm:"iclock.upgradefw_iclock" %}upgrade{% else %}''{% endif %}, itemCanBeOperated: itemIsOnline, title: '{%trans "Upgrade firmware"%}'},
+{action: {% if user|HasPerm:"iclock.copyudata_iclock" %}copyudata{% else %}''{% endif %}, title: '{%trans "Copy device data to"%}'},
+{action: {% if user|HasPerm:"iclock.reloaddata_iclock" %}'?action=reloaddata'{% else %}''{% endif %}, itemCanBeOperated: itemIsOnline, title: '{%trans "Upload data again"%}'},
+{action: {% if user|HasPerm:"iclock.reloadlogdata_iclock" %}'?action=reloadlogdata'{% else %}''{% endif %}, itemCanBeOperated: itemIsOnline, title: '{%trans "Upload transactions again"%}'},
+{action: {% if user|HasPerm:"iclock.info_iclock" %}'?action=info'{% else %}''{% endif %}, itemCanBeOperated: itemIsOnline, title: '{%trans "Refresh device information"%}'},
+{action: {% if user|HasPerm:"iclock.reboot_iclock" %}'?action=reboot'{% else %}''{% endif %}, title: '{%trans "Reboot device"%}'},
+{action: {% if user|HasPerm:"iclock.loaddata_iclock" %}'?action=loaddata'{% else %}''{% endif %}, itemCanBeOperated: itemIsOnline, title: '{%trans "Upload new data"%}'},
+{action: {% if user|HasPerm:"iclock.cleardata_iclock" %}'?action=cleardata'{% else %}''{% endif %}, itemCanBeOperated: itemIsOnline, title: '{%trans "Clear data in device"%}'},
+{action: {% if user|HasPerm:"iclock.clearlog_iclock" %}'?action=clearlog'{% else %}''{% endif %}, itemCanBeOperated: itemIsOnline, title: '{%trans "Clear transactions in device"%}'},
+{action: {% if user|HasPerm:"iclock.clearlog_iclock" %}'?action=clearpic'{% else %}''{% endif %}, title: gettext('Clear pictures in device')},
+//{action: {% if user|HasPerm:"iclock.devoption_iclock" %}function(){return setopt("COMKey", "{%trans "communicate password"%}")}{% else %}''{% endif %}, title: '{%trans "Set communicate password"%}'},
+{action: {% if user|HasPerm:"iclock.devoption_iclock" %}function(){return setopt("FreeTime", "{%trans "Set power suspend"%}")}{% else %}''{% endif %}, title: '{%trans "set power suspend"%}'},
+//{action: {% if user|HasPerm:"iclock.resetPwd_iclock" %}SetPass{% else %}''{% endif %}, itemCanBeOperated: itemIsOnline, title: '{%trans "Reset Password in device"}'},
+{action: {% if user|HasPerm:"iclock.restoreData_iclock" %}'?action=restoreData'{% else %}''{% endif %}, title: '{%trans "Restore employee to device"%}'},
+//{action: {% if user|HasPerm:"iclock.unlock_iclock" %}'?action=unlock'{% else %}''{% endif %}, title: '{%trans "Output unlock signal"%}'},
+//{action: {% if user|HasPerm:"iclock.unalarm_iclock" %}'?action=unalarm'{% else %}''{% endif %}, title: '{%trans "Terminate alarm signal"%}'},
+//{action: {% if user|HasPerm:"iclock.clear_all_employee" %}'?action=clear_all_employee'{% else %}''{% endif %}, title: '{%trans "clear all employee"%}'},
+//{action: {% if user|HasPerm:"iclock.upgrade_by_u-pack" %}upack{% else %}''{% endif %}, itemCanBeOperated: itemIsOnline, title: '{%trans "upgrade_by_u-pack"%}'},
+];
+
+currentState=-1;
+
+function filterData(data)
+{
+	if(currentState==-1) return 1;
+	if(data[2]==currentState) return 1;
+	return 0;
+}
+
+currentState=getKeyQuery('s');
+if(currentState=="") currentState=-1;
+else currentState=currentState.substr(2,100);
+
+function showState(newState)
+{
+	if(currentState==newState) return;
+	currentState=newState;
+	window.location.href=getQueryStr(window.location.href, ["s","p"], "s="+newState); 
+}
+
+function createFilter(){
+	var html="<li style='background-color: #E6E8EC; border: 1px solid white;'><a href='#' style='color: #000; background-color: #E6E8EC;background:white;'><img src='/media/img/filter.gif'></img>{% trans 'Device Status' %}</a>"
+		+"<ul><li "+(currentState==-1?"class='selected'":"")+"><a href='javascript: showState(-1)'>{%trans "All"%}</a></li>";
+	for(i=0;i<=3;i++)
+		html+="<li "+(currentState==i?"class='selected'":"")+"><a href='javascript: showState("+i+")'>"+DEV_STATUS[i]+"</a></li>";
+	$("#id_filterbar").html(html+'</ul></li>');
+}
+
+function setRefresh(){
+	clearTimeout(timeoutId);
+	var toc=$.cookie("tointerval");
+	var to=parseInt($("#id_check_interval").val());
+	if(isNaN(to)) to=10;
+	$("#id_check_interval").val(to);
+	if(to<10) to=10;
+	if(to!=toc) $.cookie("tointerval", to, { expires: 7 }); 
+	if($("#id_chk_alarm")[0].checked)
+	{
+		$.cookie("toenable", true, { expires: 7 })
+		timeoutId=setTimeout("window.location.reload()", to*1000);
+	}
+	else
+		$.cookie("toenable", false, { expires: 7 }); 
+}
+
+$(function(){
+	var to=$.cookie("tointerval"); 
+	if(to) $("#id_check_interval").val(to<10?10:to);
+	var to=$.cookie("toenable"); 
+	$("#id_chk_alarm")[0].checked=(to=="true");
+	createFilter(-1);
+	setRefresh();
+	$("#id_chk_alarm").click(setRefresh);
+	$("#id_check_interval").change(setRefresh);
+})
+
+{% endblock %}
+
+{% block object-tools %}
+	{% ifnotequal permissions 12 %}
+		{{ block.super }}
+	{% endifnotequal %}
+{% endblock %}
+
+{% block extraSection %}
+{% ifequal permissions 12 %}
+	<script>$(function(){$("#id_defSelectDataOp").hide();})</script>
+{% endifequal %}
+<table width="100%" border="2" style="margin-top: 20px; background-color: #EDF3FE; float: left;">
+<tr><th><input type="checkbox" id="id_chk_alarm" checked />&nbsp;{%trans "Auto Refresh"%}&nbsp;&nbsp;
+ {%trans "Interval: "%}({%trans "s"%})<input id="id_check_interval" value="30" size=5 /></th></tr>
+<tr class="row1"><td id="id_log"></td></tr>
+<tr><td><h2>{%trans "Tip"%}</h2>
+<ul>
+<li>&nbsp;&nbsp;{%trans "Operations, Usually only for the on-line device;"%}</li>
+<li>&nbsp;&nbsp;{%trans "After operation on the device, It's will take effect after about half minute."%}</li>
+</ul>
+</td></tr>
+</table>
+<div id="id_alarm_cc"></div>
+{% endblock %}
+{% block obj_tools %}
+<script>
+function restartIP()
+{
+	ip=prompt("{%trans 'Input the IP Address of a device: '%}");
+	if (ip!=null && ip!="")
+	{
+		window.location.href="/iclock/tasks/restart?IP="+ip;
+	}
+}
+
+</script>
+<!-- li id="id_restart_dev"><a href="javascript: restartIP()" class="viewsitelink">{%trans 'compulsion reboot device'%}</a></li>
+<li id="id_search_devs"><a href="/iclock/tasks/autorestart" class="viewsitelink">{%trans 'auto reboot halted device'%}</a></li -->
+{% endblock %}
+

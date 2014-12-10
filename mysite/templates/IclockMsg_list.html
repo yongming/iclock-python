@@ -1,0 +1,19 @@
+{% extends "data_list.html" %}
+{% block tblHeader %}
+{% load i18n %}
+fieldHeaders=["{{ cl.FieldName.SN }}","{{ cl.FieldName.MsgType }}","{{ cl.FieldName.StartTime }}","{{ cl.FieldName.EndTime }}","{{ cl.FieldName.LastTime }}","{{ cl.FieldName.MsgParam }}","{{ cl.FieldName.MsgContent }}"
+];
+options.disableCols=[0];
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.id }}","{{ item.SN }}","{{ item.get_MsgType_display }}","{{ item.StartTime }}","{{ item.EndTime }}","{{ item.LastTime }}", "{{ item.MsgParam }}","{{ item.MsgContent }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}
+
+{% block obj_tools %}
+{% ifequal permissions 1 %}
+<!-- li id="id_weather"><a href="/iclock/tasks/weather/" class="viewsitelink">{%trans "Weather Forecast test"%}</a></li -->
+<li id="id_search_devs"><a href="/iclock/tasks/genmsg/" class="viewsitelink">{%trans "Generating device customized information"%}</a></li>
+{% endifequal %}
+{% endblock %}
+

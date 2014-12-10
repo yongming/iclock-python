@@ -1,0 +1,23 @@
+{% extends "data_list.html" %}
+{% load i18n %}
+{% load iclock_tags %}
+{% block tblHeader %}
+options.disableCols=["0"];
+fieldHeaders=["{{ cl.FieldName.username }}","{{ cl.FieldName.email }}", "{{ cl.FieldName.last_name }}",
+ "{{ cl.FieldName.first_name }}", "<th>{%trans "Activate"%}</th>", "<th>{%trans "Supervisor"%}</th>", "<th>{%trans "granted department"%}</th>", "<th>{%trans "Groups"%}</th>" ];
+function strOfData(data)
+{
+	return data[1];
+}
+{% endblock %}
+
+{% block rowdata %}
+{% for item in latest_item_list %}
+[{{item.id}}, "{{ item.username }}",
+"{{ item.email }}", 
+"{{ item.last_name }}",
+"{{ item.first_name }}",
+"<img alt='True' src='{{ MEDIA_URL }}/img/icon-{% if item.is_staff %}yes{% else %}no{% endif %}.gif'/>", "<img alt='True' src='{{ MEDIA_URL }}/img/icon-{% if item.is_superuser %}yes{% else %}no{% endif %}.gif'/>",
+"{{ item.deptadmin_set.select_related.0.dept }}", "{{ item.groups.values|PackList:"name" }}"]{%if not forloop.last%},{%endif%}
+{% endfor %}
+{% endblock %}

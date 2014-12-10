@@ -1,0 +1,14 @@
+{% extends "data_list.html" %}
+{% block tblHeader %}
+fieldHeaders=["{{ cl.FieldName.PIN }}","{{ cl.FieldName.EName }}","{{ cl.FieldName.SN }}","{{ cl.FieldName.UTime }}"
+];
+// add by wjw 2011-06-10 
+options.canAdd=false;
+options.canEdit=false;
+options.canDelete=false;
+
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.PIN }}","{{ item.EName }}","{{ item.SN }}","{{ item.UTime }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}

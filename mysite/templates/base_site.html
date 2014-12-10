@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load iclock_tags %}
+
+{% block branding %}
+<h1 id="site-name">{%trans "iClock Automatic Data Master Server"%}</h1>
+{% if user.is_authenticated and user.is_staff %}
+<span>
+<ul id="nav" class="nav" style="float:left; left:0px; position:absolute; top:38px; z-index: 800;">
+{% autoescape off %}
+
+<li>
+<a href="#">{%trans "Device"%}</a>
+<ul>
+{% if user|HasPerm:"iclock.browse_iclock" %}
+<li><a href="{% if iclock_url_rel %}{{ iclock_url_rel }}{% else %}..{% endif %}/data/iclock/">{%trans "Device Maintenance"%}</a>
+{% endif %}
+{{ user|menuItem:"iclock.browse_oplog" }}
+<!-- {% if user|HasPerm:"iclock.reallog_transaction" %}
+<li><a href="{% if iclock_url_rel %}{{ iclock_url_rel }}{% else %}..{% endif %}/data/_checktranslog_">{%trans "Transaction Monitor"%}</a></li>
+{% endif %} -->
+{% if user|HasPerm:"iclock.monitor_oplog" %}
+<li><a href="{% if iclock_url_rel %}{{ iclock_url_rel }}{% else %}..{% endif %}/data/_checkoplog_">{%trans "Transaction Monitor"%}</a></li>
+{% else %}
+<li>&nbsp;&nbsp;{%trans "Transaction Monitor"%}</li>
+{% endif %}
+{% if 1|enabled_msg_mod %}
+<li><hr style="margin: 2px -10px; "/></li>
+{{ request|menuItem:"iclock.browse_iclockmsg" }}
+{{ request|menuItem:"iclock.browse_messages" }}
+{% endif %}
+</ul>
+</li>
+
+<li>
+<a href="#">{%trans "Data"%}</a>
+<ul>
+{{ request|menuItem:"iclock.browse_department" }}
+{{ request|menuItem:"iclock.browse_employee" }}
+{{ user|menuItem:"iclock.browse_transaction" }}
+{% if 1|enabled_udisk_mod %}
+{% if user|HasPerm:"iclock.upload_employee" %}
+<li><a href="{% if iclock_url_rel %}{{ iclock_url_rel }}{% else %}..{% endif %}/data/upload">{%trans "Import U_Disk Data"%}</a></li>
+{% endif %}
+{% endif %}
+</ul>
+</li>
+
+<li>
+<a href="#">{%trans "System"%}</a>
+<ul>
+{{ request|menuItem:"iclock.browse_devlog" }}
+{{ request|menuItem:"iclock.browse_devcmds" }}
+{{ request|menuItem:"iclock.browse_adminlog" }}
+<li><hr style="margin: 2px -10px; "/></li>
+{{ request|menuItem:"auth.browse_group" }}
+{{ request|menuItem:"auth.browse_user" }}
+</ul>
+</li>
+{% endautoescape %}
+</ul>
+</span>
+<script>
+$(function(){
+  $('.nav li').sfHover();
+ }) 
+</script>
+{% endif %}
+{% endblock %}
+
+{% block nav-global %}
+{% endblock %}

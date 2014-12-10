@@ -1,0 +1,9 @@
+{% extends "data_list.html" %}
+{% block tblHeader %}
+fieldHeaders=["{{ cl.FieldName.schName }}","{{ cl.FieldName.startup }}","{{ cl.FieldName.cycle }}","{{ cl.FieldName.cycleUnit }}","{{ cl.FieldName.taskType }}","{{ cl.FieldName.taskParam }}","{{ cl.FieldName.disabled }}"
+];
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.schName }}","{{ item.startup }}","{{ item.cycle }}","{{ item.get_cycleUnit_display }}","{{ item.get_taskType_display }}","{{ item.taskParam }}","{{ item.disabled }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}

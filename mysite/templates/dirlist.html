@@ -1,0 +1,27 @@
+{% extends "base_site.html" %}
+{% block extrastyle %}
+{% load i18n %}
+<style>
+code, pre{
+padding-left:30px;
+}
+</style>
+{% endblock %}
+{% block content %}
+<h3><a href="../"><img src="/media/img/folderclose.gif">&nbsp;&nbsp;[ .. ]</a></h3>
+{% autoescape off %}
+{% for dir in dirs %}
+<a href="{{ dir }}/"><img src="/media/img/folderclose.gif"> &nbsp;&nbsp;{{ dir}}</a><br>
+{% endfor %}
+{{ content }}
+{%block tag%}
+{% if request.pic_flag %}
+<span style="float:Left">{% trans 'This Device has no pictures!' %}</span>
+{% endif%}
+{%endblock%}
+{% endautoescape %} 
+<br />
+<p>&nbsp;</p>
+
+<input type="submit" value="{% trans 'return' %}" onclick="window.history.back(); return false;">
+{% endblock %}

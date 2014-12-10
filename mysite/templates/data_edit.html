@@ -1,0 +1,68 @@
+{% extends "base_site.html" %}
+{% load iclock_tags %}
+{% load i18n %}
+{% block title %}{{ dataOpt.verbose_name|cap }} {%trans "detail"%}{% endblock %}
+{% block breadcrumbs %}<div class="breadcrumbs">
+<a href="/">{% trans "Home" %}</a> &rsaquo;
+<a href="../">{{ dataOpt.verbose_name_plural|capfirst|escape }}</a> &rsaquo;
+{% if add %}{% trans "Add" %} {{ dataOpt.verbose_name|escape }}{% else %}{{ original|truncatewords:"18"|escape }}{% endif %}
+{% endblock %}
+{% block extrahead %}
+<script src="{{ MEDIA_URL }}/jslib/core.js"></script>
+<script src="{{ MEDIA_URL }}/jslib/calendar.js"></script>
+<script src="{{ MEDIA_URL }}/jslib/RelatedObjectLookups.js"></script>
+<script src="{{ MEDIA_URL }}/jslib/DateTimeShortcuts.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/forms.css" />
+<script>
+dtFields = "{{ dtFields }}"
+inputFields = "{{ inputFields }}"
+
+{% block addjs %}{% endblock %}
+
+$(function(){
+    if (dtFields != '')
+    {//日期时间 字段，加日历和时间
+        arr = dtFields.split(',')
+        for (var row in arr)
+        {
+            var obj = $('#id_' + arr[row] + '');
+			if(obj.length>0)
+			{
+              //限制日期时间长度为19，处理服务器日期时间默认值的毫秒问题
+              if (obj.val().length > 19)  obj.val(obj.val().substring(0,19));
+              if(!obj[0].readOnly)
+			  {
+			  	obj.addClass('vDateField');
+              	obj.attr('maxlength', '19');
+			  }
+			}
+        }
+    }
+    if (inputFields != "")
+    {//必输字段
+        arr = inputFields.split(',')
+        for (var row in arr)
+        {
+            var obj = $("label[@for='id_" + arr[row] + "']");
+            obj.addClass('required');
+        }
+    }
+
+})
+
+</script>
+{% endblock %}
+
+{% block content %}
+<form method="post" id="id_edit_form" enctype="multipart/form-data">
+<table>
+{{ form.as_table }}
+<tr id="addition_fields">{% block addfields %}{% endblock %}</tr>
+<tr ><th>&nbsp;&nbsp;</th>
+<td style='padding-top: 20px;'><input type="submit" value="{%trans "Submit"%}"> &nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="submit" value="{%trans "Return"%}" onclick="window.history.back(); return false;"></td>
+</tr>
+</table>
+</form>
+{% block add_contents %}{% endblock %}
+{% endblock %}

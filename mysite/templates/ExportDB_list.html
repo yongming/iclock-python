@@ -1,0 +1,9 @@
+{% extends "data_list.html" %}
+{% block tblHeader %}
+fieldHeaders=["{{ cl.FieldName.expName }}","{{ cl.FieldName.dbEngine }}","{{ cl.FieldName.dbServer }}","{{ cl.FieldName.dbName }}","{{ cl.FieldName.dbUser }}","{{ cl.FieldName.dbPassword }}"
+];
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.expName }}","{{ item.dbEngine }}","{{ item.dbServer }}","{{ item.dbName }}","{{ item.dbUser }}","{{ item.dbPassword }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}

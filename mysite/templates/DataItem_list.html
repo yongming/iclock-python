@@ -1,0 +1,9 @@
+{% extends "data_list.html" %}
+{% block tblHeader %}
+fieldHeaders=["{{ cl.FieldName.id }}","{{ cl.FieldName.dataName }}","{{ cl.FieldName.dbServer }}","{{ cl.FieldName.contentType }}","{{ cl.FieldName.format }}"
+];
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.id }}","{{ item.dataName }}","{{ item.dbServer }}","{{ item.contentType }}","{{ item.format }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}

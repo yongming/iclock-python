@@ -1,0 +1,10 @@
+{% load i18n %}
+<li style="background-color: #E6E8EC; border: 1px solid white;"><a href="#" style="color: #000; background-color: #E6E8EC;background:white;"><img src="/media/img/filter.gif"></img>{% blocktrans with title|escape as filter_title %} {{ filter_title }}  {% endblocktrans %}</a>
+<ul>
+{% for choice in choices %}
+    <li{% if choice.selected %} class="selected"{% endif %}>
+    <a href="{{ choice.query_string }}">{{ choice.display|escape }}</a></li>
+{% endfor %}
+</ul>
+</li>
+

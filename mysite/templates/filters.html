@@ -1,0 +1,13 @@
+{% load iclock_tags %}
+{% load i18n %}
+{% if cl.has_filters %}
+
+{% autoescape off %}
+{% for spec in cl.filter_specs %}
+ {% filter cl spec %}
+{% endfor %}
+{% endautoescape %}
+{% else%}
+    <ul style='background:white;'><li style="background:white;">{%trans "none" %}</li></ul>
+{% endif %}
+

@@ -1,0 +1,9 @@
+{% extends "data_list.html" %}
+{% block tblHeader %}
+fieldHeaders=["{{ cl.FieldName.id }}","{{ cl.FieldName.UserID }}","{{ cl.FieldName.StartSpecDay }}","{{ cl.FieldName.EndSpecDay }}","{{ cl.FieldName.DateID }}","{{ cl.FieldName.YUANYING }}","{{ cl.FieldName.Date }}"
+];
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.id }}","{{ item.UserID }}","{{ item.StartSpecDay }}","{{ item.EndSpecDay }}","{{ item.DateID }}","{{ item.YUANYING }}","{{ item.Date }}"],{% endfor %}
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends "base_site.html" %}
+{% load i18n %}
+{% block content %}
+<style>
+table.cls_tbl_code {
+width: 300px;
+margin: 5px 0;
+display: none;
+}
+table.cls_tbl_code thead tr {
+height: 20px;
+}
+
+</style>
+<form id='frmComebackDb'name='frmComebackDb' method='POST'>
+<div class='container' style='margin-top:0px; '>	
+<div style="right:0; background: #ffb; padding: 2px 10px; position: absoluted; float: right; ">
+<div><h3>考勤人员字段</h3>
+<ul><li>考勤号码 %(PIN)s</li><li>姓名 %(EName)s</li><li>分组 %(AccGroup)s</li><li>卡号 %(Card)s</li><li>密码 %(Password)s</li><li>登记设备序列号 %(Device_SN)s</li><li>登记设备名称 %(Device_Alias)s</li></ul></div>
+<div><h3>考勤记录字段</h3>
+<ul><li>考勤号码 %(PIN)s</li><li>考勤姓名 %(Employee_Name)s</li><li>考勤日期时间(ISO格式) %(TTime)s</li><li>考勤日期(年) %(TTime_YEAR)d</li><li>考勤日期(月) %(TTime_MONTH)d</li><li>考勤日期(日) %(TTime_DAY)d</li><li>考勤时间(时) %(TTime_HOUR)d</li><li>考勤时间(分) %(TTime_MINUTE)d</li><li>考勤时间(秒) %(TTime_SECOND)d</li><li>考勤状态 %(State)s</li><li>验证方式 %(Verify)s</li><li>工作代码 %(WorkCode)s</li><li>考勤设备序列号 %(Device_SN)s</li><li>考勤设备名称 %(Device_Alias)s</li></ul>
+</div>
+<div><h3>文件名中可用的字段</h3>
+<ul><li>日期(年) %(YEAR)d</li><li>日期(月) %(MONTH)d</li><li>日期(日) %(DAY)d</li><li>时间(HHMMSS) %(TIME)d</li><li>时间(小时) %(HOUR)d</li><li>时间(分钟) %(MINUTE)d</li><li>时间(秒) %(SECOND)d</li><li>设备名称 %(Device_Alias)s</li><li>设备序列号 %(Device_SN)s</li></ul>
+</div>
+</div>
+<script>
+
+function toggleShow(id)
+{
+	$(id).toggle();
+}
+
+</script>
+
+<div>
+<h1>文件</h1>
+<table>
+	<tr><td>自动导出间隔：</td><td><input type='text' name='dexp_interval' value='10' size=10 /> 分钟</td></tr>
+	<tr><td>行结束符：</td><td>
+		<input type='radio' value='rowsp1013' name='dexp_rowsp' checked />回车换行0x0A0x0D(Window)
+		<input type='radio' value='rowsp13' name='dexp_rowsp' />换行0x0D(Unix)
+		<input type='radio' value='rowsp10' name='dexp_rowsp' />回车0x0A(Mac)
+	</td></tr>
+	<tr><td>文件存放位置：</td><td><input type="text" name='dexp_path' value='c:/data/' size=100 /></tr>
+
+	<tr><td colspan=2 align='center'>&nbsp;</td></tr>
+	<tr><td colspan=2 align='center'><b>人员信息</b></td></tr>
+	<tr><td>文件名：</td><td><input type="text" name='dexp_e_fn' value='E_%(YEAR)4d%(MONTH)02d%(DAY)02d_%(TIME)s_%(Device_SN)s.XML' size=100 /></td></tr>
+	<tr><td>文件头：</td><td><input type='text' name='dexp_e_head' value='<xml><data>' size=100 /></tr>
+	<tr><td>数据行：</td><td><input type='text' name='dexp_e_row' value='<row><dev>%(Device_Alias)s</dev><pin>%(PIN)s</pin><name>%(EName)s</name><password>%(Password)s</password>%(AccGroup)s	%(Card)s</row>' size=100 /></tr>
+	<tr><td>文件尾：</td><td><input type='text' name='dexp_e_tail' value='</data></xml>' size=100/></td></tr>
+
+	<tr><td colspan=2 align='center'>&nbsp;</td></tr>
+	<tr><td colspan=2 align='center'><b>考勤记录</b></td></tr>
+	<tr><td>文件名：</td><td><input type="text" name='dexp_t_fn' value='T_%(YEAR)4d%(MONTH)02d%(DAY)02d_%(TIME)s.CSV' size=100 /></td></tr>
+	<tr><td>文件头：</td><td><input type='text' name='dexp_t_head' value='' size=100 /></tr>
+	<tr><td>数据行：</td><td><input type='text' name='dexp_t_row' value='%(PIN)s,%(Employee_Name)s,%(TTime)s,%(State)s,%(Verify)s,%(WorkCode)s,%(Device_SN)s,%(Device_Alias)s' size=100 /></tr>
+	<tr><td>文件尾：</td><td><input type='text' name='dexp_t_tail' value='' size=100/></td></tr>
+	<tr><td colspan=2 align='center'>&nbsp;</td></tr>
+	<tr><td>考勤状态定义：</td><td>[<a href='javascript: toggleShow("#id_tbl_attstate");'>...</a>]
+	
+	<table border='1' class='cls_tbl_code' id="id_tbl_attstate">
+	<thead><tr bgcolor="#ccd"><td>考勤状态</td><td>原始代码</td><td>重定义代码</td></tr></thead>
+	<tbody>
+{% for item in attstates %}
+<tr><td>{{item.1}}</td><td>{{item.0}}</td><td><input type='text' value='{{item.0}}' size=10 name='c_state_{{item.0}}'></td></tr>
+{% endfor %}
+	</tbody>
+	</table>
+
+	</td></tr>
+	<tr><td>验证方式定义：</td><td>[<a href='javascript: toggleShow("#id_tbl_verify");'>...</a>]
+
+	<table border='1' class='cls_tbl_code' id='id_tbl_verify'>
+	<thead><tr bgcolor="#ccd"><td>验证方式</td><td>原始代码</td><td>重定义代码</td></tr></thead>
+	<tbody>
+{% for value, item in verifies %}
+<tr><td>{{item}}</td><td>{{value}}</td><td><input type='text' value='{{value}}' size=10 name='c_verify_{{value}}'></td></tr>
+{% endfor %}
+	</tbody>
+	</table>
+
+	</td></tr>
+	<tr><td>工作代码定义：</td><td>[<a href='javascript: toggleShow("#id_tbl_wc");'>...</a>]
+	<table border='1' class='cls_tbl_code' id='id_tbl_wc'>
+	<thead><tr bgcolor="#ccd"><td>序号</td><td>原始工作代码</td><td>重定义代码</td></tr></thead>
+	<tbody>
+{% for item in workcode_count %}
+<tr><td>{{forloop.counter}}</td><td><input type='text' size=10 name='c_wc_{{forloop.counter}}' /></td><td><input type='text' size=10 name='c_wc_t_{{forloop.counter}}' /></td></tr>
+{% endfor %}
+	</tbody>
+	</table>
+	</td></tr>
+	<tr><td>保留字段定义：</td><td>[<a href='javascript: toggleShow("#id_tbl_rs");'>...</a>]
+	<table border='1' class='cls_tbl_code' id='id_tbl_rs'>
+	<thead><tr bgcolor="#ccd"><td>序号</td><td>保留字段原始代码</td><td>重定义代码</td></tr></thead>
+	<tbody>
+{% for item in reserved_count %}
+<tr><td>{{forloop.counter}}</td><td><input type='text' size=10 name='c_rs_{{forloop.counter}}' /></td><td><input type='text' size=10 name='c_rs_t_{{forloop.counter}}' /></td></tr>
+{% endfor %}
+	</tbody>
+	</table>
+	</td></tr>
+</table>	
+</div>
+<hr />
+<div>
+<h1>数据库</h1>
+<table>
+	<tr><td>数据库引擎：</td><td><input type='text' name='DATABASE_ENGINE' value='mysql' size=100/></td></tr>
+	<tr><td>服务器主机：</td><td><input type='text' name='DATABASE_HOST' value='127.0.0.1' size=100/></td></tr>
+	<tr><td>数据库名称：</td><td><input type='text' name='DATABASE_NAME' value='icdat' size=100/></td></tr>
+	<tr><td>数据库端口：</td><td><input type='text' name='DATABASE_PORT' value='83306' size=100/></td></tr>
+	<tr><td>登录用户名：</td><td><input type='text' name='DATABASE_USER' value='root' size=100/></td></tr>
+	<tr><td>登录密码：</td><td><input type='text' name='DATABASE_PASSWORD' value='' size=100/></td></tr>
+	<tr><td>SQL起始语句：</td><td><input type='text' name='dexp_db_sql_head' value='' size=100 /></tr>
+	<tr><td>SQL用户信息插入语句：</td><td><input type='text' name='dexp_db_sql_user' value='INSERT INTO userinfo(badgenumber, name) VALUES("%(PIN)s","%(EName)s");' size=100 /></tr>
+	<tr><td>SQL考勤记录插入语句：</td><td><input type='text' name='dexp_db_sql_trans' value='INSERT INTO checkinout(userid, checktime) VALUES(%(Employee_ID)d, "%(TTime)s");' size=100 /></tr>
+	<tr><td>SQL用户ID查询语句：</td><td><input type='text' name='emp_search_sql' value='SELECT UserID FROM userinfo WHERE badgenumber=%s' size=100 /></tr>
+	<tr><td>SQL结束语句：</td><td><input type='text' name='dexp_db_sql_tail' value='' size=100/></td></tr>
+
+</table>
+</div>
+<div>
+<input name='submit' value='{%trans "ok"%}' type='submit' class='button first'/>
+<input type="submit" value="{%trans "return"%}" onclick="window.history.back(); return false;">
+</div>
+</div>
+</form>
+{% endblock %}

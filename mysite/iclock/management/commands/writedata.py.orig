@@ -1,0 +1,35 @@
+from django.core.management.base import BaseCommand, CommandError
+import os
+import time
+import sys
+from mysite import settings
+from mysite.iclock.writedata import performPostDataFile 
+
+class Command(BaseCommand):
+    option_list = BaseCommand.option_list + ()
+    help = "Starts write data pro."
+    args = '[optional seconds delay]'
+ 
+    def handle(self, seconds='', *args, **options):
+        import django
+ 
+        sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)
+        sys.stderr = os.fdopen(sys.stderr.fileno(), 'w', 0)
+ 
+        if args:
+            raise CommandError('Usage is writedata %s' % self.args)
+
+        if not seconds: seconds='10'
+        if not seconds.isdigit():
+            raise CommandError("%r is not a valid port number." % port)
+ 
+        seconds=int(seconds)
+        os.chdir(os.path.split(settings.__file__)[0])
+        i=0
+        while True:
+            i+=1
+            if i>200: return
+            print i, 'check data file'
+            performPostDataFile()
+            time.sleep(seconds)
+

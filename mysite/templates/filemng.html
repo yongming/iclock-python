@@ -1,0 +1,171 @@
+{% extends "base_site.html" %}
+{% load i18n %}
+{% block title %}{%trans "File management device"%}: {{ device }}{% endblock %}
+{% block extrastyle %}
+<style>
+code, pre{
+padding-left:30px;
+}
+div.context ol li {
+color:#666666;
+cursor:pointer;
+font-family:monospace;
+white-space:pre;
+background-color: black;
+}
+
+div.context {
+background-color: #333333;
+color:#666666;
+}
+
+.cls_fl_title {
+text-align: center;
+color: white;
+height: 20px;
+}
+
+a.cls_getDir {
+color: #10ff00;
+}
+
+div.context ol a {
+display: block;
+}
+
+div.context ol a:hover {
+background-color: #333333;
+}
+
+.cls_file {
+background-color: #ffff88;
+display: block;
+height: 20px;
+}
+
+.cls_close {
+float:right;
+margin-top:-15px;
+}
+
+</style>
+{% endblock %}
+
+{% block extrahead %}
+<script>
+
+cmdTimeOut=1000;
+cmdHist={};
+fCount=0;
+
+function hideMe(id)
+{
+	$("#"+id).slideUp('slow');
+}
+
+function showMe(id)
+{
+	$("#"+id).slideDown('slow');
+}
+
+function showHistFile(fileName)
+{
+	for(var i in cmdHist)
+	{
+		if(cmdHist[i]==fileName)
+		{
+			$("#id_f_"+i).slideDown('slow');
+			return true;
+		}
+	}
+	return false;
+}
+
+function showFileList(id, data)
+{
+	var flname=cmdHist[id].substr(2,1000);
+	if(flname=="") flname="{%trans "Main Contents"%}";
+	else flname="{%trans "directory"%} "+flname;
+	$("#fl").after("<div class='context' id='id_f_"+id+"'><div class='cls_fl_title'> "+flname+" {%trans "file list"%}：<span class='cls_close'><a href='javascript: hideMe(\"id_f_"+id+"\")'>[X]</span></div>"+data+"</div>");
+}
+
+function downloadFile(id, data)
+{
+	if(data.substr(0,4)=="URL:")
+	{
+		fname=data.substr(4,1000);
+		desc="";
+		if(fname.indexOf("ssrattlog")>=0 || fname.indexOf("ssruser")>=0 || fname.indexOf("oplog")>=0) 
+			desc="&nbsp;&nbsp;<a target='_blank' href='./desc/"+fname.substr(20,1000)+"'>[{%trans "Show the contents of the documents"%}]</a>";
+		var html="<div class='cls_file' id='id_f_"+id+"'>"+cmdHist[id].substr(2,1000)+"：<a target='_blank' href='"+fname+"'>[{%trans "Download files"%}]</a>"+desc+"&nbsp;&nbsp;<span class='cls_close'><a href='javascript: hideMe(\"id_f_"+id+"\")'>[X]</a></span></div>";
+		$("#fl").after(html);
+	}
+	else
+		$("#fl").after("<pre>"+data+"</pre>");
+}
+
+function checkCmd(cmdId, cmd)
+{
+	$.ajax({type: "GET", url: "./_check_/"+cmdId, dataType:"text",
+		success: function(data){
+			if(data=="_PROCESSING_")
+				setTimeout("checkCmd('"+cmdId+"','"+cmd+"')", cmdTimeOut);
+			else if(data=="_WAITTING_")
+				setTimeout("checkCmd('"+cmdId+"','"+cmd+"')", cmdTimeOut);
+			else
+			{
+				fCount--;
+				if(fCount==0) $("#id_loading").hide();
+				if(cmd=="ls")
+					showFileList(cmdId, data);
+				else if(cmd=="getfile")
+					downloadFile(cmdId, data);
+			}
+		}
+		});	
+}
+
+function getFile(fn)
+{
+	if(showHistFile("F:"+fn)) return;
+	fCount++;
+	$.ajax({type: "GET", url: "./get/"+fn, dataType:"text",
+		success: function(data){
+			setTimeout("checkCmd('"+data+"','getfile')", 3000);
+			cmdHist[data]="F:"+fn;
+		}
+		});
+}
+
+function getDir(dir)
+{
+	if(showHistFile("D:"+dir)) return;
+	fCount++;
+	$.ajax({type: "GET", url: "./ls/"+dir, dataType:"text",
+		success: function(data){			
+			setTimeout("checkCmd('"+data+"','ls')", 3000);
+			cmdHist[data]="D:"+dir;
+		}
+		});
+}
+
+$(function(){
+	$().ajaxStart(function(){
+		$("#id_loading").show();
+		});
+	getDir("");
+})
+</script>
+{% endblock %}
+
+
+
+{% block content %}
+{%trans "File management device"%}({{ device }})<span id='id_loading' style="color: red;"><img src="/media/img/loading.gif" style="margin-bottom:-4px;" />{%trans "Download data from the device"%}……</span><hr />
+<p>&nbsp;</p>
+<div id="fl">
+</div>
+<br />
+<p>&nbsp;</p>
+
+{% endblock %}

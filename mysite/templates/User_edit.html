@@ -1,0 +1,64 @@
+{% extends "data_edit.html" %}
+{% load i18n %}
+
+{% block addjs %}
+
+function toggleShowPwd(show)
+{
+	if(show)
+	{
+		$('#id_ResetPassword').parent().parent().show();
+		$('#id_Password').parent().parent().show();
+		$('#id_ResetPassword').val('');
+		$('#id_Password').val('');
+	}
+	else
+	{
+		$('#id_ResetPassword').parent().parent().hide();
+		$('#id_Password').parent().parent().hide();
+		$('#id_ResetPassword').val('111111');
+		$('#id_Password').val('111111');
+	}
+}
+
+function toggleShowSuper(show)
+{
+	var dept=$('#id_AuthedDept')
+	if(show)
+	{
+		$('#id_groups').parent().parent().show();
+		dept.parent().parent().show();
+	}
+	else
+	{
+		$('#id_groups').parent().parent().hide();
+		dept.parent().parent().hide();
+		if(dept[0].selectedIndex<=0) dept[0].selectedIndex=1;
+	}
+}
+
+$(function(){	
+	$('#id_is_resetPw').click(function()
+	{
+		toggleShowPwd(this.checked);
+	})
+	$('#id_is_superuser').click(function()
+	{
+		toggleShowSuper(!this.checked);
+	})
+{% if isAdd %}
+	$('#id_is_resetPw').parent().parent().hide();
+{% else %}
+	$.each($('#id_is_resetPw'),function(){
+		if($(this).attr("checked"))
+			toggleShowPwd(this.checked);
+		else
+			toggleShowPwd(false);
+	});
+	$('#id_username').attr('readonly','True')
+{% endif %}
+	if($('#id_is_superuser').attr("checked"))
+		toggleShowSuper(false)
+})
+
+{% endblock %}

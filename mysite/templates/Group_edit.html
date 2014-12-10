@@ -1,0 +1,286 @@
+{% extends "data_edit.html" %}
+{% load i18n %}
+{% load iclock_tags %}
+{% block addjs %}
+$(function(){
+ic_permission=[]
+ic_ids=[];
+ic_selected_ids=[];
+ic_allowed_perm=[
+	" department ",
+	" employee ",
+	" device ",
+	" transaction ",
+	{% if 1|enabled_att_mod %}
+	" shift time-table ",
+	" shift ",
+	" empoyee shift ",
+	" special leave ",
+	" holidays ",
+	" Leave Class ",
+	" attendance rule ",
+	{% endif %}
+	" administration log ",
+	{% if 1|enabled_msg_mod %}
+	" information subscription ",
+	" public information ",
+	{% endif %}
+	" command to device ",
+	" data from device ",
+	" device operation log ",
+	" group ",
+	" user "                     ];
+ic_allowed_perm_trans={
+	" department ":             "{% trans ' department ' %}",
+	" employee ":               "{% trans ' employee ' %}",
+	" device ":                 "{% trans ' device ' %}",
+	" transaction ":            "{% trans ' transaction ' %}",
+	
+	{% if 1|enabled_att_mod %}
+	" shift time-table ":       "{% trans ' shift time-table ' %}",
+	" shift ":          		"{% trans ' shift ' %}",
+	" empoyee shift ":          "{% trans ' empoyee shift ' %}",
+	" special leave ":          "{% trans ' special leave ' %}",
+	" holidays ":          		"{% trans ' holidays ' %}",
+	" Leave Class ":         	 "{% trans ' Leave Class ' %}",
+	" attendance rule ":          "{% trans ' attendance rule ' %}",
+	{% endif %}
+	
+	" administration log ":     "{% trans ' administration log ' %}",
+	
+	{% if 1|enabled_msg_mod %}
+	" information subscription ":"{% trans ' information subscription ' %}",
+	" public information ":     "{% trans ' public information ' %}",
+	{% endif %} 
+	           
+	" command to device ":"{% trans ' log of command to device ' %}",
+	" data from device ":"{% trans ' log of data from device ' %}",
+	" device operation log ":          "{% trans ' device operation log ' %}",
+	" group ":                  "{% trans 'group' %}",
+	" user ":                   "{% trans 'User' %}"};
+sec_perm=ic_allowed_perm;
+getInitData();
+$("#id_permissions").parent().html("<fieldset><legend></legend><div style='width:400px;'>"+getPermissionTree()+"</div></fieldset>"
+					+'<div style="display:none"><select id="id_permissions" name="permissions" multiple="multiple"></select></div>');
+$("#permBrowser").treeview();
+$(".class_perm_parent").click(function(event){
+	if($(".class_perm_parent").attr("checked"))
+	{
+		$(".class_perm_sec").attr("checked","checked");
+		$(".class_permission").addClass("checked");
+	}
+	else
+	{
+		$(".class_perm_sec").removeAttr("checked");
+		$(".class_permission").removeClass("checked");
+	}
+		event.stopPropagation();
+});
+$(".class_perm_sec").click(function(event){
+	$(".class_perm_parent").removeAttr("checked");
+	selected_sec=$(this).attr("alt");
+	for(var i=0;i<ic_permission.length;i++)
+		if(ic_permission[i][1]==selected_sec && $(this).attr("checked") )
+			$("#id_"+ic_ids[i]).addClass("checked");
+		else if(ic_permission[i][1]==selected_sec)
+			$("#id_"+ic_ids[i]).removeClass("checked");
+		event.stopPropagation();
+});
+$(".class_permission").click(function(){
+	$(this).toggleClass("checked");
+	$(".class_perm_parent").removeAttr("checked");
+	selected_perm1=$(this).attr("alt");
+	for(var i=0;i<ic_ids.length;i++)
+		if(ic_ids[i]==selected_perm1)
+			var sec_permStr=ic_permission[i][1];
+	for(var j=0;j<sec_perm.length;j++)
+		if(sec_perm[j]==sec_permStr)
+			$("#id_sec"+j).removeAttr("checked");
+});
+
+$("#id_edit_form").submit(function(){
+	$("#id_permissions").html(getOptions_html());
+});
+});
+function getOptions_html()
+{
+	var html="";
+	var selected_perm=[];
+	$.each($(".class_permission"),function(){
+           if($(this).hasClass("checked")) {
+               selected_perm.push($(this).attr("alt"))
+			}
+	});
+	
+	//权限关联  设置
+	for(var i=0;i<selected_perm.length;i++)
+	{
+		//员工请假、人员排班、忘签到签退、报表、考勤记录 人员过滤
+		if(selected_perm[i]==170 ||selected_perm[i]==171 || selected_perm[i]==114||selected_perm[i]==115 || selected_perm[i]==116)
+		{	selected_perm.push("180");
+			selected_perm.push("183");
+		}
+		if(selected_perm[i]==99) //增加时段 功能 浏览时段权限
+			selected_perm.push("169");
+		if(selected_perm[i]==107){  //增加人员排班与临时排班  浏览班次、时段权限
+			selected_perm.push("164");
+			selected_perm.push("169");
+		}
+		if(selected_perm[i]==115)//报表  统计结果详情、班次详情、异常情况对应表的浏览权限
+		{
+			selected_perm.push("177");
+			selected_perm.push("178");
+			selected_perm.push("153");
+		}
+	}
+	for(var i=0;i<selected_perm.length;i++)
+		html+="<option value='"+selected_perm[i]+"' selected>"+selected_perm[i]+"</option>"
+	return html;
+}
+
+function getInitData()
+{	
+	var gp_Obj=$("#id_permissions").get(0).options;
+	for(var i=0;i<gp_Obj.length;i++)
+		if(gp_Obj[i].selected)
+			ic_selected_ids.push(gp_Obj[i].value);
+	ic_allowed_perm_str=ic_allowed_perm.join("|")+"|"
+	for(var i=0;i<gp_Obj.length;i++)
+	{
+		var texts=(gp_Obj[i].innerHTML).split("|");
+		if(texts[0]=="iclock " || texts[0]=="auth ")
+		{
+				if(ic_allowed_perm_str.indexOf(texts[1]+"|")>=0){
+					ic_permission.push(texts);
+					ic_ids.push(gp_Obj[i].value);
+				}
+		}
+	}
+}
+
+function getPermissionTree(){ 
+	var tree="<ul id='permBrowser' class='filetree'><li>"
+			+"<span class='folder'><input type='checkbox' class='class_perm_parent' alt='"+ic_permission[0][0]+"'/>{%trans ' iclock ' %}</span>"
+	for(var i=0;i<sec_perm.length;i++)
+		tree+="<ul>"+getTreeString(sec_perm[i],i)+"</ul>"
+	tree+="</li></ul>";//+"<pre>"+ic_permission.length+"\n"+ic_permission.join("\r\n")+"</pre>"
+	return tree;
+}
+//权限翻译
+var general_perm={
+				"Can add":		"{% trans 'Add' %}",
+				"Can browse":	"{% trans 'Browse' %}",
+				"Can change":	"{% trans 'Modify' %}",
+				"Can delete":	"{% trans 'Delete' %}"
+};
+
+var third_perm={
+	" employee ": {
+		'Delete employee from the device': "{% trans 'Delete employee from the device' %}",
+		'Employee leave': "{% trans 'Employee leave' %}",
+		'Move employee to a new device': "{% trans 'Move employee to a new device' %}",
+		"Change employee's department": "{% trans "Change employee's department" %}",
+		'Transfer to the device templately': "{% trans 'Transfer to the device templately' %}",
+		'Transfer employee to the device': "{% trans 'Transfer employee to the device' %}",
+		'DataBase':			"{% trans 'DataBase' %}",
+		"Enroll employee's fingerprint": "{% trans "Enroll employee's fingerprint" %}"
+	},
+
+	" device ": {
+		'Clear data in device':			"{% trans 'Clear data in device' %}",
+		'Clear transactions in device':	"{% trans 'Clear transactions in device' %}",
+		'Clear all employee':	"{% trans 'Clear all employee' %}",
+		'Copy data between device':		"{% trans 'Copy data between device' %}",
+		'Set power suspend':			"{% trans 'Set power suspend' %}",
+		'Refresh device information':	"{% trans 'Refresh device information' %}",
+		'Upload new data':				"{% trans 'Upload new data' %}",
+		'Pause device':					"{% trans 'Pause device' %}",
+		'Reboot device':				"{% trans 'Reboot device' %}",
+		'Upload data again':			"{% trans 'Upload data again' %}",
+		'Upload transactions again':	"{% trans 'Upload transactions again' %}",
+		'Reset Password in device':		"{% trans 'Reset Password in device' %}",
+		'Restore employee to device':	"{% trans 'Restore employee to device' %}",
+		'Resume a resumed device':		"{% trans 'Resume a resumed device' %}",
+		'Output unlock signal':			"{% trans 'Output unlock signal' %}",
+		'Terminate alarm signal':		"{% trans 'Terminate alarm signal' %}",
+		'Upgrade firmware':				"{% trans 'Upgrade firmware' %}",
+		'Set options of device':		"{% trans 'Set options of device' %}",
+		'Upgrade by u-pack':		"{% trans 'Upgrade by u-pack' %}"
+		
+	},
+	" transaction ":
+	{
+		'Clear Obsolete Data':					"{% trans 'Clear Obsolete Data' %}",
+		'Init database':			"{% trans 'Init database' %}"
+	},
+	" device operation log ":
+		{
+			'Transaction Monitor':			"{% trans 'Transaction Monitor' %}"
+		},
+	" special leave ":
+		{
+			'Audit Sepcial Leave':			"{% trans 'Audit Sepcial Leave' %}",
+			'operate Forget to clock in and out':	"{% trans 'Forgetting to Clock in/out' %}",
+			'operate reports':						"{% trans 'Reports' %}",
+			'ReCalculate Reports':				"{% trans 'ReCalculate Reports' %}"
+	
+		},
+	" shift ":
+			{
+				'Add time-table':			"{% trans 'Add time-table' %}",
+				'Delete time-table':		"{% trans 'Delete time-table' %}"
+			}
+	
+}
+
+function getTransText(table, permName)
+{
+	for(n in general_perm) 
+		if(permName.indexOf(n)==1) 
+			return general_perm[n];
+	if(table in third_perm)
+	{
+		var perms=third_perm[table];
+		for(n in perms) if(permName.indexOf(n)==1) return perms[n];
+	}
+	return permName;
+}
+
+function getTreeString(sec_str,index) 
+{	
+	var tree_sub="<li><span class='folder'><input type='checkbox' class='class_perm_sec' id='id_sec"+index+"' alt='"+sec_str+"'/>"+ic_allowed_perm_trans[sec_str]+"</span>";
+	subStr="<ul>"
+	for(var i=0;i<ic_permission.length;i++)
+		if(ic_permission[i][1]==sec_str)
+		{
+			var ttext=getTransText(ic_permission[i][1], ic_permission[i][2]);
+			subStr+="<li class='file'><a class='class_permission"+(isSelected(ic_ids[i])?' checked':'')+"' id='id_"+ic_ids[i]+"' alt='"+ic_ids[i]+"' "+" >"+ttext+"</a></span></li>";
+		}	
+	tree_sub+=subStr+"</ul></li>";
+	return tree_sub;
+}
+function isSelected(selected_id)
+{	var flag=0;
+	for(i=0;i<ic_selected_ids.length;i++){
+		if(ic_selected_ids[i]==selected_id)
+			{
+				flag=1;
+				break;
+			}
+		else
+			flag=0;
+	}
+	return flag;
+}
+
+</script>
+
+<style>
+.filetree a.class_permission { background:transparent url(/media/img/lock.gif) no-repeat; padding-left: 20px;}
+.filetree a.checked { background:transparent url(/media/img/unlock.gif) no-repeat; padding-left: 25px;}
+</style>
+
+<script>
+
+{% endblock %}
+

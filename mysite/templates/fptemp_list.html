@@ -1,0 +1,9 @@
+{% extends "data_list.html" %}
+{% block tblHeader %}
+fieldHeaders=["{{ cl.FieldName.UserID }}","{{ cl.FieldName.FingerID }}","{{ cl.FieldName.Valid }}","{{ cl.FieldName.DelTag }}"
+];
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.UserID }}","{{ item.get_FingerID_display }}","{{ item.get_Valid_display }}","{{ item.get_DelTag_display }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}

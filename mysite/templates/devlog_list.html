@@ -1,0 +1,27 @@
+{% extends "data_list.html" %}
+{% load iclock_tags %}
+{% load i18n %}
+{% block tblHeader %}
+fieldHeaders=["{{ cl.FieldName.SN }}", "{{ cl.FieldName.OpTime }}", "{{ cl.FieldName.OP }}", "{{ cl.FieldName.Object }}", "{{ cl.FieldName.Cnt }}", "{{ cl.FieldName.ECnt }}"];
+options.disableCols=["0","6","8"];
+options.canEdit=false;
+options.canAdd=false;
+function strOfData(data)
+{
+	return "{% trans "device" %} "+data[1]+"{% trans "at" %} "+data[2]+"{% trans "transfer data log" %} ";
+}
+
+function ErrorLink(data)
+{
+	if(data[6]=='0') return '0';
+	return "<a href='/iclock/tmp/transaction_"+data[8]+"_"+data[0]+".txt'>"+data[6]+"</a>";
+
+}
+
+{% endblock %}
+
+{% block rowdata %}
+    {% for item in latest_item_list %}[{{item.id}}, "{{ item.Device }}", "{{ item.OpTime|shortTime }}", "{{ item.OP|dataShowStr }}","{{ item.Object|lescape }}", "{{ item.Cnt }}", "{{ item.ECnt }}", ErrorLink, "{{ item.Device.SN }}"]{%if not forloop.last%},{%endif%}
+    {% endfor %}
+{% endblock %}
+

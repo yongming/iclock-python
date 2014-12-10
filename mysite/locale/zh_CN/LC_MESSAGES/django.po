@@ -1,0 +1,5797 @@
+# coding=utf-8
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-01-15 14:37+0800\n"
+"PO-Revision-Date: 2008-04-10 11:57+0800\n"
+"Last-Translator: <csk@zksoftware.com>\n"
+"Language-Team: Simplified Chinese <limodou@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Country: CHINA\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: .\authurls.py:40 .\authurls.py:56
+msgid "Login"
+msgstr "登录"
+
+#: .\authurls.py:41
+msgid "Invalid Username or Password, please try again."
+msgstr "用户名或密码错误，请重试"
+
+#: .\authurls.py:57
+msgid "No permission to do anything!"
+msgstr "你无权修改任何东西。"
+
+#: .\iclocklocale.py:70 .\iclocklocale.py:81
+#, python-format
+msgid "Staff %s"
+msgstr "员工 %s"
+
+#: .\settings.py:84
+msgid "English"
+msgstr "英语"
+
+#: .\settings.py:85
+msgid "Simplified Chinese"
+msgstr "简体中文"
+
+#: .\iclock\admin_detail_view.py:51
+msgid "Reset password"
+msgstr "重设密码"
+
+#: .\iclock\admin_detail_view.py:52 .\iclock\models.py:502
+#: .\iclock\models.py:730 .\templates\admin\auth\user\add_form.html.py:18
+#: .\templates\admin\auth\user\change_password.html.py:34
+msgid "Password"
+msgstr "密码"
+
+#: .\iclock\admin_detail_view.py:54
+msgid "Password again"
+msgstr "确认密码"
+
+#: .\iclock\admin_detail_view.py:75
+msgid "Must be same as Password"
+msgstr "两次输入的密码必须相同"
+
+#: .\iclock\admin_detail_view.py:79
+msgid "The length must be great than 4"
+msgstr "长度必须大于4"
+
+#: .\iclock\admin_detail_view.py:137
+#, python-format
+msgid "Keyword \"%(object_name)s\" Data do not exist!"
+msgstr "关键字段%(object_name)s数据不存在"
+
+#: .\iclock\admin_detail_view.py:141
+msgid "No permission"
+msgstr "没有权限"
+
+#: .\iclock\datamisc.py:27
+msgid "male"
+msgstr "男"
+
+#: .\iclock\datamisc.py:27
+msgid "female"
+msgstr "女"
+
+#: .\iclock\datamisc.py:52
+msgid "Export data"
+msgstr "导出数据"
+
+#: .\iclock\datamisc.py:52
+msgid "Specified data format does not exist or do not support!"
+msgstr "指定的数据格式不存在或不支持"
+
+#: .\iclock\dataproc.py:281
+#, python-format
+msgid ""
+"The Firmware version of device %(object_name)s is unknown，cannot to be "
+"upgraded!"
+msgstr "设备%(object_name)s固件版本号未知"
+
+#: .\iclock\dataproc.py:292
+#, python-format
+msgid ""
+"The firmware file '%(object_name)s' does not exist, can not upgrade firmware "
+"for %(esc_name)s!"
+msgstr ""
+"服务器上的固件文件%(object_name)s 不存在，不能对设备%(esc_name)s升级固件"
+
+#: .\iclock\dataproc.py:305
+msgid "Not specified a device to enroll"
+msgstr "没有指定登记设备"
+
+#: .\iclock\dataproc.py:311
+msgid "All fingerprint have enrolled"
+msgstr "所有指纹已经被登记"
+
+#: .\iclock\datautils.py:303 .\iclock\dataview.py:482
+msgid "You do not have the permission!"
+msgstr "你没有该权限"
+
+#: .\iclock\dataview.py:201
+msgid "Duplicated"
+msgstr "号码重复"
+
+#: .\iclock\dataview.py:257
+#, python-format
+msgid "Keyword \"%(object_name)s\" can not to be changed!"
+msgstr "关键字段%(object_name)s不能修改"
+
+#: .\iclock\dataview.py:393
+#, python-format
+msgid "Device options \"%s\" Unavailable!"
+msgstr "考勤机选项\"%s\"不可用"
+
+#: .\iclock\dataview.py:412 .\iclock\dataview.py:418 .\iclock\dataview.py:424
+#: .\iclock\dataview.py:435 .\iclock\dataview.py:441 .\iclock\taskview.py:39
+#: .\iclock\taskview.py:79
+msgid "Designated device does not exist!"
+msgstr "指定的考勤机不存在"
+
+#: .\iclock\dataview.py:454
+#, python-format
+msgid "%s %s does not exist!"
+msgstr "%s %s不存在"
+
+#: .\iclock\dataview.py:459
+#, python-format
+msgid "Does not support this feature: \"action=%(object_name)s\""
+msgstr "不支持该功能%(object_name)s"
+
+#: .\iclock\dataview.py:473 .\iclock\genmsgview.py:74
+#: .\iclock\genmsgview.py:87
+msgid "Error"
+msgstr "错误"
+
+#: .\iclock\dataview.py:473 .\iclock\genmsgview.py:74
+#: .\iclock\genmsgview.py:87
+msgid "The server is not installed information services module!"
+msgstr "该版本服务器程序没有安装信息定制服务模块"
+
+#: .\iclock\desfiles.py:69
+#, python-format
+msgid "%d attendance record(s)."
+msgstr "%d 签到记录"
+
+#: .\iclock\expview.py:320
+msgid "Automatically Data Export Definition"
+msgstr "自动导出数据格式定义"
+
+#: .\iclock\filterspecs.py:70 .\iclock\filterspecs.py:100
+#: .\iclock\filterspecs.py:156 .\iclock\filterspecs.py:182
+#: .\templates\iclock_list.html.py:128 .\templates\iclock_list.html.py:254
+msgid "All"
+msgstr "全部"
+
+#: .\iclock\filterspecs.py:87
+msgid "More ..."
+msgstr "更多..."
+
+#: .\iclock\filterspecs.py:121
+msgid "Any date"
+msgstr "任意日期"
+
+#: .\iclock\filterspecs.py:122
+msgid "Today"
+msgstr "今天"
+
+#: .\iclock\filterspecs.py:125
+msgid "Past 7 days"
+msgstr "前7天"
+
+#: .\iclock\filterspecs.py:127
+msgid "This month"
+msgstr "本月"
+
+#: .\iclock\filterspecs.py:129
+msgid "This year"
+msgstr "今年"
+
+#: .\iclock\filterspecs.py:130
+msgid "Range ..."
+msgstr "指定范围..."
+
+#: .\iclock\filterspecs.py:156 .\iclock\models.py:126
+msgid "Yes"
+msgstr "是"
+
+#: .\iclock\filterspecs.py:156 .\iclock\models.py:126
+msgid "No"
+msgstr "否"
+
+#: .\iclock\filterspecs.py:163
+msgid "Unknown"
+msgstr "未知"
+
+#: .\iclock\genmsgview.py:71
+msgid "Generating Messages"
+msgstr "信息服务生成"
+
+#: .\iclock\importdata.py:20
+#, python-format
+msgid "<a href='/iclock/tmp/%s'> %d record(s) is duplicated or invalid."
+msgstr "<a href='/iclock/tmp/%s'> %d  数据为重复或无效记录"
+
+#: .\iclock\importdata.py:24
+#, python-format
+msgid "Inserted %(object_num)d successfully"
+msgstr "成功插入了 %(object_num)d 条"
+
+#: .\iclock\importdata.py:25
+#, python-format
+msgid "Updated %(object_num)d successfully"
+msgstr "成功修改了%(object_num)d 条"
+
+#: .\iclock\importdata.py:26
+#, python-format
+msgid " %(object_num)d already exists in the database"
+msgstr "%(object_num)d条已存在数据库中"
+
+#: .\iclock\importdata.py:28
+#, python-format
+msgid "In the data files %(object_num)d  %(object_name)s "
+msgstr "数据文件中有%(object_num)d %(object_name)s"
+
+#: .\iclock\importdata.py:65 .\iclock\importdata.py:69
+#: .\iclock\importdata.py:192
+msgid "fail"
+msgstr "失败"
+
+#: .\iclock\importdata.py:65
+msgid "<h1> Data upload failure </h1>. <br/> A device must be provided."
+msgstr "<h1>数据上传失败</h1>,<br />请选择考勤机"
+
+#: .\iclock\importdata.py:69
+#, python-format
+msgid ""
+"<h1> Data upload failure </h1>. <br/> You have no permission to upload data "
+"to device %(object_name)s "
+msgstr "<h1>数据上传失败</h1>,<br />没有权限导入考勤机%(object_name)s上的数据"
+
+#: .\iclock\importdata.py:93 .\iclock\importdata.py:148
+#: .\iclock\importdata.py:153
+msgid "fail "
+msgstr "失败"
+
+#: .\iclock\importdata.py:93
+#, python-format
+msgid ""
+"<h1> Data upload failure </h1> <br/> Empployee information from the data "
+"file is not from device %(object_name)s"
+msgstr ""
+"<h1>数据上传失败</h1><br />人员信息数据文件不是来自考勤机%(object_name)s"
+
+#: .\iclock\importdata.py:128
+msgid "user information"
+msgstr "个人信息"
+
+#: .\iclock\importdata.py:131 .\iclock\importdata.py:183
+#: .\iclock\importdata.py:218 .\iclock\importdata.py:221
+msgid "Import data"
+msgstr "导入数据"
+
+#: .\iclock\importdata.py:132
+msgid ""
+"Employee information does not match the data, select the correct employee "
+"information data file"
+msgstr "用户信息数据不匹配，请选择正确的用户信息数据文件"
+
+#: .\iclock\importdata.py:148
+#, python-format
+msgid ""
+"<h1> Data upload failure </ h1>, <br /> staff fingerprint data files are not "
+"from the attendance of %(object_name)s"
+msgstr ""
+"<h1>数据上传失败</h1>,<br />人员指纹数据文件不是来自考勤机 %(object_name)s"
+
+#: .\iclock\importdata.py:154
+msgid ""
+"<h1> Data upload failure </ h1>, <br /> If the fingerprint template to "
+"upload, please also upload their associated user information!"
+msgstr "如果上传指纹模版，必须同时上传相关的用户信息文件"
+
+#: .\iclock\importdata.py:180
+msgid "Fingerprint template"
+msgstr "指纹模版"
+
+#: .\iclock\importdata.py:184
+#, python-format
+msgid ""
+"<h1>Upload data success</h1><br /><br />%(object_name)s<br /><h1>Data Import "
+"failure</h1><br /><br />Fingerprint template does not match the data or data "
+"file is empty, please select the correct <b>fingerprint template </b>data "
+"files"
+msgstr ""
+"<h1>数据上传成功</h1><br /><br />%(object_name)s<br /><h1>数据导入失败</"
+"h1><br /><br />指纹模版数据不匹配或者数据文件为空，请选择正确的<b>指纹模版</"
+"b>数据文件"
+
+#: .\iclock\importdata.py:192
+msgid "Upload data failure"
+msgstr "数据上传失败"
+
+#: .\iclock\importdata.py:192
+msgid "Attendance record attendance data files are not from the device"
+msgstr "考勤记录数据文件不是来自考勤机"
+
+#: .\iclock\importdata.py:215 .\templates\employee_list.html.py:5
+#: .\templates\employee_list.html.py:247
+msgid "Transactions"
+msgstr "考勤记录"
+
+#: .\iclock\importdata.py:219 .\iclock\importdata.py:221
+msgid "Data Import Results"
+msgstr "数据导入结果"
+
+#: .\iclock\importdata.py:219
+msgid "Data Import failure"
+msgstr "数据导入失败"
+
+#: .\iclock\importdata.py:219
+msgid ""
+"Transactions does not match data, Please select the correct <b>transaction</"
+"b> data file!"
+msgstr "选择正确的考勤记录数据文件"
+
+#: .\iclock\importdata.py:225
+msgid "error"
+msgstr "错误"
+
+#: .\iclock\importdata.py:225
+msgid "The server is not installed U-disk data import module!"
+msgstr "该版本服务器程序没有安装U盘数据导入模块"
+
+#: .\iclock\models.py:20
+msgid "Apply"
+msgstr "申请"
+
+#: .\iclock\models.py:21
+msgid "Auditing"
+msgstr "正在审核"
+
+#: .\iclock\models.py:22
+msgid "Accepted"
+msgstr "已接受"
+
+#: .\iclock\models.py:23
+
+msgid "Refused"
+msgstr "拒绝"
+
+#: .\iclock\models.py:24
+
+msgid "Paused"
+msgstr "暂停"
+
+#: .\iclock\models.py:25
+msgid "Re-Apply"
+msgstr "重申请"
+
+#: .\iclock\models.py:26
+msgid "Again"
+msgstr "重新申请"
+
+#: .\iclock\models.py:27
+
+msgid "Cancel_leave"
+msgstr "取消请假"
+
+#: .\iclock\models.py:29 .\templates\employee_list.html.py:193
+msgid "department"
+msgstr "部门"
+
+#: .\iclock\models.py:30 .\templates\employee_list.html.py:5
+#: .\templates\employee_list.html.py:211
+#: .\templates\transaction_list.html.py:16
+msgid "department name"
+msgstr "部门名称"
+
+#: .\iclock\models.py:31 .\templates\employee_list.html.py:5
+#: .\templates\employee_list.html.py:210
+#: .\templates\transaction_list.html.py:15
+msgid "department number"
+msgstr "部门编号"
+
+#: .\iclock\models.py:51
+msgid "parent"
+msgstr "上级部门"
+
+#: .\iclock\models.py:97
+msgid "Nested department parent"
+msgstr "嵌套的父部门"
+
+#: .\iclock\models.py:291 .\iclock\models.py:384
+msgid "serial number"
+msgstr "序列号"
+
+#: .\iclock\models.py:291
+msgid ""
+"Should be set with the device, on the device, access management menu \"Sys "
+"Info\" / \"Dev Info\" / \"Serial Num\" could be found"
+msgstr ""
+"应该设置与考勤机一致, 在考勤机上, 进入管理菜单的 \"系统信息\"/\"设备信息\"/"
+"\"序列号\" 可查到"
+
+#: .\iclock\models.py:293
+msgid "last activity"
+msgstr "最近联机时间"
+
+#: .\iclock\models.py:294 .\iclock\models.py:1044
+msgid "transfer time"
+msgstr "传送时间"
+
+#: .\iclock\models.py:294
+msgid ""
+"Setting device for a moment from the plane started to send checks to the new "
+"data server. Hh: mm (hours: minutes) format, with a number of time between "
+"the semicolon (;) separately"
+msgstr ""
+"用于设定考勤机从某个时刻起开始检查并向服务器传送新数据. hh:mm (时:分)格式, 多"
+"个时间之间用分号(;)分开"
+
+#: .\iclock\models.py:295
+msgid "interval"
+msgstr "刷新间隔时间"
+
+#: .\iclock\models.py:295
+msgid ""
+"Device set for each interval to check how many minutes to send new data "
+"server"
+msgstr "用于设定设备每间隔多少分钟就检查并向服务器传送新数据"
+
+#: .\iclock\models.py:296
+msgid "trans record stamp"
+msgstr "传送签到记录标记"
+
+#: .\iclock\models.py:296
+msgid ""
+"Logo for the latest device to the server send the transactions timestamps"
+msgstr "用于标识设备向服务器传送最新的签到记录的时间戳"
+
+#: .\iclock\models.py:297
+msgid "trans OP stamp"
+msgstr "传送用户数据标记"
+
+#: .\iclock\models.py:297
+msgid ""
+"Marking device for the server to the employee data transfer as timestamps"
+msgstr "用于标识设备向服务器传送最新的用户数据的时间戳"
+
+#: .\iclock\models.py:298
+msgid "trans photo stamp"
+msgstr "传送图片标记"
+
+#: .\iclock\models.py:298
+
+msgid "Marking device for the server to the picture transfer as timestamps"
+msgstr "用于标识设备向服务器传送最新的用户数据的时间戳"
+
+#: .\iclock\models.py:299 .\templates\iclock_list.html.py:86
+msgid "Device Alias name"
+msgstr "设备别名"
+
+#: .\iclock\models.py:299
+msgid "Device of a name"
+msgstr "设备的别名"
+
+#: .\iclock\models.py:301
+msgid "update flag"
+msgstr "数据更新标志"
+
+#: .\iclock\models.py:301
+msgid "To identify what kind of data should be transfered to the server"
+msgstr "用于标识设备上什么样的新数据要传送到服务器上"
+
+#: .\iclock\models.py:302
+msgid "style"
+msgstr "机型"
+
+#: .\iclock\models.py:304
+msgid "FW Version"
+msgstr "固件版本"
+
+#: .\iclock\models.py:305
+msgid "FP Count"
+msgstr "指纹数"
+
+#: .\iclock\models.py:306
+msgid "Transaction Count"
+msgstr "记录数"
+
+#: .\iclock\models.py:307
+msgid "User Count"
+msgstr "用户数"
+
+#: .\iclock\models.py:308
+msgid "MainTime"
+msgstr "动作时间"
+
+#: .\iclock\models.py:309
+msgid "MaxFingerCount"
+msgstr "最大指纹容量"
+
+#: .\iclock\models.py:310
+msgid "MaxAttLogCount"
+msgstr "最大记录容量"
+
+#: .\iclock\models.py:311
+msgid "Device Name"
+msgstr "设备名称"
+
+#: .\iclock\models.py:312
+msgid "AlgVer"
+msgstr "算法版本"
+
+#: .\iclock\models.py:313
+msgid "FlashSize"
+msgstr "总Flash容量"
+
+#: .\iclock\models.py:314
+msgid "FreeFlashSize"
+msgstr "剩余Flash容量"
+
+#: .\iclock\models.py:315
+msgid "Language"
+msgstr "语言"
+
+#: .\iclock\models.py:316
+msgid "VOLUME"
+msgstr "容量"
+
+#: .\iclock\models.py:317
+msgid "DtFmt"
+msgstr "日期格式"
+
+#: .\iclock\models.py:318
+msgid "IPAddress"
+msgstr "IP地址"
+
+#: .\iclock\models.py:319
+msgid "IsTFT"
+msgstr "是否为彩屏"
+
+#: .\iclock\models.py:320
+msgid "Platform"
+msgstr "系统平台"
+
+#: .\iclock\models.py:321
+msgid "Brightness"
+msgstr "分辨率"
+
+#: .\iclock\models.py:322
+msgid "Auto backup data to"
+msgstr "自动备份登记数据到"
+
+#: .\iclock\models.py:323
+msgid "OEMVendor"
+msgstr "制造商"
+
+#: .\iclock\models.py:324
+msgid "city"
+msgstr "所在城市"
+
+#: .\iclock\models.py:324
+msgid "City of the location"
+msgstr "机器所安装的城市"
+
+#: .\iclock\models.py:325
+msgid "Access Function"
+msgstr "门禁功能"
+
+#: .\iclock\models.py:326
+msgid "Timezone"
+msgstr "时区"
+
+#: .\iclock\models.py:326
+msgid "Timezone of the location"
+msgstr "当地时区"
+
+#: .\iclock\models.py:384
+#, python-format
+msgid "Invalid %s"
+msgstr "非法的 %s"
+
+#: .\iclock\models.py:404 .\iclock\models.py:804 .\iclock\models.py:964
+#: .\iclock\models.py:996 .\iclock\models.py:1040 .\iclock\models.py:1132
+#: .\templates\devlog_list.html.py:11 .\templates\dlogcheck.html.py:130
+#: .\templates\employee_edit.html.py:34 .\templates\employee_list.html.py:26
+#: .\templates\employee_list.html.py:179 .\templates\employee_list.html.py:191
+#: .\templates\iclock_edit.html.py:31 .\templates\iclock_list.html.py:209
+#: .\templates\upload.html.py:23
+msgid "device"
+msgstr "设备"
+
+#: .\iclock\models.py:431 .\templates\User_list.html.py:7
+msgid "granted department"
+msgstr "授权部门"
+
+#: .\iclock\models.py:437
+msgid "admin granted department"
+msgstr "授权部门"
+
+#: .\iclock\models.py:455
+msgid "Male"
+msgstr "男"
+
+#: .\iclock\models.py:456 .\templates\employee_list.html.py:233
+msgid "Female"
+msgstr "女"
+
+#: .\iclock\models.py:461
+msgid "Normal"
+msgstr "正常"
+
+#: .\iclock\models.py:462
+msgid "Registrar"
+msgstr "登记员"
+
+#: .\iclock\models.py:463
+msgid "Administrator"
+msgstr "系统管理员维护"
+
+#: .\iclock\models.py:464 .\templates\User_list.html.py:7
+msgid "Supervisor"
+msgstr "超级管理员"
+
+#: .\iclock\models.py:486 .\iclock\models.py:491
+
+msgid "By Time Zone"
+msgstr "依据相应时间段"
+
+#: .\iclock\models.py:487
+msgid "Must Clock In"
+msgstr "上班必须签到"
+
+#: .\iclock\models.py:488
+
+msgid "Don't Check In"
+msgstr "上班不用签到"
+
+#: .\iclock\models.py:492
+msgid "Must Clock Out"
+msgstr "下班必须签退"
+
+#: .\iclock\models.py:493
+
+msgid "Don't Check Out"
+msgstr "下班不用签退"
+
+#: .\iclock\models.py:499 .\templates\dlogcheck.html.py:130
+#: .\templates\logcheck.html.py:101 .\templates\transaction_list.html.py:7
+msgid "PIN"
+msgstr "考勤号码"
+
+#: .\iclock\models.py:501
+msgid "Emp Name"
+msgstr "姓名"
+
+#: .\iclock\models.py:503
+msgid "ID Card"
+msgstr "卡号"
+
+#: .\iclock\models.py:504
+msgid "privilege"
+msgstr "权限"
+
+#: .\iclock\models.py:505
+msgid "Access Group"
+msgstr "门禁组"
+
+#: .\iclock\models.py:506
+msgid "Access Timezone"
+msgstr "门禁时间段"
+
+#: .\iclock\models.py:507
+msgid "sex"
+msgstr "性别"
+
+#: .\iclock\models.py:508
+msgid "birthday"
+msgstr "出生日期"
+
+#: .\iclock\models.py:509
+msgid "address"
+msgstr "通信地址"
+
+#: .\iclock\models.py:510
+msgid "postcode"
+msgstr "邮政编码"
+
+#: .\iclock\models.py:511
+msgid "office phone"
+msgstr "办公电话"
+
+#: .\iclock\models.py:512
+msgid "home phone"
+msgstr "家庭电话"
+
+#: .\iclock\models.py:513
+msgid "mobile"
+msgstr "手机"
+
+#: .\iclock\models.py:514
+msgid "nationality"
+msgstr "民族"
+
+#: .\iclock\models.py:515
+msgid "title"
+msgstr "职务"
+
+#: .\iclock\models.py:516
+msgid "registration device"
+msgstr "登记设备"
+
+#: .\iclock\models.py:517
+msgid "social insurance num"
+msgstr "社会保险号"
+
+#: .\iclock\models.py:518 .\iclock\models.py:704
+msgid "refresh time"
+msgstr "更新时间"
+
+#: .\iclock\models.py:519
+msgid "participate in the working date"
+msgstr "参加工作日期"
+
+#: .\iclock\models.py:524
+
+msgid "Active AC"
+msgstr "有效考勤记录"
+
+#: .\iclock\models.py:525
+
+msgid "Count OT"
+msgstr "记加班"
+
+#: .\iclock\models.py:526
+msgid "Rest on Holidays"
+msgstr "节假日休息"
+
+#: .\iclock\models.py:527
+
+msgid "Check Clock In"
+msgstr "上班签到"
+
+#: .\iclock\models.py:528
+
+msgid "Check Clock Out"
+msgstr "下班签退"
+
+#: .\iclock\models.py:533
+msgid "left"
+msgstr "离职标记"
+
+#: .\iclock\models.py:568
+#, python-format
+msgid "Employee PIN %s not found"
+msgstr "人员考勤号码 %s没有找到"
+
+#: .\iclock\models.py:606
+#, python-format
+msgid "Employee PIN '%s' is disabled"
+msgstr "人员考勤号码 %s 已被禁止使用"
+
+#: .\iclock\models.py:608
+#, python-format
+msgid "Max employee PIN is %d"
+msgstr "允许最大的人员考勤号码为 %d"
+
+#: .\iclock\models.py:616 .\iclock\models.py:621
+#, python-format
+msgid "Duplicated Employee PIN: %s"
+msgstr "与现有号码: %s重复"
+
+#: .\iclock\models.py:649 .\iclock\models.py:800 .\iclock\models.py:1409
+#: .\iclock\models.py:1438 .\iclock\models.py:1464 .\iclock\models.py:1588
+#: .\iclock\models.py:1614 .\iclock\models.py:1641 .\iclock\models.py:1663
+#: .\templates\department_list.html.py:9
+msgid "employee"
+msgstr "人员"
+
+#: .\iclock\models.py:725
+msgid "fingerprint"
+msgstr "指纹"
+
+#: .\iclock\models.py:731 .\iclock\templatetags\iclock_tags.py:169
+msgid "Fingerprint"
+msgstr "指纹"
+
+#: .\iclock\models.py:732
+msgid "Card"
+msgstr "刷卡"
+
+#: .\iclock\models.py:733 .\templates\Group_edit.html.py:167
+#: .\templates\Group_edit_att_trunk.html.py:163
+#: .\templates\data_edit.html.py:8 .\templates\admin\change_form.html.py:20
+#: .\templates\admin\index.html.py:29
+msgid "Add"
+msgstr " 增加"
+
+#: .\iclock\models.py:735
+msgid "Other"
+msgstr "其他"
+
+#: .\iclock\models.py:739
+msgid "Check in"
+msgstr "上班签到"
+
+#: .\iclock\models.py:740
+msgid "Check out"
+msgstr "下班签退"
+
+#: .\iclock\models.py:741
+msgid "Meal start"
+msgstr "就餐开始"
+
+#: .\iclock\models.py:742
+msgid "Meal end"
+msgstr "就餐结束"
+
+#: .\iclock\models.py:747
+msgid "Break out"
+msgstr "外出"
+
+#: .\iclock\models.py:748
+msgid "Break in"
+msgstr "外出返回"
+
+#: .\iclock\models.py:749
+msgid "Overtime in"
+msgstr "加班签到"
+
+#: .\iclock\models.py:750
+msgid "Overtime out"
+msgstr "加班签退"
+
+#: .\iclock\models.py:801 .\iclock\models.py:967 .\iclock\models.py:1150
+#: .\templates\dlogcheck.html.py:130
+msgid "time"
+msgstr "时间"
+
+#: .\iclock\models.py:802 .\iclock\models.py:1444
+msgid "state"
+msgstr "状态"
+
+#: .\iclock\models.py:803
+msgid "verification"
+msgstr "验证方式"
+
+#: .\iclock\models.py:806 .\templates\transaction_list.html.py:46
+msgid "work code"
+msgstr "工作代码"
+
+#: .\iclock\models.py:807 .\templates\transaction_list.html.py:46
+msgid "Reserved"
+msgstr "保留"
+
+#: .\iclock\models.py:861 .\templates\iclock_list.html.py:15
+#: .\templates\transaction_list.html.py:10
+msgid "transaction"
+msgstr "考勤记录"
+
+#: .\iclock\models.py:862
+msgid "transactions"
+msgstr "考勤记录"
+
+#: .\iclock\models.py:876
+msgid "start up"
+msgstr "开机"
+
+#: .\iclock\models.py:877
+msgid "shutdown"
+msgstr "关机"
+
+#: .\iclock\models.py:878
+msgid "validation failure"
+msgstr "验证失败"
+
+#: .\iclock\models.py:879
+msgid "alarm"
+msgstr "报警"
+
+#: .\iclock\models.py:880
+msgid "enter the menu"
+msgstr "进入菜单"
+
+#: .\iclock\models.py:881
+msgid "change settings"
+msgstr "更改设置"
+
+#: .\iclock\models.py:882
+msgid "registration fingerprint"
+msgstr "登记指纹"
+
+#: .\iclock\models.py:883
+msgid "registration password"
+msgstr "登记密码"
+
+#: .\iclock\models.py:884
+msgid "card registration"
+msgstr "卡登记"
+
+#: .\iclock\models.py:885
+msgid "delete User"
+msgstr "删除用户"
+
+#: .\iclock\models.py:886
+msgid "delete fingerprints"
+msgstr "删除指纹"
+
+#: .\iclock\models.py:887
+msgid "delete the password"
+msgstr "删除密码"
+
+#: .\iclock\models.py:888
+msgid "delete RF card"
+msgstr "删除射频卡"
+
+#: .\iclock\models.py:889
+msgid "remove data"
+msgstr "清除数据"
+
+#: .\iclock\models.py:890
+msgid "MF create cards"
+msgstr "创建MF卡"
+
+#: .\iclock\models.py:891 .\iclock\models.py:892
+msgid "MF registration cards"
+msgstr "登记MF卡"
+
+#: .\iclock\models.py:893
+msgid "MF registration card deleted"
+msgstr "删除MF卡注册"
+
+#: .\iclock\models.py:894
+msgid "MF clearance card content"
+msgstr "清除MF卡内容"
+
+#: .\iclock\models.py:895
+msgid "moved to the registration card data"
+msgstr "把登记数据移到卡中"
+
+#: .\iclock\models.py:896
+msgid "the data in the card copied to the machine"
+msgstr "把卡中的数据复制到机器中"
+
+#: .\iclock\models.py:897
+msgid "set time"
+msgstr "设置时间"
+
+#: .\iclock\models.py:898
+msgid "restore factory settings"
+msgstr "恢复出厂设置"
+
+#: .\iclock\models.py:899
+msgid "delete records access"
+msgstr "删除进出记录"
+
+#: .\iclock\models.py:900
+msgid "remove administrator rights"
+msgstr "清除管理员权限"
+
+#: .\iclock\models.py:901
+msgid "group set up to amend Access"
+msgstr "修改门禁设置"
+
+#: .\iclock\models.py:902
+msgid "modify user access control settings"
+msgstr "修改用户门禁设置"
+
+#: .\iclock\models.py:903
+msgid "access time to amend paragraph"
+msgstr "修改门禁时间段"
+
+#: .\iclock\models.py:904
+msgid "amend unlock Portfolio"
+msgstr "修改开锁组合设置"
+
+#: .\iclock\models.py:905
+msgid "unlock"
+msgstr "开锁"
+
+#: .\iclock\models.py:906
+msgid "registration of new users"
+msgstr "登记新用户"
+
+#: .\iclock\models.py:907
+msgid "fingerprint attribute changes"
+msgstr "更改指纹属性"
+
+#: .\iclock\models.py:908
+msgid "stress alarm"
+msgstr "胁迫报警"
+
+#: .\iclock\models.py:949
+msgid "Door Close Detected"
+msgstr "门被非法关闭"
+
+#: .\iclock\models.py:950
+msgid "Door Open Detected"
+msgstr "门被非法打开"
+
+#: .\iclock\models.py:951
+msgid "Machine Been Broken"
+msgstr "机器被拆除"
+
+#: .\iclock\models.py:952
+msgid "Out Door Button"
+msgstr "出门按钮"
+
+#: .\iclock\models.py:953
+msgid "Door Broken Accidentally"
+msgstr "门被意外打开"
+
+#: .\iclock\models.py:954
+msgid "Try Invalid Verification"
+msgstr "多次验证失败"
+
+#: .\iclock\models.py:955
+msgid "Alarm Cancelled"
+msgstr "取消报警"
+
+#: .\iclock\models.py:965
+msgid "device administrator"
+msgstr "设备超级管理员"
+
+#: .\iclock\models.py:966 .\iclock\models.py:1647
+msgid "Operation"
+msgstr "操作"
+
+#: .\iclock\models.py:968
+msgid "Object"
+msgstr "对象"
+
+#: .\iclock\models.py:969
+msgid "Parameter1"
+msgstr "参数1"
+
+#: .\iclock\models.py:970
+msgid "Parameter2"
+msgstr "参数2"
+
+#: .\iclock\models.py:971
+msgid "Parameter3"
+msgstr "参数3"
+
+#: .\iclock\models.py:985
+msgid "device operation log"
+msgstr "设备操作日志"
+
+#: .\iclock\models.py:986
+msgid "device operation logs"
+msgstr "设备操作日志"
+
+#: .\iclock\models.py:997 .\iclock\models.py:1152
+msgid "data"
+msgstr "数据"
+
+#: .\iclock\models.py:998 .\iclock\models.py:1154
+msgid "object"
+msgstr "对象"
+
+#: .\iclock\models.py:999
+msgid "record count"
+msgstr "数据记录数"
+
+#: .\iclock\models.py:1000
+msgid "error count"
+msgstr "错误"
+
+#: .\iclock\models.py:1001
+msgid "Upload Time"
+msgstr "上传时间"
+
+#: .\iclock\models.py:1016
+msgid "data from device"
+msgstr "设备上传数据日志"
+
+#: .\iclock\models.py:1042
+msgid "command content"
+msgstr "命令内容"
+
+#: .\iclock\models.py:1043
+msgid "submit time"
+msgstr "提交时间"
+
+#: .\iclock\models.py:1045
+msgid "return time"
+msgstr "返回时间"
+
+#: .\iclock\models.py:1046
+msgid "return value"
+msgstr "返回值"
+
+#: .\iclock\models.py:1047 .\iclock\models.py:1151
+msgid "administrator"
+msgstr "管理员"
+
+#: .\iclock\models.py:1070
+msgid "command to device"
+msgstr "服务器下发命令日志"
+
+#: .\iclock\models.py:1099 .\iclock\models.py:1108
+msgid "News Channel"
+msgstr "新闻频道"
+
+#: .\iclock\models.py:1100 .\iclock\models.py:1109
+msgid "Company Notice"
+msgstr "公司公告"
+
+#: .\iclock\models.py:1101
+msgid "Notice System"
+msgstr "系统公告"
+
+#: .\iclock\models.py:1102
+msgid "Companies short message"
+msgstr "公司短信息"
+
+#: .\iclock\models.py:1106
+msgid "Weather Forecast"
+msgstr "天气预报"
+
+#: .\iclock\models.py:1107
+msgid "Employee SMS"
+msgstr "个人短消息"
+
+#: .\iclock\models.py:1110
+msgid "System Notice"
+msgstr "系统日志"
+
+#: .\iclock\models.py:1111
+msgid "Companies SMS"
+msgstr "公司短信息"
+
+#: .\iclock\models.py:1115 .\iclock\models.py:1133
+msgid "type"
+msgstr "类型"
+
+#: .\iclock\models.py:1116 .\iclock\models.py:1134
+msgid "take effect"
+msgstr "生效时间"
+
+#: .\iclock\models.py:1117 .\iclock\models.py:1135
+msgid "out-of-service"
+msgstr "失效时间"
+
+#: .\iclock\models.py:1118
+msgid "Content"
+msgstr "内容"
+
+#: .\iclock\models.py:1119
+msgid "picture"
+msgstr "图片"
+
+#: .\iclock\models.py:1120
+msgid "company/department"
+msgstr "公司/部门"
+
+#: .\iclock\models.py:1121 .\iclock\models.py:1136
+msgid "parameter"
+msgstr "上级部门"
+
+# update by wjw 2011-06-13
+#: .\iclock\models.py:1127
+#msgid "public information"
+#msgstr "公共信息服务"
+msgid "public information"
+msgstr "短信息内容设置"
+
+
+#: .\iclock\models.py:1137
+msgid "content"
+msgstr "内容类型"
+
+#: .\iclock\models.py:1138
+msgid "recently service"
+msgstr "最近服务时间"
+
+# update by wjw 2011-06-13
+#: .\iclock\models.py:1146
+#msgid "information subscription"
+#msgstr "设备信息订阅服务"
+msgid "information subscription"
+msgstr "已发送短消息"
+
+#: .\iclock\models.py:1153
+msgid "operation"
+msgstr "操作"
+
+#: .\iclock\models.py:1155
+msgid "amount"
+msgstr "数量"
+
+#: .\iclock\models.py:1166
+msgid "administration log"
+msgstr "管理员操作日志"
+
+#: .\iclock\models.py:1167
+msgid "administration logs"
+msgstr "管理员操作日志"
+
+#: .\iclock\models.py:1198
+
+msgid "Check time"
+msgstr "考勤时间"
+
+#: .\iclock\models.py:1199
+
+msgid "Check type"
+msgstr "考勤类型"
+
+#: .\iclock\models.py:1206
+
+msgid "Modify by"
+msgstr " 修改"
+
+#: .\iclock\models.py:1207
+
+msgid "Modify date"
+msgstr "员工考勤修改日志日期"
+
+#: .\iclock\models.py:1217
+
+msgid "Attendance date"
+msgstr "考勤时间"
+
+#: .\iclock\models.py:1218
+msgid "Notes"
+msgstr "备注"
+
+#: .\iclock\models.py:1227
+
+msgid "The Han nationality"
+msgstr "汉族"
+
+#: .\iclock\models.py:1228
+
+msgid "The Mongol nationality"
+msgstr "蒙古族"
+
+#: .\iclock\models.py:1229
+
+msgid "The Hui nationality"
+msgstr "回族"
+
+#: .\iclock\models.py:1230
+
+msgid "The Tibetan nationality"
+msgstr "藏族"
+
+#: .\iclock\models.py:1231
+
+msgid "The Uyghur nationality"
+msgstr "维吾尔族"
+
+#: .\iclock\models.py:1232
+
+msgid "The Miao nationality"
+msgstr "苗族"
+
+#: .\iclock\models.py:1233
+
+msgid "The Yi nationality"
+msgstr "彝族"
+
+#: .\iclock\models.py:1234
+
+msgid "The Chuang nationality"
+msgstr "壮族"
+
+#: .\iclock\models.py:1235
+
+msgid "The Puyi nationality"
+msgstr "布依族"
+
+#: .\iclock\models.py:1236
+
+msgid "The Korean nationality"
+msgstr "朝鲜族"
+
+#: .\iclock\models.py:1237
+
+msgid "The Manchu nationality"
+msgstr "满族"
+
+#: .\iclock\models.py:1238
+
+msgid "The Dongs nationality"
+msgstr "侗族"
+
+#: .\iclock\models.py:1239
+
+msgid "The Yao nationality"
+msgstr "瑶族"
+
+#: .\iclock\models.py:1240
+
+msgid "The Pai nationality"
+msgstr "白族"
+
+#: .\iclock\models.py:1241
+
+msgid "The Tujia nationality"
+msgstr "土家族"
+
+#: .\iclock\models.py:1242
+
+msgid "The Hani nationality"
+msgstr "哈尼族"
+
+#: .\iclock\models.py:1243
+
+msgid "The Kazak nationality"
+msgstr "哈萨克族"
+
+#: .\iclock\models.py:1244
+
+msgid "The Dai nationality"
+msgstr "傣族"
+
+#: .\iclock\models.py:1245
+
+msgid "The Li nationality"
+msgstr "黎族"
+
+#: .\iclock\models.py:1246
+msgid "The Lisu ethnic Lisu nationality"
+msgstr "僳僳族"
+
+#: .\iclock\models.py:1247
+
+msgid "The Wa nationality"
+msgstr "佤族"
+
+#: .\iclock\models.py:1248
+
+msgid "The She nationality"
+msgstr "畲族"
+
+#: .\iclock\models.py:1249
+
+msgid "The Gaoshan nationality"
+msgstr "高山族"
+
+#: .\iclock\models.py:1250
+
+msgid "The Lahu nationality"
+msgstr "拉祜族"
+
+#: .\iclock\models.py:1251
+msgid "The Aquatic animals nationality"
+msgstr "水族"
+
+#: .\iclock\models.py:1252
+
+msgid "The Dongxiang nationality"
+msgstr "东乡族"
+
+#: .\iclock\models.py:1253
+
+msgid "The Naxi nationality"
+msgstr "纳西族"
+
+#: .\iclock\models.py:1254
+
+msgid "The Jingpo nationality"
+msgstr "景颇族"
+
+#: .\iclock\models.py:1255
+
+msgid "The Kirgiz nationality"
+msgstr "柯尔克孜族"
+
+#: .\iclock\models.py:1256
+
+msgid "The Tu nationality"
+msgstr "土族"
+
+#: .\iclock\models.py:1257
+
+msgid "The Daur nationality"
+msgstr "达斡尔族"
+
+#: .\iclock\models.py:1258
+
+msgid "The Mulao nationality"
+msgstr "仫佬族"
+
+#: .\iclock\models.py:1259
+
+msgid "The Qiang nationality"
+msgstr "羌族"
+
+#: .\iclock\models.py:1260
+
+msgid "The Blang nationality"
+msgstr "布朗族"
+
+#: .\iclock\models.py:1261
+
+msgid "The Salar nationality"
+msgstr "撒拉族"
+
+#: .\iclock\models.py:1262
+
+msgid "The Gelao nationality"
+msgstr "仡佬族"
+
+#: .\iclock\models.py:1263
+
+msgid "The Xibe nationality"
+msgstr "锡伯族"
+
+#: .\iclock\models.py:1264
+
+msgid "The Achang nationality"
+msgstr "阿昌族"
+
+#: .\iclock\models.py:1265
+
+msgid "The Pumi nationality"
+msgstr "普米族"
+
+#: .\iclock\models.py:1266
+
+msgid "The Tajik nationality"
+msgstr "塔吉克族"
+
+#: .\iclock\models.py:1267
+
+msgid "The Nu nationality"
+msgstr "怒族"
+
+#: .\iclock\models.py:1268
+
+msgid "The Uzbek nationality"
+msgstr "乌孜别克族"
+
+#: .\iclock\models.py:1269
+
+msgid "The Russians nationality"
+msgstr "俄罗斯族"
+
+#: .\iclock\models.py:1270
+
+msgid "The Ewenki nationality"
+msgstr "鄂温克族"
+
+#: .\iclock\models.py:1271
+
+msgid "The De'ang nationality"
+msgstr "德昂族"
+
+#: .\iclock\models.py:1272
+
+msgid "The Bonan nationality"
+msgstr "保安族"
+
+#: .\iclock\models.py:1273
+
+msgid "The Yugur nationality"
+msgstr "裕固族"
+
+#: .\iclock\models.py:1274
+
+msgid "The Gin nationality"
+msgstr "京族"
+
+#: .\iclock\models.py:1275
+
+msgid "The Tatar nationality"
+msgstr "塔塔尔族"
+
+#: .\iclock\models.py:1276
+
+msgid "The Derung nationality"
+msgstr "独龙族"
+
+#: .\iclock\models.py:1277
+
+msgid "The Oroqen nationality"
+msgstr "鄂伦春族"
+
+#: .\iclock\models.py:1278
+
+msgid "The Hezhen nationality"
+msgstr "赫哲族"
+
+#: .\iclock\models.py:1279
+
+msgid "The Monba nationality"
+msgstr "门巴族"
+
+#: .\iclock\models.py:1280
+
+msgid "The Lhoba nationality"
+msgstr "珞巴族"
+
+#: .\iclock\models.py:1281
+
+msgid "The Jino nationality"
+msgstr "基诺族"
+
+#: .\iclock\models.py:1287
+
+msgid "Holiday name"
+msgstr "节假日名称"
+
+#: .\iclock\models.py:1288
+
+msgid "Year"
+msgstr "年"
+
+#: .\iclock\models.py:1289 .\iclock\models.py:1334
+msgid "Month"
+msgstr "月"
+
+#: .\iclock\models.py:1290 .\iclock\models.py:1332
+
+msgid "Day"
+msgstr "日"
+
+#: .\iclock\models.py:1291 .\iclock\models.py:1465
+msgid "Beginning time"
+msgstr "开始时间"
+
+#: .\iclock\models.py:1292
+
+msgid "Duration times"
+msgstr "持续时间"
+
+#: .\iclock\models.py:1293
+msgid "Holiday type"
+msgstr "节假日类型"
+
+#: .\iclock\models.py:1294
+msgid "Holiday sex"
+msgstr "节假日性别"
+
+#: .\iclock\models.py:1295
+msgid "Holiday nation"
+msgstr "节假日民族"
+
+#: .\iclock\models.py:1302
+
+msgid "holidays"
+msgstr "节假日"
+
+#: .\iclock\models.py:1310 .\iclock\models.py:1352
+msgid "shift"
+msgstr "班次"
+
+#: .\iclock\models.py:1311 .\iclock\models.py:1439
+msgid "beginning time"
+msgstr "开始时间"
+
+#: .\iclock\models.py:1312 .\iclock\models.py:1440
+
+msgid "ending time"
+msgstr "结束时间"
+
+#: .\iclock\models.py:1313
+
+msgid "start day"
+msgstr "开始日期"
+
+#: .\iclock\models.py:1314
+msgid "finish day"
+msgstr "结束日期"
+
+#: .\iclock\models.py:1315 .\iclock\models.py:1668
+msgid "time-table class"
+msgstr "时段类型"
+
+#: .\iclock\models.py:1318 .\iclock\models.py:1467
+
+msgid "Over time"
+msgstr "加班"
+
+#: .\iclock\models.py:1326
+
+msgid "shift detail"
+msgstr "班次详情"
+
+#: .\iclock\models.py:1333
+
+msgid "Week"
+msgstr "周"
+
+#: .\iclock\models.py:1341 .\iclock\models.py:1381
+
+msgid "Sch name"
+msgstr "班次名称"
+
+#: .\iclock\models.py:1342 .\iclock\models.py:1383 .\iclock\models.py:1410
+msgid "Beginning date"
+msgstr "开始日期"
+
+#: .\iclock\models.py:1343 .\iclock\models.py:1384 .\iclock\models.py:1411
+
+msgid "Ending date"
+msgstr "结束日期"
+
+#: .\iclock\models.py:1344
+
+msgid "Cycle number"
+msgstr "周期数"
+
+#: .\iclock\models.py:1345 .\iclock\models.py:1399
+msgid "Cycle unit"
+msgstr "周期单位"
+
+#: .\iclock\models.py:1385
+
+msgid "Run number"
+msgstr "班次数量"
+
+#: .\iclock\models.py:1386
+msgid "SCH1"
+msgstr "第一个班次"
+
+#: .\iclock\models.py:1387
+msgid "SCH2"
+msgstr "第二个班次"
+
+#: .\iclock\models.py:1388
+msgid "SCH3"
+msgstr "第三个班次"
+
+#: .\iclock\models.py:1389
+msgid "SCH4"
+msgstr "第四个班次"
+
+#: .\iclock\models.py:1390
+msgid "SCH5"
+msgstr "第五个班次"
+
+#: .\iclock\models.py:1391
+msgid "SCH6"
+msgstr "第六个班次"
+
+#: .\iclock\models.py:1392
+msgid "SCH7"
+msgstr "第七个班次"
+
+#: .\iclock\models.py:1393
+msgid "SCH8"
+msgstr "第八个班次"
+
+#: .\iclock\models.py:1394
+msgid "SCH9"
+msgstr "第九个班次"
+
+#: .\iclock\models.py:1395
+msgid "SCH10"
+msgstr "第十个班次"
+
+#: .\iclock\models.py:1396
+msgid "SCH11"
+msgstr "第十一个班次"
+
+#: .\iclock\models.py:1397
+msgid "SCH12"
+msgstr "第十二个班次"
+
+#: .\iclock\models.py:1398
+msgid "Shift Cycle"
+msgstr "轮班周期"
+
+#: .\iclock\models.py:1404
+msgid "Scheduled shift"
+msgstr "轮班"
+
+#: .\iclock\models.py:1412
+msgid "Shift"
+msgstr "班次"
+
+#: .\iclock\models.py:1432
+
+msgid "empoyee shift"
+msgstr "员工排班"
+
+#: .\iclock\models.py:1441 .\iclock\models.py:1510
+msgid "Leave Class"
+msgstr "假类"
+
+#: .\iclock\models.py:1442
+
+msgid "reson"
+msgstr "原因"
+
+#: .\iclock\models.py:1443
+
+msgid "apply date"
+msgstr "申请时间"
+
+#: .\iclock\models.py:1450
+msgid "special leave"
+msgstr "请假"
+
+#: .\iclock\models.py:1466
+msgid "Ending time"
+msgstr "结束时间"
+
+#: .\iclock\models.py:1468
+
+msgid "Type"
+msgstr "临时排班类型"
+
+#: .\iclock\models.py:1483
+msgid "temporary schedule"
+msgstr "临时排班"
+
+#: .\iclock\models.py:1488
+
+msgid "Workday"
+msgstr "工作日"
+
+#: .\iclock\models.py:1489
+
+msgid "Hour"
+msgstr "小时"
+
+#: .\iclock\models.py:1490
+
+msgid "Minute"
+msgstr "分钟"
+
+#: .\iclock\models.py:1494
+msgid "Leave ID"
+msgstr "假类编号"
+
+#: .\iclock\models.py:1495 .\iclock\models.py:1517
+
+msgid "Leave Class name"
+msgstr "假类名称"
+
+#: .\iclock\models.py:1496 .\iclock\models.py:1518
+msgid "Min.unit"
+msgstr "最小单位"
+
+#: .\iclock\models.py:1497 .\iclock\models.py:1519
+msgid "Unit"
+msgstr "单位"
+
+#: .\iclock\models.py:1498 .\iclock\models.py:1520
+msgid "Round at Acc."
+msgstr "累计后再进行舍入"
+
+#: .\iclock\models.py:1499 .\iclock\models.py:1521
+msgid "Acc. by times"
+msgstr "按次计算"
+
+#: .\iclock\models.py:1500 .\iclock\models.py:1522
+msgid "Symbol in report"
+msgstr "报表中的表示符号"
+
+#: .\iclock\models.py:1501 .\iclock\models.py:1523
+msgid "Min. unit deduction"
+msgstr "每一最小单位扣款"
+
+#: .\iclock\models.py:1502 .\iclock\models.py:1524 .\iclock\models.py:1549
+
+msgid "display color"
+msgstr "显示颜色"
+
+#: .\iclock\models.py:1526
+msgid "Leave Class Type"
+msgstr "假类类型"
+
+#: .\iclock\models.py:1532
+msgid "report item"
+msgstr "报表计算项目"
+
+#: .\iclock\models.py:1538
+msgid "time-table name"
+msgstr "时段名称"
+
+#: .\iclock\models.py:1539
+
+msgid "on duty time"
+msgstr "上班时间"
+
+#: .\iclock\models.py:1540
+msgid "off duty time"
+msgstr "下班时间"
+
+#: .\iclock\models.py:1541
+msgid "late mins."
+msgstr "记迟到分钟"
+
+#: .\iclock\models.py:1542
+msgid "leave early mins."
+msgstr "记早退分钟"
+
+#: .\iclock\models.py:1543
+msgid "must C/In"
+msgstr "必须签到"
+
+#: .\iclock\models.py:1544
+msgid "must C/Out"
+msgstr "必须签退"
+
+#: .\iclock\models.py:1545
+msgid "beginning in"
+msgstr "开始签到时间"
+
+#: .\iclock\models.py:1546
+msgid "ending in"
+msgstr "结束签到时间"
+
+#: .\iclock\models.py:1547
+
+msgid "begin out"
+msgstr "开始签退时间"
+
+#: .\iclock\models.py:1548
+
+msgid "end out"
+msgstr "结束签退时间"
+
+#: .\iclock\models.py:1551
+
+msgid "work day"
+msgstr "工作日"
+
+#: .\iclock\models.py:1558
+msgid "shift time-table"
+msgstr "时段"
+
+#: .\iclock\models.py:1564
+
+msgid "Att parameter name"
+msgstr "考勤规则参数名称"
+
+#: .\iclock\models.py:1565
+
+msgid "Att parameter type"
+msgstr "考勤规则参数类型"
+
+#: .\iclock\models.py:1566
+
+msgid "Att parameter value"
+msgstr "考勤规则参数值"
+
+#: .\iclock\models.py:1571
+
+msgid "attendance rule"
+msgstr "考勤规则"
+
+#: .\iclock\models.py:1589 .\iclock\models.py:1642
+
+msgid "CheckTime"
+msgstr "考勤时间"
+
+#: .\iclock\models.py:1590
+
+msgid "UTime"
+msgstr "标准时间"
+
+#: .\iclock\models.py:1615
+
+msgid "StartTime"
+msgstr "起始时间"
+
+#: .\iclock\models.py:1616
+
+msgid "EndTime"
+msgstr "结束时间"
+
+#: .\iclock\models.py:1617 .\iclock\models.py:1683
+
+msgid "Exception"
+msgstr "例外情况"
+
+#: .\iclock\models.py:1618
+msgid "AuditExc"
+msgstr "审核状态"
+
+#: .\iclock\models.py:1619
+msgid "OldAuditExc"
+msgstr "以前审核状态"
+
+#: .\iclock\models.py:1621
+msgid "TotalTimeLong"
+msgstr "总时长"
+
+#: .\iclock\models.py:1622
+msgid "ValidateTimeLong"
+msgstr "有效时长"
+
+#: .\iclock\models.py:1623 .\iclock\models.py:1648 .\iclock\models.py:1666
+
+msgid "AttDate"
+msgstr "日期"
+
+#: .\iclock\models.py:1643
+msgid "CheckType"
+msgstr "考勤类型"
+
+#: .\iclock\models.py:1644
+msgid "NewType"
+msgstr "更正状态"
+
+#: .\iclock\models.py:1646
+msgid "Schclass"
+msgstr "时段"
+
+#: .\iclock\models.py:1656 .\iclock\models.py:1657
+msgid "attRecAbnormite"
+msgstr "统计结果明细"
+
+#: .\iclock\models.py:1670
+msgid "ClockInTime"
+msgstr "签到时间"
+
+#: .\iclock\models.py:1671
+msgid "ClockOutTime"
+msgstr "签退时间"
+
+#: .\iclock\models.py:1672
+
+msgid "On duty"
+msgstr "上班时间"
+
+#: .\iclock\models.py:1673
+
+msgid "Off duty"
+msgstr "下班时间"
+
+#: .\iclock\models.py:1674
+msgid "WorkDay"
+msgstr "应到"
+
+#: .\iclock\models.py:1675
+msgid "RealWorkDay"
+msgstr "实到"
+
+#: .\iclock\models.py:1676
+
+msgid "NoIn"
+msgstr "否"
+
+#: .\iclock\models.py:1677
+msgid "NoOut"
+msgstr ""
+
+#: .\iclock\models.py:1678
+
+msgid "LateTimes"
+msgstr "迟到"
+
+#: .\iclock\models.py:1679
+msgid "EarlyTimes"
+msgstr "早退"
+
+#: .\iclock\models.py:1680
+
+msgid "Absent"
+msgstr "旷工"
+
+#: .\iclock\models.py:1681
+
+msgid "OverTime"
+msgstr "加班签到"
+
+#: .\iclock\models.py:1682
+
+msgid "WorkTime"
+msgstr "考勤时间"
+
+#: .\iclock\models.py:1684
+msgid "Symbol"
+msgstr "符号"
+
+#: .\iclock\models.py:1685
+msgid "MustIn"
+msgstr "应签到"
+
+#: .\iclock\models.py:1686
+msgid "MustOut"
+msgstr "应签退"
+
+#: .\iclock\models.py:1687
+
+msgid "OverTime1"
+msgstr "加班"
+
+#: .\iclock\models.py:1688
+msgid "WorkMins"
+msgstr "工作分钟"
+
+#: .\iclock\models.py:1689
+msgid "SSpeDayNorma"
+msgstr "平日"
+
+#: .\iclock\models.py:1690
+msgid "SSpeDayWeekend"
+msgstr "周末"
+
+#: .\iclock\models.py:1691
+msgid "SSpeDayHoliday"
+msgstr "节假日"
+
+#: .\iclock\models.py:1692
+
+msgid "AttTime"
+msgstr "时间"
+
+#: .\iclock\models.py:1693
+msgid "SSpeDayNormalOT"
+msgstr "平日加班"
+
+#: .\iclock\models.py:1694
+msgid "SSpeDayWeekendOT"
+msgstr "周末加班"
+
+#: .\iclock\models.py:1695
+msgid "SSpeDayHolidayOT"
+msgstr "节假日加班"
+
+#: .\iclock\reports.py:104 .\iclock\reports.py:108 .\iclock\reports.py:122
+msgid "UserID"
+msgstr "用户编号"
+
+#: .\iclock\reports.py:104
+msgid "checktime"
+msgstr "考勤时间"
+
+#: .\iclock\reports.py:104
+msgid "OP"
+msgstr "操作"
+
+#: .\iclock\reports.py:108 .\iclock\reports.py:122
+msgid "DeptID"
+msgstr "部门编号"
+
+#: .\iclock\reports.py:108
+msgid "SchId"
+msgstr "时段名称"
+
+#: .\iclock\reports.py:111 .\iclock\reports.py:122
+msgid "ExceptionID"
+msgstr "例外情况"
+
+#: .\iclock\reports.py:111
+msgid "SSpeDayNormal"
+msgstr "平日"
+
+#: .\iclock\reports.py:123
+msgid "AuditExcID"
+msgstr "审核状态"
+
+#: .\iclock\reports.py:123
+msgid "OldAuditExcID"
+msgstr "以前审核状态"
+
+#: .\iclock\reports.py:123
+msgid "TimeLong"
+msgstr "总时长"
+
+#: .\iclock\reports.py:123
+msgid "InScopeTime"
+msgstr "有效时长"
+
+#: .\iclock\setoption.py:22
+msgid "YES"
+msgstr "是"
+
+#: .\iclock\setoption.py:23
+msgid "NO"
+msgstr "否"
+
+#: .\iclock\setoption.py:28
+msgid "You must change options from your website!"
+msgstr "你必须从你的站点修改配置！"
+
+#: .\iclock\setoption.py:48
+msgid "Set options OK!"
+msgstr "设置配置文件成功!"
+
+#: .\iclock\taskview.py:29
+#, python-format
+msgid "No permission to do on device %s!"
+msgstr "没有权限传送 %s 上登记的人员"
+
+#: .\iclock\taskview.py:36
+#, python-format
+msgid "No permission to download employee data to device %s!"
+msgstr "没有权限传送人员到设备 %s"
+
+#: .\iclock\taskview.py:41
+msgid "Not specified a device!"
+msgstr "没有指定设备!"
+
+#: .\iclock\taskview.py:70 .\iclock\taskview.py:72
+msgid "Designated employee does not exist!"
+msgstr "指定人员不存在"
+
+#: .\iclock\taskview.py:76
+#, python-format
+msgid "No permission to deete the employee's in device %s"
+msgstr "没有权限删除设备 %s 中的人员"
+
+#: .\iclock\taskview.py:82
+#, python-format
+msgid ""
+"Not specified a device, and no permission to delete employee from device %s."
+msgstr "没有指定设备， 并且没有权限从登记设备 %s 中删除该人员"
+
+#: .\iclock\taskview.py:84
+msgid "Not specified a device, and the employee has no a enrollment device."
+msgstr "没有指定设备，并且该人员没有登记设备"
+
+#: .\iclock\taskview.py:104
+#, python-format
+msgid "%s is not a valid PIN."
+msgstr "%s 不是一个合法的考勤号码"
+
+#: .\iclock\taskview.py:125
+msgid ""
+"Not specified a valid device, or the employee has no a enrollment device!"
+msgstr "没有指定合适的考勤机，或者该人员没有登记考勤机！"
+
+#: .\iclock\taskview.py:127
+msgid "The employee no in the database."
+msgstr "该用户在数据库中还没有录入姓名"
+
+#: .\iclock\taskview.py:149
+msgid "Delete employee from device"
+msgstr "删除考勤机上的人员"
+
+#: .\iclock\taskview.py:150
+msgid "Download employee's name to device"
+msgstr "传送人员姓名到考勤机"
+
+#: .\iclock\taskview.py:151
+msgid "Dispatch employee to device"
+msgstr "分派人员到考勤机"
+
+#: .\iclock\taskview.py:194
+#, python-format
+msgid ""
+"%s employee's data is ready to transfer, but following record(s) is missing:"
+msgstr "%s位员工处理数据已经提交准备传送, 但是发生如下错误"
+
+#: .\iclock\taskview.py:196
+msgid "There are wrong: "
+msgstr "没有员工处理数据被传送, 发生如下错误"
+
+#: .\iclock\taskview.py:200
+#, python-format
+msgid "%s employee(s) data is ready to transfer."
+msgstr "%s位员工处理数据已经提交准备传送"
+
+#: .\iclock\taskview.py:213
+msgid "Dispatch employee data to device"
+msgstr "分派人员到考勤机"
+
+#: .\iclock\taskview.py:240
+msgid "Upload employee list"
+msgstr "批量上传人员列表"
+
+#: .\iclock\taskview.py:276
+#, python-format
+msgid "%(object)s employee has been successfully!"
+msgstr "%(object)s位员工已经保存成功"
+
+#: .\iclock\taskview.py:282
+msgid "Delete the employee(s) in device"
+msgstr "删除考勤机上的人员"
+
+#: .\iclock\taskview.py:287
+msgid "Server upgrades"
+msgstr "服务器程序升级"
+
+#: .\iclock\taskview.py:329
+msgid "Restart device successfully: "
+msgstr "密码修改成功。"
+
+#: .\iclock\taskview.py:329
+#, python-format
+msgid ""
+"Its size and standard firmware(%(object_name)s) is inconsistent, Need to "
+"upgrade firmware If there is no automatic inspection later firmware update, "
+"or manually upgrade firmware"
+msgstr ""
+"其固件大小与标准%(object_name)s需要升级固件，稍后检查如果没有自动进行固件升级"
+"的话，请手工升级固件"
+
+#: .\iclock\taskview.py:331
+msgid "Failure to restart device:"
+msgstr "重新启动机器失败"
+
+#: .\iclock\taskview.py:333
+msgid "Please enter the IP address of the device"
+msgstr "请输入一个有效的 IP 地址。"
+
+#: .\iclock\taskview.py:334
+msgid "Restart device"
+msgstr "程序重新启动"
+
+#: .\iclock\taskview.py:341
+msgid "Automatically check sluggish device"
+msgstr "自动检查呆滞设备"
+
+#: .\iclock\taskview.py:341
+msgid ""
+"The device(s) does not connect with the server more than half and an hour: </"
+"p><p>"
+msgstr "下面的设备超过半小时没有同服务器连接</p><p>"
+
+#: .\iclock\taskview.py:341
+msgid ""
+"The system will connect and re-start the following device automaticly: </"
+"p><p>"
+msgstr "系统将从后台连接并重新启动如下设备</p><p>"
+
+#: .\iclock\weatherview.py:27
+msgid "device:"
+msgstr "设备"
+
+#: .\iclock\templatetags\iclock_tags.py:168
+msgid "Personnel information"
+msgstr "人员信息"
+
+#: .\iclock\templatetags\iclock_tags.py:170
+msgid "Del employee"
+msgstr "删除人员"
+
+#: .\iclock\templatetags\iclock_tags.py:171
+msgid "Del fingerprint"
+msgstr "删除指纹"
+
+#: .\iclock\templatetags\iclock_tags.py:172
+msgid "Check the server configuration"
+msgstr "检查服务器配置"
+
+#: .\iclock\templatetags\iclock_tags.py:173
+msgid "Updated device information on the server"
+msgstr "更新服务器上的设备信息"
+
+#: .\iclock\templatetags\iclock_tags.py:174
+msgid "Remove transaction"
+msgstr "清除考勤记录"
+
+#: .\iclock\templatetags\iclock_tags.py:175
+msgid "restart device"
+msgstr "重新启动设备"
+
+#: .\iclock\templatetags\iclock_tags.py:176
+msgid "reboot device"
+msgstr "重新启动设备"
+
+#: .\iclock\templatetags\iclock_tags.py:177
+msgid "Check and upload the new data"
+msgstr "检查并传送新数据"
+
+#: .\iclock\templatetags\iclock_tags.py:178
+msgid "Send file to the device"
+msgstr "发送文件到设备"
+
+#: .\iclock\templatetags\iclock_tags.py:179
+msgid "Get file from the equipment"
+msgstr "从设备传文件"
+
+#: .\iclock\templatetags\iclock_tags.py:180
+msgid "Run a device shell command"
+msgstr "执行内部命令"
+
+#: .\iclock\templatetags\iclock_tags.py:181
+msgid "Change configuration"
+msgstr "修改配置"
+
+#: .\iclock\templatetags\iclock_tags.py:182
+msgid "Clear all data"
+msgstr "清除全部数据"
+
+#: .\iclock\templatetags\iclock_tags.py:183 .\templates\Group_edit.html.py:199
+#: .\templates\Group_edit_att_trunk.html.py:195
+#: .\templates\iclock_list.html.py:228
+msgid "Output unlock signal"
+msgstr "输出开门信号"
+
+#: .\iclock\templatetags\iclock_tags.py:184 .\templates\Group_edit.html.py:200
+#: .\templates\Group_edit_att_trunk.html.py:196
+#: .\templates\iclock_list.html.py:229
+msgid "Terminate alarm signal"
+msgstr "中断报警信号"
+
+#: .\iclock\templatetags\iclock_tags.py:185 .\templates\Group_edit.html.py:182
+#: .\templates\Group_edit_att_trunk.html.py:178
+#: .\templates\employee_list.html.py:205
+msgid "Enroll employee's fingerprint"
+msgstr "登记人员指纹"
+
+#: .\iclock\templatetags\iclock_tags.py:199
+msgid "Transaction"
+msgstr "考勤记录"
+
+#: .\iclock\templatetags\iclock_tags.py:200
+msgid "employee info/fingerprint "
+msgstr "人员信息及其指纹"
+
+#: .\templates\404.html.py:4 .\templates\404.html.py:8
+#: .\templates\admin\404.html.py:4 .\templates\admin\404.html.py:8
+msgid "Page not found"
+msgstr "页面没有找到"
+
+#: .\templates\404.html.py:10
+msgid "Sorry,you have no the permission or the page doesn't exist!"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:34
+#: .\templates\Group_edit_att_trunk.html.py:32
+msgid " department "
+msgstr " 部门管理 "
+
+#: .\templates\Group_edit.html.py:35
+#: .\templates\Group_edit_att_trunk.html.py:33
+msgid " employee "
+msgstr " 人员管理 "
+
+#: .\templates\Group_edit.html.py:36
+#: .\templates\Group_edit_att_trunk.html.py:34
+msgid " device "
+msgstr " 设备管理 "
+
+#: .\templates\Group_edit.html.py:37
+#: .\templates\Group_edit_att_trunk.html.py:35
+msgid " transaction "
+msgstr " 考勤记录 "
+
+#: .\templates\Group_edit.html.py:39
+#: .\templates\Group_edit_att_trunk.html.py:36
+msgid " shift time-table "
+msgstr " 时段管理"
+
+#: .\templates\Group_edit.html.py:40
+#: .\templates\Group_edit_att_trunk.html.py:37
+msgid " shift "
+msgstr " 班次"
+
+#: .\templates\Group_edit.html.py:41
+#: .\templates\Group_edit_att_trunk.html.py:38
+
+msgid " empoyee shift "
+msgstr " 员工排班 "
+
+#: .\templates\Group_edit.html.py:42
+#: .\templates\Group_edit_att_trunk.html.py:39
+msgid " special leave "
+msgstr " 员工请假"
+
+#: .\templates\Group_edit.html.py:43
+#: .\templates\Group_edit_att_trunk.html.py:40
+msgid " holidays "
+msgstr " 节假日"
+
+#: .\templates\Group_edit.html.py:44
+#: .\templates\Group_edit_att_trunk.html.py:41
+msgid " Leave Class "
+msgstr " 假类"
+
+#: .\templates\Group_edit.html.py:45
+#: .\templates\Group_edit_att_trunk.html.py:42
+
+msgid " attendance rule "
+msgstr " 考勤规则"
+
+#: .\templates\Group_edit.html.py:47
+#: .\templates\Group_edit_att_trunk.html.py:43
+msgid " administration log "
+msgstr " 管理员操作日志 "
+
+#: .\templates\Group_edit.html.py:49
+#: .\templates\Group_edit_att_trunk.html.py:45
+msgid " information subscription "
+msgstr " 设备信息订阅服务 "
+
+#: .\templates\Group_edit.html.py:50
+#: .\templates\Group_edit_att_trunk.html.py:46
+msgid " public information "
+msgstr " 公共信息服务 "
+
+#: .\templates\Group_edit.html.py:52
+#: .\templates\Group_edit_att_trunk.html.py:48
+msgid " log of command to device "
+msgstr " 服务器下发命令日志"
+
+#: .\templates\Group_edit.html.py:53
+#: .\templates\Group_edit_att_trunk.html.py:49
+msgid " log of data from device "
+msgstr " 设备上传数据日志"
+
+#: .\templates\Group_edit.html.py:54
+#: .\templates\Group_edit_att_trunk.html.py:50
+msgid " device operation log "
+msgstr "设备操作日志"
+
+#: .\templates\Group_edit.html.py:55
+#: .\templates\Group_edit_att_trunk.html.py:51
+msgid "group"
+msgstr "组"
+
+#: .\templates\Group_edit.html.py:56
+#: .\templates\Group_edit_att_trunk.html.py:52
+#: .\templates\admin\object_history.html.py:23
+msgid "User"
+msgstr "用户"
+
+#: .\templates\Group_edit.html.py:159
+#: .\templates\Group_edit_att_trunk.html.py:155
+msgid " iclock "
+msgstr " 总权限 "
+
+#: .\templates\Group_edit.html.py:168
+#: .\templates\Group_edit_att_trunk.html.py:164
+msgid "Browse"
+msgstr " 浏览"
+
+#: .\templates\Group_edit.html.py:169
+#: .\templates\Group_edit_att_trunk.html.py:165
+msgid "Modify"
+msgstr " 修改"
+
+#: .\templates\Group_edit.html.py:170
+#: .\templates\Group_edit_att_trunk.html.py:166
+#: .\templates\admin\delete_confirmation.html.py:10
+#: .\templates\admin\submit_line.html.py:4
+msgid "Delete"
+msgstr " 删除"
+
+#: .\templates\Group_edit.html.py:175
+#: .\templates\Group_edit_att_trunk.html.py:171
+#: .\templates\employee_list.html.py:201
+msgid "Delete employee from the device"
+msgstr "从设备中删除人员"
+
+#: .\templates\Group_edit.html.py:176
+#: .\templates\Group_edit_att_trunk.html.py:172
+#: .\templates\employee_list.html.py:202
+msgid "Employee leave"
+msgstr "人员离职"
+
+#: .\templates\Group_edit.html.py:177
+#: .\templates\Group_edit_att_trunk.html.py:173
+#: .\templates\employee_list.html.py:203
+msgid "Move employee to a new device"
+msgstr "转移人员数据到新设备"
+
+#: .\templates\Group_edit.html.py:178
+#: .\templates\Group_edit_att_trunk.html.py:174
+#: .\templates\employee_list.html.py:193 .\templates\employee_list.html.py:204
+msgid "Change employee's department"
+msgstr "调整人员部门"
+
+#: .\templates\Group_edit.html.py:179
+#: .\templates\Group_edit_att_trunk.html.py:175
+#: .\templates\employee_list.html.py:200
+msgid "Transfer to the device temporarily"
+msgstr "临时调拨人员到设备"
+
+#: .\templates\Group_edit.html.py:180
+#: .\templates\Group_edit_att_trunk.html.py:176
+#: .\templates\employee_list.html.py:26 .\templates\employee_list.html.py:179
+#: .\templates\employee_list.html.py:184 .\templates\employee_list.html.py:199
+msgid "Transfer employee to the device"
+msgstr "传送人员到设备"
+
+#: .\templates\Group_edit.html.py:181
+#: .\templates\Group_edit_att_trunk.html.py:177
+
+msgid "DataBase"
+msgstr "系统设置"
+
+#: .\templates\Group_edit.html.py:186
+#: .\templates\Group_edit_att_trunk.html.py:182
+#: .\templates\iclock_list.html.py:221
+msgid "Clear data in device"
+msgstr " 清除设备上所有的数据"
+
+#: .\templates\Group_edit.html.py:187
+#: .\templates\Group_edit_att_trunk.html.py:183
+#: .\templates\iclock_list.html.py:222
+msgid "Clear transactions in device"
+msgstr " 清除设备上的考勤记录"
+
+#: .\templates\Group_edit.html.py:188
+#: .\templates\Group_edit_att_trunk.html.py:184
+msgid "Copy data between device"
+msgstr " 备份登记数据到其他设备"
+
+#: .\templates\Group_edit.html.py:189
+#: .\templates\Group_edit_att_trunk.html.py:185
+#: .\templates\iclock_list.html.py:225
+msgid "Set power suspend"
+msgstr " 设置自动休眠（单位：分钟）"
+
+msgid "set power suspend"
+msgstr " 设置自动休眠"
+
+#: .\templates\Group_edit.html.py:190
+#: .\templates\Group_edit_att_trunk.html.py:186
+#: .\templates\iclock_list.html.py:218
+msgid "Refresh device information"
+msgstr " 更新设备信息"
+
+#: .\templates\Group_edit.html.py:191
+#: .\templates\Group_edit_att_trunk.html.py:187
+#: .\templates\iclock_list.html.py:220
+msgid "Upload new data"
+msgstr " 立即检查并传送数据"
+
+#: .\templates\Group_edit.html.py:192
+#: .\templates\Group_edit_att_trunk.html.py:188
+msgid "Pause device"
+msgstr " 暂停"
+
+#: .\templates\Group_edit.html.py:193
+#: .\templates\Group_edit_att_trunk.html.py:189
+#: .\templates\iclock_list.html.py:219
+msgid "Reboot device"
+msgstr " 重新启动设备"
+
+#: .\templates\Group_edit.html.py:194
+#: .\templates\Group_edit_att_trunk.html.py:190
+#: .\templates\iclock_list.html.py:216
+msgid "Upload data again"
+msgstr " 重新传送设备上的全部数据"
+
+#: .\templates\Group_edit.html.py:195
+#: .\templates\Group_edit_att_trunk.html.py:191
+#: .\templates\iclock_list.html.py:217
+msgid "Upload transactions again"
+msgstr " 重新传送设备上的考勤记录"
+
+#: .\templates\Group_edit.html.py:196
+#: .\templates\Group_edit_att_trunk.html.py:192
+msgid "Reset Password in device"
+msgstr " 重新设置设备密码"
+
+#: .\templates\Group_edit.html.py:197
+#: .\templates\Group_edit_att_trunk.html.py:193
+#: .\templates\iclock_list.html.py:227
+msgid "Restore employee to device"
+msgstr " 恢复设备上的人员数据"
+
+#: .\templates\Group_edit.html.py:198
+#: .\templates\Group_edit_att_trunk.html.py:194
+msgid "Resume a resumed device"
+msgstr " 恢复使用"
+
+#: .\templates\Group_edit.html.py:201
+#: .\templates\Group_edit_att_trunk.html.py:197
+#: .\templates\iclock_list.html.py:214
+msgid "Upgrade firmware"
+msgstr " 升级固件"
+
+#: .\templates\Group_edit.html.py:202
+#: .\templates\Group_edit_att_trunk.html.py:198
+msgid "Set options of device"
+msgstr "设置设备选项"
+
+#: .\templates\Group_edit.html.py:206
+#: .\templates\Group_edit_att_trunk.html.py:204
+
+msgid "Clear Obsolete Data"
+msgstr " 清除过期数据"
+
+#: .\templates\Group_edit.html.py:207
+#: .\templates\Group_edit_att_trunk.html.py:219
+msgid "Init database"
+msgstr "初始化系统"
+
+#: .\templates\Group_edit.html.py:211
+#: .\templates\Group_edit_att_trunk.html.py:210
+#: .\templates\base_site.html.py:20 .\templates\base_site.html.py:23
+#: .\templates\base_site.html.py:25 .\templates\iclock_list.html.py:20
+msgid "Transaction Monitor"
+msgstr "实时记录监控"
+
+#: .\templates\Group_edit.html.py:215
+#: .\templates\Group_edit_att_trunk.html.py:214
+msgid "Audit Sepcial Leave"
+msgstr "审核"
+
+#: .\templates\Group_edit.html.py:216
+#: .\templates\Group_edit_att_trunk.html.py:202
+msgid "Forgetting to Clock in/out"
+msgstr " 员工忘签到/签退处理"
+
+#: .\templates\Group_edit.html.py:217
+#: .\templates\Group_edit_att_trunk.html.py:203
+
+msgid "Reports"
+msgstr " 报表"
+
+#: .\templates\Group_edit.html.py:218
+#: .\templates\Group_edit_att_trunk.html.py:205
+msgid "ReCalculate Reports"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:223
+#: .\templates\Group_edit_att_trunk.html.py:223
+msgid "Add time-table"
+msgstr "增加时段"
+
+#: .\templates\Group_edit.html.py:224
+#: .\templates\Group_edit_att_trunk.html.py:224
+
+msgid "Delete time-table"
+msgstr "清除时段"
+
+#: .\templates\Group_list.html.py:4
+msgid "GroupID"
+msgstr "组编号"
+
+#: .\templates\IclockMsg_list.html.py:15
+msgid "Weather Forecast test"
+msgstr "测试天气预报"
+
+#: .\templates\IclockMsg_list.html.py:16
+msgid "Generating device customized information"
+msgstr "生成设备定制信息"
+
+#: .\templates\User_list.html.py:7
+msgid "Activate"
+msgstr "人员状态"
+
+#: .\templates\User_list.html.py:7
+msgid "Groups"
+msgstr "组"
+
+#: .\templates\base.html.py:36 .\templates\admin\base.html.py:25
+msgid "Welcome,"
+msgstr "欢迎，"
+
+#: .\templates\base.html.py:37 .\templates\admin\base.html.py:25
+#: .\templates\admin\auth\user\change_password.html.py:9
+#: .\templates\admin\auth\user\change_password.html.py:15
+#: .\templates\admin\auth\user\change_password.html.py:46
+#: .\templates\registration\password_change_done.html.py:3
+#: .\templates\registration\password_change_form.html.py:3
+msgid "Change password"
+msgstr "修改密码"
+
+#: .\templates\base.html.py:38 .\templates\admin\base.html.py:25
+#: .\templates\admin\auth\user\change_password.html.py:9
+#: .\templates\registration\password_change_done.html.py:3
+#: .\templates\registration\password_change_form.html.py:3
+msgid "Log out"
+msgstr "注销"
+
+#: .\templates\base.html.py:38
+msgid "help"
+msgstr "系统帮助"
+
+#: .\templates\base.html.py:45 .\templates\setoption.html.py:12
+msgid "--- Language ---"
+msgstr "语言选择"
+
+#: .\templates\base.html.py:60 .\templates\data_edit.html.py:6
+#: .\templates\setoption.html.py:6 .\templates\upload.html.py:6
+#: .\templates\admin\500.html.py:4 .\templates\admin\base.html.py:30
+#: .\templates\admin\change_form.html.py:17
+#: .\templates\admin\change_list.html.py:8
+#: .\templates\admin\delete_confirmation.html.py:6
+#: .\templates\admin\invalid_setup.html.py:4
+#: .\templates\admin\object_history.html.py:6
+#: .\templates\admin\auth\user\change_password.html.py:12
+#: .\templates\registration\logged_out.html.py:4
+#: .\templates\registration\password_change_done.html.py:4
+#: .\templates\registration\password_change_form.html.py:4
+#: .\templates\registration\password_reset_done.html.py:4
+#: .\templates\registration\password_reset_form.html.py:4
+msgid "Home"
+msgstr "首页"
+
+#: .\templates\base_site.html.py:6 .\templates\admin\base_site.html.py:7
+msgid "iClock Automatic Data Master Server"
+msgstr "iClock数据服务器"
+
+#: .\templates\base_site.html.py:13 .\templates\logcheck.html.py:103
+#: .\templates\upload.html.py:51
+msgid "Device"
+msgstr "设备管理"
+
+#: .\templates\base_site.html.py:16
+msgid "Device Maintenance"
+msgstr "设备维护与管理"
+
+#: .\templates\base_site.html.py:36 .\templates\iclock_list.html.py:32
+#: .\templates\iclock_list.html.py:115
+msgid "Data"
+msgstr "数据维护"
+
+#: .\templates\base_site.html.py:43
+msgid "Import U_Disk Data"
+msgstr "导入U盘数据"
+
+#: .\templates\base_site.html.py:50
+msgid "System"
+msgstr "系统日志"
+
+#: .\templates\data_edit.html.py:4
+msgid "detail"
+msgstr "详情"
+
+#: .\templates\data_edit.html.py:62 .\templates\disp_emp.html.py:28
+#: .\templates\setoption.html.py:64
+msgid "Submit"
+msgstr "提交"
+
+#: .\templates\data_edit.html.py:63 .\templates\setoption.html.py:65
+msgid "Return"
+msgstr "返回"
+
+#: .\templates\data_exp_def.html.py:126 .\templates\upgrade.html.py:18
+msgid "ok"
+msgstr "确 定"
+
+#: .\templates\data_exp_def.html.py:127 .\templates\dirlist.html.py:21
+#: .\templates\disp_emp.html.py:29 .\templates\fppiclist.html.py:37
+#: .\templates\info.html.py:18 .\templates\piclist.html.py:44
+#: .\templates\upgrade.html.py:19
+msgid "return"
+msgstr "返回"
+
+#: .\templates\data_list.html.py:22
+msgid "Please set a template file"
+msgstr "请在模版文件中设置好"
+
+#: .\templates\data_list.html.py:41
+msgid "Clear all data, are you sure?"
+msgstr "确信要删除全部数据吗？"
+
+#: .\templates\data_list.html.py:49
+msgid "Delete out-of-date records, are you sure?"
+msgstr "删除过时记录吗？"
+
+#: .\templates\data_list.html.py:51
+msgid "Delete before _days_ days, out-of-date records, are you sure?"
+msgstr "删除过时（ _days_ 天前）记录吗？"
+
+#: .\templates\data_list.html.py:81
+msgid "Select Employee"
+msgstr "选择人员"
+
+#: .\templates\data_list.html.py:292
+msgid "Select All"
+msgstr "选择全部"
+
+#: .\templates\data_list.html.py:316 .\templates\data_list.html.py:358
+msgid "Export"
+msgstr "导出"
+
+#: .\templates\data_list.html.py:316
+msgid "list"
+msgstr "数据列表"
+
+#: .\templates\data_list.html.py:316
+msgid "format"
+msgstr "格式"
+
+#: .\templates\data_list.html.py:335 .\templates\department_list.html.py:32
+msgid "Style:"
+msgstr "显示风格:"
+
+#: .\templates\data_list.html.py:335 .\templates\department_list.html.py:32
+msgid "Table style"
+msgstr "表格形式"
+
+#: .\templates\data_list.html.py:336
+msgid "List style"
+msgstr "列表形式"
+
+#: .\templates\data_list.html.py:341
+msgid "Search by:"
+msgstr "可查询字段:"
+
+#: .\templates\data_list.html.py:342 .\templates\empsInDept.html.py:38
+msgid "Search"
+msgstr " 模糊查询"
+
+#: .\templates\data_list.html.py:361 .\templates\data_list.html.py:363
+msgid "Append"
+msgstr "新增"
+
+#: .\templates\data_list.html.py:367 .\templates\data_list.html.py:369
+msgid "Clear All"
+msgstr "删除全部"
+
+#: .\templates\data_list.html.py:372
+msgid "Delete out-of-date records"
+msgstr "删除过时数据"
+
+#: .\templates\data_list.html.py:382
+msgid "Operation for selected"
+msgstr "对选取数据进行操作"
+
+#: .\templates\data_list.html.py:398
+msgid "Filter By:&nbsp;&nbsp;"
+msgstr "过滤条件:&nbsp;&nbsp;"
+
+#: .\templates\department_list.html.py:6 .\templates\employee_list.html.py:274
+msgid "view"
+msgstr "查看"
+
+#: .\templates\department_list.html.py:9
+msgid "Show the use of employee of the department"
+msgstr "查看该部门的使用人员"
+
+#: .\templates\department_list.html.py:18
+msgid "delete"
+msgstr "删除"
+
+#: .\templates\department_list.html.py:19
+msgid ""
+"The operation will also remove these department-affiliated employee data"
+msgstr "该操作将同时删除这些部门所属的人员数据   "
+
+#: .\templates\department_list.html.py:25
+msgid "Convinced that you want to delete all units"
+msgstr "确信要删除全部单位吗"
+
+#: .\templates\department_list.html.py:25
+msgid ""
+"The operation will also remove these department-affiliated personnel data"
+msgstr "该操作将同时删除这些部门所属的人员数据   "
+
+#: .\templates\department_list.html.py:30
+msgid "Delete the following departments will delete all the staff information"
+msgstr "删除部门 将删除下面的所有员工信息"
+
+#: .\templates\department_list.html.py:33
+msgid "Tree style"
+msgstr "部门树形结构"
+
+#: .\templates\devcmds_list.html.py:8
+msgid "Command content"
+msgstr "命令内容"
+
+#: .\templates\devcmds_list.html.py:12 .\templates\devlog_list.html.py:11
+#: .\templates\transaction_list.html.py:10
+msgid "at"
+msgstr "在"
+
+#: .\templates\devcmds_list.html.py:12
+msgid "to device "
+msgstr "向考勤机"
+
+#: .\templates\devcmds_list.html.py:12
+msgid "send command"
+msgstr "发送的命令"
+
+#: .\templates\devlog_list.html.py:11
+msgid "transfer data log"
+msgstr "传送数据的日志"
+
+#: .\templates\disp_emp.html.py:11
+msgid "Please select .txt file!"
+msgstr "请选择.txt文件"
+
+#: .\templates\disp_emp.html.py:23
+msgid "Upload file location:"
+msgstr "上传文件位置"
+
+#: .\templates\disp_emp.html.py:36
+msgid "List upload the file format:"
+msgstr "上传列表文件格式说明:"
+
+#: .\templates\disp_emp.html.py:37
+msgid "List upload file is a text file, can have more line:"
+msgstr "上传列表文件是一个文本文件，可以有多行；"
+
+#: .\templates\disp_emp.html.py:39
+msgid ""
+"List of file every line, there are three fields, that is, PIN,  name and "
+"device, each field with tabs between (TAB keys) separate:"
+msgstr ""
+"列表文件的每一行，有三个字段，即人员工号、姓名和考勤机，每个字段之间用制表符"
+"(TAB键)分隔:"
+
+#: .\templates\disp_emp.html.py:42
+msgid ""
+"List of file every line, there are two fields, that is, PIN, and device, "
+"between the two fields with tabs (TAB key) separate:"
+msgstr ""
+"列表文件的每一行，有两个字段，即人员工号和考勤机，两个字段之间用制表符(TAB键)"
+"分隔:"
+
+#: .\templates\disp_emp.html.py:44
+msgid ""
+"device can be the Serial number, it can also be a device name (IP address):"
+msgstr "考勤机可以是序列号，也可以是机器名称（IP地址）:"
+
+#: .\templates\disp_emp.html.py:45
+msgid "device may not specify for field:"
+msgstr "考勤机字段可以不指定:"
+
+#: .\templates\disp_emp.html.py:47
+msgid ""
+"Assigned employee, if not in the database for the number of employee, the "
+"first add the new employee in the database:"
+msgstr "分派人员时，若数据库中没有该号码的人员，则首先在数据库中新增该人员:"
+
+#: .\templates\disp_emp.html.py:48
+msgid ""
+"Assigned employee, if there is no specify device, only add the new employee "
+"in the database, not assigned to any device:"
+msgstr ""
+"分派人员时，若没有指定考勤机，则仅仅在数据库中新增该人员，不分配到任何考勤机"
+
+#: .\templates\disp_emp.html.py:51
+msgid ""
+"Delete the employee, if there is no specify device,the employee will be left"
+"(The column of 'Left' is 'Yes'):"
+msgstr ""
+"分派人员时，若没有指定考勤机，则将该人员的离职标记设置为是(列表中'离职标记'列"
+"为'是')"
+
+#: .\templates\disp_emp.html.py:52
+msgid ""
+"Delete the employee, if there is no specify device,not only delete the new "
+"employee in the database, and also  delete employee in the  register device "
+"and backup device:"
+msgstr ""
+"删除人员时，若没有指定考勤机，则不仅在数据库中删除该人员，也同时在登记考勤机"
+"和备份考勤机中删除该人员:"
+
+#: .\templates\disp_emp.html.py:56
+msgid ""
+"Send names, if there are no specific device, the employee sent to the "
+"register device and backup device:"
+msgstr ""
+"传送人员姓名时，若没有指定考勤机，则传送到该人员登记的考勤机和备份的考勤机:"
+
+#: .\templates\disp_emp.html.py:57
+msgid ""
+"Send names, if there are no specific names, the first from the database to "
+"find the names of the employee sent to the device:"
+msgstr ""
+"传送人员姓名时，若没有指定姓名，则首先从数据库中查找到该人员的姓名再传送到考"
+"勤机:"
+
+#: .\templates\disp_emp.html.py:58
+msgid ""
+"If the specific name, but the name and inconsistencies in the database, or "
+"the database did not name, first name insert into the database:"
+msgstr ""
+"若指定了姓名，但与数据库中姓名不一致，或数据库中没有姓名，则先把姓名写入数据"
+"库:"
+
+#: .\templates\disp_emp.html.py:59
+msgid ""
+"If the specified number of employee in the database does not exist, the "
+"first in the database to join the employee:"
+msgstr "若指定编号的员工在数据库中不存在，则先在数据库中加入该员工:"
+
+#: .\templates\disp_emp.html.py:63
+msgid "Delete employee column :"
+msgstr "删除人员列表示例:"
+
+#: .\templates\disp_emp.html.py:74
+msgid "Assigned employee column:"
+msgstr "分派人员列表示例:"
+
+#: .\templates\disp_emp.html.py:84
+msgid "Send employee name:"
+msgstr "传送人员姓名"
+
+#: .\templates\dlogcheck.html.py:97 .\templates\logcheck.html.py:73
+msgid "get"
+msgstr "取到"
+
+#: .\templates\dlogcheck.html.py:97 .\templates\logcheck.html.py:73
+msgid " new transaction"
+msgstr "新记录"
+
+#: .\templates\dlogcheck.html.py:107 .\templates\logcheck.html.py:78
+msgid "no new records"
+msgstr "无新记录"
+
+#: .\templates\dlogcheck.html.py:111 .\templates\logcheck.html.py:82
+msgid "access to the latest data errors"
+msgstr "获取最新数据错误"
+
+#: .\templates\dlogcheck.html.py:130
+msgid "Event"
+msgstr "事件"
+
+#: .\templates\dlogcheck.html.py:130
+msgid "Param1"
+msgstr "参数1"
+
+#: .\templates\dlogcheck.html.py:130
+msgid "Param2"
+msgstr "参数2"
+
+#: .\templates\employee_edit.html.py:9 .\templates\iclock_edit.html.py:15
+msgid "Add Another"
+msgstr "增加其它部门"
+
+#: .\templates\employee_edit.html.py:11
+msgid "Date format is "
+msgstr "日期格式为"
+
+#: .\templates\employee_edit.html.py:11
+msgid "for example"
+msgstr "例如"
+
+#: .\templates\employee_edit.html.py:32
+msgid "Select a device"
+msgstr "选择考勤机"
+
+#: .\templates\employee_edit.html.py:34 .\templates\upload.html.py:56
+msgid "select device"
+msgstr "选择考勤机"
+
+#: .\templates\employee_edit.html.py:43 .\templates\employee_list.html.py:5
+#: .\templates\transaction_list.html.py:7
+msgid "Picture"
+msgstr "照片"
+
+#: .\templates\employee_list.html.py:6
+msgid ""
+"After the submission of the operation need to be about half a minute or so "
+"of device in the entry into force"
+msgstr "对设备的操作提交后,需要大概半分钟左右才能在设备上生效"
+
+#: .\templates\employee_list.html.py:19
+msgid "Sequence of input devices"
+msgstr "输入设备序列号"
+
+#: .\templates\employee_list.html.py:31
+msgid "Deleted from the device employee"
+msgstr "从设备中删除人员"
+
+#: .\templates\employee_list.html.py:31
+msgid "Change employee department"
+msgstr "调整人员部门"
+
+#: .\templates\employee_list.html.py:41
+msgid "Input Department #"
+msgstr "部门管理"
+
+#: .\templates\employee_list.html.py:57
+msgid "copy employee information"
+msgstr "拷贝人员信息"
+
+#: .\templates\employee_list.html.py:60
+msgid "copy the following fields"
+msgstr "拷贝如下字段"
+
+#: .\templates\employee_list.html.py:63
+msgid "To your choice in front of the other transaction"
+msgstr "到您前面选择的其它的记录里"
+
+#: .\templates\employee_list.html.py:92
+msgid "null"
+msgstr "空"
+
+#: .\templates\employee_list.html.py:127
+msgid "You have no choice any character, for copying data"
+msgstr "你没有选择任何字符，用于复制数据"
+
+#: .\templates\employee_list.html.py:136
+msgid "You have no source of data, select"
+msgstr "你没有源数据，请选择"
+
+#: .\templates\employee_list.html.py:147
+msgid "You have to choose at least two employee"
+msgstr "你至少要选择两名人员"
+
+#: .\templates\employee_list.html.py:182
+msgid "Transfer employee to the device temporarily"
+msgstr "临时调拨人员到设备"
+
+#: .\templates\employee_list.html.py:191
+msgid "Deleted employee from the device"
+msgstr "从设备中删除人员"
+
+#: .\templates\employee_list.html.py:195
+msgid "Change the employee's registration device"
+msgstr "转移人员数据到新设备"
+
+#: .\templates\employee_list.html.py:195
+msgid "new device"
+msgstr "新设备"
+
+#: .\templates\employee_list.html.py:209
+#: .\templates\transaction_list.html.py:14
+msgid "Emp name"
+msgstr "姓名"
+
+#: .\templates\employee_list.html.py:212
+#: .\templates\transaction_list.html.py:17
+msgid "Sex"
+msgstr "性别"
+
+#: .\templates\employee_list.html.py:213
+#: .\templates\transaction_list.html.py:18
+msgid "Birthday"
+msgstr "出生日期"
+
+#: .\templates\employee_list.html.py:214
+#: .\templates\transaction_list.html.py:19
+msgid "Nationality"
+msgstr "民族"
+
+#: .\templates\employee_list.html.py:215
+#: .\templates\transaction_list.html.py:20
+msgid "Title"
+msgstr "职务"
+
+#: .\templates\employee_list.html.py:216
+#: .\templates\transaction_list.html.py:21
+msgid "Office phone"
+msgstr "办公电话"
+
+#: .\templates\employee_list.html.py:217
+#: .\templates\transaction_list.html.py:22
+msgid "Mobile"
+msgstr "手机"
+
+#: .\templates\employee_list.html.py:218
+#: .\templates\transaction_list.html.py:23
+msgid "Id card"
+msgstr "ID卡"
+
+#: .\templates\employee_list.html.py:219
+#: .\templates\transaction_list.html.py:24
+msgid "FP"
+msgstr "指纹数"
+
+#: .\templates\employee_list.html.py:220
+#: .\templates\transaction_list.html.py:25
+msgid "Left"
+msgstr "离职标记"
+
+#: .\templates\employee_list.html.py:245
+msgid "Registration device"
+msgstr "登记设备"
+
+#: .\templates\employee_list.html.py:253
+msgid "No Employee!"
+msgstr "无人员"
+
+#: .\templates\employee_list.html.py:281
+msgid "Upload a dispatch employee list"
+msgstr "根据列表文件分派人员到考勤机"
+
+#: .\templates\employee_list.html.py:282
+msgid "Upload a delete employee list"
+msgstr "根据列表文件删除考勤机上的人员"
+
+#: .\templates\empsInDept.html.py:43
+msgid "Selected:"
+msgstr "已选择"
+
+#: .\templates\filemng.html.py:3 .\templates\filemng.html.py:164
+msgid "File management device"
+msgstr "设备文件管理"
+
+#: .\templates\filemng.html.py:87
+msgid "Main Contents"
+msgstr "主目录"
+
+#: .\templates\filemng.html.py:88
+msgid "directory"
+msgstr "目录"
+
+#: .\templates\filemng.html.py:89
+msgid "file list"
+msgstr "文件列表"
+
+#: .\templates\filemng.html.py:99
+msgid "Show the contents of the documents"
+msgstr "查看文件内容"
+
+#: .\templates\filemng.html.py:100
+msgid "Download files"
+msgstr "下载文件"
+
+#: .\templates\filemng.html.py:164
+msgid "Download data from the device"
+msgstr "正在从设备下载数据"
+
+#: .\templates\filters.html.py:11
+msgid "none"
+msgstr "无"
+
+#: .\templates\fppiclist.html.py:26
+
+msgid "Fingerprint Images"
+msgstr "登记指纹图片"
+
+#: .\templates\iclock_edit.html.py:11
+msgid "don't set backup"
+msgstr "不能设置自身为备份机"
+
+#: .\templates\iclock_edit.html.py:25
+msgid "Set"
+msgstr "设置"
+
+#: .\templates\iclock_edit.html.py:25
+msgid "Clear"
+msgstr "清除"
+
+#: .\templates\iclock_edit.html.py:31
+msgid "Auto backup data"
+msgstr "自动备份登记数据到"
+
+#: .\templates\iclock_list.html.py:16
+msgid "Employee"
+msgstr "该设备登记的人员"
+
+#: .\templates\iclock_list.html.py:17
+msgid "Upload data log"
+msgstr "上传数据日志"
+
+#: .\templates\iclock_list.html.py:18
+msgid "Command log"
+msgstr "下发命令日志"
+
+#: .\templates\iclock_list.html.py:24
+msgid "File management"
+msgstr "文件管理"
+
+#: .\templates\iclock_list.html.py:25
+msgid "Uploaded pictures"
+msgstr "上传图片"
+
+#: .\templates\iclock_list.html.py:29 .\templates\iclock_list.html.py:114
+msgid "Status"
+msgstr "状态"
+
+#: .\templates\iclock_list.html.py:42 .\templates\iclock_list.html.py:212
+msgid "Pause"
+msgstr "暂停"
+
+#: .\templates\iclock_list.html.py:42
+msgid "Online"
+msgstr "正常"
+
+#: .\templates\iclock_list.html.py:42
+msgid "Communicating"
+msgstr "通信中"
+
+#: .\templates\iclock_list.html.py:42
+msgid "Offline"
+msgstr "脱机"
+
+#: .\templates\iclock_list.html.py:85
+msgid "Device name"
+msgstr "设备名称"
+
+#: .\templates\iclock_list.html.py:87
+msgid "Transfer time"
+msgstr "传送时间"
+
+#: .\templates\iclock_list.html.py:88
+msgid "Interval"
+msgstr "刷新间隔时间"
+
+#: .\templates\iclock_list.html.py:89
+msgid "Last activity"
+msgstr "最近联机时间"
+
+#: .\templates\iclock_list.html.py:90
+msgid "Fw version"
+msgstr "固件版本"
+
+#: .\templates\iclock_list.html.py:91
+msgid "User count"
+msgstr "用户数"
+
+#: .\templates\iclock_list.html.py:92
+msgid "Fp count"
+msgstr "指纹数"
+
+#: .\templates\iclock_list.html.py:93
+msgid "Transaction count"
+msgstr "记录数"
+
+#: .\templates\iclock_list.html.py:123
+msgid "No Device!"
+msgstr "无设备！"
+
+#: .\templates\iclock_list.html.py:173
+msgid "please enter"
+msgstr "请输入0-999之间的整数"
+
+#: .\templates\iclock_list.html.py:190
+msgid "Device will be conducted as follows firmware update"
+msgstr "将对如下考勤机进行 固件升级操作，该操作结束时将会重启设备"
+
+#: .\templates\iclock_list.html.py:190
+msgid "Please ensure that the server installation path"
+msgstr "请确保在服务器程序安装路径的"
+
+#: .\templates\iclock_list.html.py:191
+msgid "model"
+msgstr "机型"
+
+#: .\templates\iclock_list.html.py:191
+msgid "The relevant firmware file be stored in its subdirectory"
+msgstr "中对应的子目录内存在相应机型的固件文件"
+
+#: .\templates\iclock_list.html.py:209 .\templates\iclock_list.html.py:215
+msgid "Copy device data to"
+msgstr "备份登记数据到其他设备"
+
+#: .\templates\iclock_list.html.py:213
+msgid "Resume"
+msgstr "恢复使用"
+
+#: .\templates\iclock_list.html.py:224
+msgid "communicate password"
+msgstr "设备通信密码"
+
+#: .\templates\iclock_list.html.py:224
+msgid "Set communicate password"
+msgstr "设置通信密码"
+
+#: .\templates\iclock_list.html.py:253
+msgid "Device Status"
+msgstr "由 考勤机状态"
+
+#: .\templates\iclock_list.html.py:301
+msgid "Auto Refresh"
+msgstr "状态监控"
+
+#: .\templates\iclock_list.html.py:302
+msgid "Interval: "
+msgstr "刷新间隔时间"
+
+#: .\templates\iclock_list.html.py:302
+msgid "s"
+msgstr "秒"
+
+#: .\templates\iclock_list.html.py:304
+msgid "Tip"
+msgstr "提示"
+
+#: .\templates\iclock_list.html.py:306
+msgid "Operations, Usually only for the on-line device;"
+msgstr "对设备的操作,通常只能在设备联机的时候进行"
+
+#: .\templates\iclock_list.html.py:307
+msgid ""
+"After operation on the device, It's will take effect after about half minute."
+msgstr "对设备的操作提交后,需要大概半分钟左右才能在设备上生效"
+
+#: .\templates\iclock_list.html.py:317
+msgid "Input the IP Address of a device: "
+msgstr "请输入一个有效的 IP 地址。"
+
+#: .\templates\iclock_list.html.py:325
+msgid "compulsion reboot device"
+msgstr "强制重新启动设备"
+
+#: .\templates\iclock_list.html.py:326
+msgid "auto reboot halted device"
+msgstr "自动重启动呆滞设备"
+
+#: .\templates\logcheck.html.py:101
+msgid "id"
+msgstr "记录编号"
+
+#: .\templates\logcheck.html.py:101 .\templates\transaction_list.html.py:7
+msgid "EName"
+msgstr "姓名"
+
+#: .\templates\logcheck.html.py:102
+msgid "Time"
+msgstr "考勤时间"
+
+#: .\templates\logcheck.html.py:102
+msgid "State"
+msgstr "考勤状态"
+
+#: .\templates\logcheck.html.py:103
+msgid "Verification"
+msgstr "验证方式"
+
+#: .\templates\piclist.html.py:25
+msgid "Success Verification"
+msgstr "成功的验证"
+
+#: .\templates\piclist.html.py:33
+msgid "Fail Verification"
+msgstr "失败的验证"
+
+#: .\templates\setoption.html.py:7 .\templates\setoption.html.py:19
+msgid "Set Options"
+msgstr "设置配置文件"
+
+#: .\templates\setoption.html.py:34
+msgid "Web Port:"
+msgstr "WEB端口:"
+
+#: .\templates\setoption.html.py:35
+msgid "Database Engine:"
+msgstr "数据库引擎:"
+
+#: .\templates\setoption.html.py:40
+msgid "Database Name:"
+msgstr "数据库名称:"
+
+#: .\templates\setoption.html.py:41
+msgid "Database User:"
+msgstr "数据库用户名:"
+
+#: .\templates\setoption.html.py:42
+msgid "Database Password:"
+msgstr "数据库密码:"
+
+#: .\templates\setoption.html.py:43
+msgid "Database Port:"
+msgstr "数据库端口:"
+
+#: .\templates\setoption.html.py:44
+msgid "Database Host:"
+msgstr "数据库地址:"
+
+#: .\templates\setoption.html.py:45
+msgid "PIN Width:"
+msgstr "考勤号码长度:"
+
+#: .\templates\setoption.html.py:46
+msgid "Encryp:"
+msgstr "加密:"
+
+#: .\templates\setoption.html.py:51
+msgid "Page Limit:"
+msgstr "每页长度:"
+
+#: .\templates\setoption.html.py:52
+msgid "Realtime:"
+msgstr "实时:"
+
+#: .\templates\setoption.html.py:57
+msgid "Auto Registry:"
+msgstr "自动注册:"
+
+#: .\templates\transaction_list.html.py:7
+msgid "Index"
+msgstr "序号"
+
+#: .\templates\transaction_list.html.py:53
+
+msgid "No Data!"
+msgstr "无数据"
+
+#: .\templates\upgrade.html.py:10
+msgid "Upload file location"
+msgstr "上传文件位置"
+
+#: .\templates\upload.html.py:7 .\templates\upload.html.py:9
+msgid "U-exported to upload data"
+msgstr "上传导出到U盘的数据"
+
+#: .\templates\upload.html.py:23 .\templates\upload.html.py:29
+msgid "device choice"
+msgstr "请选择考勤机"
+
+#: .\templates\upload.html.py:39
+msgid ""
+"If you plan to upload fingerprint template, users upload information at the "
+"same time"
+msgstr "如果您打算上传指纹模版，请同时上传用户信息"
+
+#: .\templates\upload.html.py:51
+msgid "File type"
+msgstr "文件类型"
+
+#: .\templates\upload.html.py:51
+msgid "Select file"
+msgstr "选择文件"
+
+#: .\templates\upload.html.py:58
+msgid ""
+"Here set to upload data files from the downloaded to the device which "
+"transaction was the U-disk"
+msgstr "这里设定要上传的数据文件是从哪个考勤机下载到U盘的"
+
+#: .\templates\upload.html.py:60
+msgid "transaction file"
+msgstr "考勤记录文件"
+
+#: .\templates\upload.html.py:64
+msgid "users File"
+msgstr "用户信息文件"
+
+#: .\templates\upload.html.py:68
+msgid "fingerprint template file"
+msgstr "指纹模版文件"
+
+#: .\templates\upload.html.py:71
+msgid ""
+"If upload fingerprint template must also upload file related to the user's "
+"information"
+msgstr "如果上传指纹模版，必须同时上传相关的用户信息文件"
+
+#: .\templates\upload.html.py:75
+msgid "upload file"
+msgstr "上传文件"
+
+#: .\templates\welcome_sys.html.py:3
+msgid "Login System"
+msgstr "系统登录"
+
+#: .\templates\welcome_sys.html.py:8
+msgid "Welcome to the iclock system!"
+msgstr "欢迎使用Iclock 数据服务系统！"
+
+#: .\templates\admin\404.html.py:10
+msgid "We're sorry, but the requested page could not be found."
+msgstr "报歉，请求页面无法找到。"
+
+#: .\templates\admin\500.html.py:4
+msgid "Server error"
+msgstr "服务器错误"
+
+#: .\templates\admin\500.html.py:6
+msgid "Server error (500)"
+msgstr "服务器错误(500)"
+
+#: .\templates\admin\500.html.py:9
+msgid "Server Error <em>(500)</em>"
+msgstr "服务器错误 <em>(500)</em>"
+
+#: .\templates\admin\500.html.py:10
+msgid ""
+"There's been an error. It's been reported to the site administrators via e-"
+"mail and should be fixed shortly. Thanks for your patience."
+msgstr ""
+"发生了一个错误。它已经通过电子邮件报告给站点管理员了，而且应该很快会得到解"
+"决。感谢您的耐心。"
+
+#: .\templates\admin\base.html.py:25
+msgid "Documentation"
+msgstr "文档"
+
+#: .\templates\admin\base_site.html.py:4
+msgid "Django site admin"
+msgstr "Django 站点管理员"
+
+#: .\templates\admin\change_form.html.py:27
+#: .\templates\admin\object_history.html.py:10
+msgid "History"
+msgstr "历史"
+
+#: .\templates\admin\change_form.html.py:28
+msgid "View on site"
+msgstr "在站点上查看"
+
+#: .\templates\admin\change_form.html.py:38
+#: .\templates\admin\auth\user\change_password.html.py:24
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "请修正下面的错误。"
+msgstr[1] "请修正下面的错误。"
+
+#: .\templates\admin\change_list.html.py:16
+#, python-format
+msgid "Add %(name)s"
+msgstr "增加 %(name)s"
+
+#: .\templates\admin\change_list.html.py:26
+#: .\templates\admin\filters.html.py:4
+msgid "Filter"
+msgstr "过滤器"
+
+#: .\templates\admin\delete_confirmation.html.py:16
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+"删除 %(object_name)s  '%(escaped_object)s' 会导致删除相关的对象，但你的帐号无"
+"权删除下列类型的对象："
+
+#: .\templates\admin\delete_confirmation.html.py:23
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+"你确认想要删除 %(object_name)s \"%(escaped_object)s\"？ 下列所有相关的项目都"
+"将被删除："
+
+#: .\templates\admin\delete_confirmation.html.py:28
+msgid "Yes, I'm sure"
+msgstr "是的，我确定"
+
+#: .\templates\admin\filter.html.py:2
+#, python-format
+msgid " %(filter_title)s  "
+msgstr " 以 %(filter_title)s"
+
+#: .\templates\admin\index.html.py:18
+#, python-format
+msgid "Models available in the %(name)s application."
+msgstr "模型在 %(name)s 应用中可用。"
+
+#: .\templates\admin\index.html.py:19
+#, python-format
+msgid "%(name)s"
+msgstr "%(name)s"
+
+#: .\templates\admin\index.html.py:35
+msgid "Change"
+msgstr "修改"
+
+#: .\templates\admin\index.html.py:45
+msgid "You don't have permission to edit anything."
+msgstr "你无权修改任何东西。"
+
+#: .\templates\admin\index.html.py:53
+msgid "Recent Actions"
+msgstr "最近动作"
+
+#: .\templates\admin\index.html.py:54
+msgid "My Actions"
+msgstr "我的动作"
+
+#: .\templates\admin\index.html.py:58
+msgid "None available"
+msgstr "不可用"
+
+#: .\templates\admin\invalid_setup.html.py:7
+msgid ""
+"Something's wrong with your database installation. Make sure the appropriate "
+"database tables have been created, and make sure the database is readable by "
+"the appropriate user."
+msgstr ""
+"你的数据库安装有误。确保已经创建了相应的数据库表，并确保数据库可被相关的用户"
+"读取。"
+
+#: .\templates\admin\object_history.html.py:22
+msgid "Date/time"
+msgstr "日期/时间"
+
+#: .\templates\admin\object_history.html.py:24
+msgid "Action"
+msgstr "动作"
+
+#: .\templates\admin\object_history.html.py:30
+msgid "DATETIME_FORMAT"
+msgstr "DATETIME_FORMAT"
+
+#: .\templates\admin\object_history.html.py:38
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr "该对象没有变更历史记录。可能从未通过这个管理站点添加。"
+
+#: .\templates\admin\pagination.html.py:10
+msgid "Show all"
+msgstr "显示全部"
+
+#: .\templates\admin\search_form.html.py:8
+msgid "Go"
+msgstr "执行"
+
+#: .\templates\admin\search_form.html.py:10
+#, python-format
+msgid "1 result"
+msgid_plural "%(counter)s results"
+msgstr[0] "1 条结果"
+msgstr[1] "%(counter)s 条结果"
+
+#: .\templates\admin\search_form.html.py:10
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr "总共 %(full_result_count)s"
+
+#: .\templates\admin\submit_line.html.py:3
+msgid "Save"
+msgstr "保存"
+
+#: .\templates\admin\submit_line.html.py:5
+msgid "Save as new"
+msgstr "保存为新的"
+
+#: .\templates\admin\submit_line.html.py:6
+msgid "Save and add another"
+msgstr "保存并增加另一个"
+
+#: .\templates\admin\submit_line.html.py:7
+msgid "Save and continue editing"
+msgstr "保存并继续编辑"
+
+#: .\templates\admin\auth\user\add_form.html.py:6
+msgid ""
+"First, enter a username and password. Then, you'll be able to edit more user "
+"options."
+msgstr "首先，输入一个用户名和口令。然后，你就可以编辑更多的用户选项。"
+
+#: .\templates\admin\auth\user\add_form.html.py:12
+msgid "Username"
+msgstr "用户名"
+
+#: .\templates\admin\auth\user\add_form.html.py:23
+#: .\templates\admin\auth\user\change_password.html.py:39
+msgid "Password (again)"
+msgstr "口令(重复)"
+
+#: .\templates\admin\auth\user\add_form.html.py:24
+#: .\templates\admin\auth\user\change_password.html.py:40
+msgid "Enter the same password as above, for verification."
+msgstr "为了校验，输入与上面相同的口令。"
+
+#: .\templates\admin\auth\user\change_password.html.py:28
+#, python-format
+msgid "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr "为用户<strong>%(username)s</strong>输入一个新的口令。"
+
+#: .\templates\registration\logged_out.html.py:8
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr "感谢您今天在本站花费了一些宝贵时间。"
+
+#: .\templates\registration\logged_out.html.py:10
+msgid "Log in again"
+msgstr "重新登录"
+
+#: .\templates\registration\login.html.py:18
+msgid "Invalid username or passowrd, please try again."
+msgstr "用户名或密码不正确，请重新输入"
+
+#: .\templates\registration\login.html.py:22
+msgid "Username:"
+msgstr "用户名："
+
+#: .\templates\registration\login.html.py:25
+msgid "Password:"
+msgstr "密码："
+
+#: .\templates\registration\login.html.py:30
+msgid "Log in"
+msgstr "登录"
+
+#: .\templates\registration\password_change_done.html.py:4
+#: .\templates\registration\password_change_form.html.py:4
+#: .\templates\registration\password_change_form.html.py:6
+#: .\templates\registration\password_change_form.html.py:10
+msgid "Password change"
+msgstr "口令修改"
+
+#: .\templates\registration\password_change_done.html.py:6
+#: .\templates\registration\password_change_done.html.py:10
+msgid "Password change successful"
+msgstr "口令修改成功"
+
+#: .\templates\registration\password_change_done.html.py:12
+msgid "Your password was changed."
+msgstr "你的口令已修改。"
+
+#: .\templates\registration\password_change_form.html.py:12
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+"请输入你的旧口令，为了安全起见，接着要输入两遍新口令，以便我们校验你输入的是"
+"否正确。"
+
+#: .\templates\registration\password_change_form.html.py:18
+msgid "Change my password"
+msgstr "修改我的口令"
+
+#: .\templates\registration\password_reset_done.html.py:4
+#: .\templates\registration\password_reset_form.html.py:4
+#: .\templates\registration\password_reset_form.html.py:6
+#: .\templates\registration\password_reset_form.html.py:10
+msgid "Password reset"
+msgstr "口令重设"
+
+#: .\templates\registration\password_reset_done.html.py:6
+#: .\templates\registration\password_reset_done.html.py:10
+msgid "Password reset successful"
+msgstr "口令重设成功"
+
+#: .\templates\registration\password_reset_done.html.py:12
+msgid ""
+"We've e-mailed a new password to the e-mail address you submitted. You "
+"should be receiving it shortly."
+msgstr ""
+"我们已经按你所提交的邮箱地址发送了一个新的口令。你应该很快就能收到这封邮件。"
+
+#: .\templates\registration\password_reset_email.html.py:2
+msgid "You're receiving this e-mail because you requested a password reset"
+msgstr "之所以收到这封邮件，是因为你请求了口令重设"
+
+#: .\templates\registration\password_reset_email.html.py:3
+#, python-format
+msgid "for your user account at %(site_name)s"
+msgstr "在 %(site_name)s 你的用户帐号"
+
+#: .\templates\registration\password_reset_email.html.py:5
+#, python-format
+msgid "Your new password is: %(new_password)s"
+msgstr "你的新口令是： %(new_password)s"
+
+#: .\templates\registration\password_reset_email.html.py:7
+msgid "Feel free to change this password by going to this page:"
+msgstr "到这个页面可以自由地修改口令："
+
+#: .\templates\registration\password_reset_email.html.py:11
+msgid "Your username, in case you've forgotten:"
+msgstr "你的用户名，如果已忘记的话："
+
+#: .\templates\registration\password_reset_email.html.py:13
+msgid "Thanks for using our site!"
+msgstr "感谢使用我们的站点！"
+
+#: .\templates\registration\password_reset_email.html.py:15
+#, python-format
+msgid "The %(site_name)s team"
+msgstr "%(site_name)s 团队"
+
+#: .\templates\registration\password_reset_form.html.py:12
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll reset "
+"your password and e-mail the new one to you."
+msgstr ""
+"忘记了你的口令？请在下面输入你的 e-mail 地址，我们将重设你的口令并将新口令通"
+"过邮件发送给你。"
+
+#: .\templates\registration\password_reset_form.html.py:16
+msgid "E-mail address:"
+msgstr "E-mail 地址："
+
+#: .\templates\registration\password_reset_form.html.py:16
+msgid "Reset my password"
+msgstr "重设我的口令"
+
+#~ msgid "PIN,Time,Verification,State"
+#~ msgstr "号码, 时间, 验证方式, 考勤状态"
+
+#~ msgid "log of data from device"
+#~ msgstr "设备上传数据日志"
+
+#~ msgid "log of command to device"
+#~ msgstr "服务器下发命令日志"
+
+#~ msgid "OK"
+#~ msgstr "确定"
+
+#~ msgid "%(filter_title)s&nbsp;&nbsp;&nbsp; "
+#~ msgstr " 以 %(filter_title)s"
+
+#~ msgid "device name"
+#~ msgstr "设备名称"
+
+#~ msgid "device auto poweroff time"
+#~ msgstr "设备自动关机时间(时:分格式, HH:MM)"
+
+#~ msgid "Test Data"
+#~ msgstr "测试数据"
+
+#~ msgid "Department"
+#~ msgstr "部门"
+
+#~ msgid "SN"
+#~ msgstr "系列号"
+
+#~ msgid "Ordering"
+#~ msgstr "排序中"
+
+#~ msgid "Order:"
+#~ msgstr "排序："
+
+#~ msgid "DATE_WITH_TIME_FULL"
+#~ msgstr "DATE_WITH_TIME_FULL"
+
+#~ msgid "More Info."
+#~ msgstr "更多信息..."
+
+#~ msgid "Can browse %s"
+#~ msgstr "能浏览 %s"
+
+#~ msgid "Unknown command"
+#~ msgstr "未知命令"
+
+#~ msgid "new"
+#~ msgstr "新建"
+
+#~ msgid "clear"
+#~ msgstr "清除"
+
+#~ msgid "Import U-disk data files"
+#~ msgstr "导入U盘数据文件"
+
+#~ msgid "DeviceName"
+#~ msgstr "设备名称"
+
+#~ msgid "the host city"
+#~ msgstr "选择考勤机所在城市（地级市），考勤机在空闲时刻可以显示当地天气预报"
+
+#~ msgid "Name"
+#~ msgstr "名称"
+
+#~ msgid "open"
+#~ msgstr "开机"
+
+#~ msgid "Firmware"
+#~ msgstr "固件版本"
+
+#~ msgid "Model"
+#~ msgstr "机型"
+
+#~ msgid "Emp./FP/Trans."
+#~ msgstr "人员/指纹/签到记录 "
+
+#~ msgid ""
+#~ "The command to delete employee %s from device %s and it's backup device %"
+#~ "s has been sent."
+#~ msgstr "删除人员%s的命令已向设备%s和备份设备%s发送"
+
+#~ msgid "The command to delete employee %s from device %s has been sent."
+#~ msgstr "删除人员%s的命令已向设备%s发送"
+
+#~ msgid "Employee %s has no a registration device"
+#~ msgstr "人员%s没有在该设备上注册"
+
+#~ msgid "permissions"
+#~ msgstr "权限"
+
+#~ msgid "SAP Data Synchronizationr"
+#~ msgstr "SAP数据同步"
+
+#~ msgid "Your old password was entered incorrectly. Please enter it again."
+#~ msgstr "你的旧口令不正确。请重新输入。"
+
+#~ msgid "Old password:"
+#~ msgstr "旧口令："
+
+#~ msgid "New password:"
+#~ msgstr "新口令："
+
+#~ msgid "Confirm password:"
+#~ msgstr "确认口令："
+
+#~ msgid "edit"
+#~ msgstr "编辑"
+
+#~ msgid "Keyword \"%(object_name)s\" Not to be revised!"
+#~ msgstr "关键字段%(object_name)s不能修改"
+
+#~ msgid "use"
+#~ msgstr "使用"
+
+#~ msgid "Operations (modified or added)"
+#~ msgstr "操作(修改或添加)"
+
+#~ msgid "add"
+#~ msgstr "增加"
+
+#~ msgid "The %(dataModel)s that its %(key)s equal %(val)s is already exists!"
+#~ msgstr "%(dataModel)s 为\"%(key)s\"的 %(val)s 已经存在。"
+
+#~ msgid "Add %s"
+#~ msgstr "增加 %s"
+
+#~ msgid "Data can not be saved!"
+#~ msgstr "数据不能保存"
+
+#~ msgid "Edit %(object_name)s"
+#~ msgstr "编辑 %(object_name)s"
+
+#~ msgid "Keyword \"%(object_name)s\" data do not exist!"
+#~ msgstr "关键字段%(object_name)s数据不存在"
+
+#~ msgid "info"
+#~ msgstr "设备信息"
+
+#~ msgid "Test"
+#~ msgstr "测试"
+
+#~ msgid "this field is must"
+#~ msgstr "这个字段是必填项"
+
+#~ msgid "Password two inconsistent"
+#~ msgstr "两次密码不一致"
+
+#~ msgid "Confirm password"
+#~ msgstr "确认密码"
+
+#~ msgid "Employee information"
+#~ msgstr "个人信息"
+
+#~ msgid "Last name"
+#~ msgstr "姓"
+
+#~ msgid "First name"
+#~ msgstr "名"
+
+#~ msgid "Email Address"
+#~ msgstr "E-mail 地址"
+
+#~ msgid "Employee status"
+#~ msgstr "人员状态"
+
+#~ msgid "Specify whether users can log on to this site management"
+#~ msgstr "指明用户是否可以登录到这个管理站点"
+
+#~ msgid "Employee permission"
+#~ msgstr "用户权限"
+
+#~ msgid "Super administrator"
+#~ msgstr "超级管理员"
+
+#~ msgid "Any operation can be carried out"
+#~ msgstr "可以进行任何操作"
+
+#~ msgid "View transaction"
+#~ msgstr "查看考勤记录"
+
+#~ msgid "Show all devices can be an transaction"
+#~ msgstr "能查看所有设备上的考勤记录"
+
+#~ msgid "Show only Specify device transaction and device status"
+#~ msgstr "只能查看指定的设备的考勤记录和设备状态"
+
+#~ msgid "Delete selected for device"
+#~ msgstr "删除选中的考勤机"
+
+#~ msgid "Agencies administrator"
+#~ msgstr "机构管理员"
+
+#~ msgid "Be able to manage the device specified under some functions"
+#~ msgstr "能够管理指定的设备下的部分功能"
+
+#~ msgid "List of device can be managed"
+#~ msgstr "可管理设备列表"
+
+#~ msgid "login"
+#~ msgstr "登录"
+
+#~ msgid "Information Service"
+#~ msgstr "公共信息服务"
+
+#~ msgid "Messages Maintenance"
+#~ msgstr "信息定制服务"
+
+#~ msgid "Employees"
+#~ msgstr "人员管理"
+
+#~ msgid "Log of Device Uploading"
+#~ msgstr "设备上传数据日志"
+
+#~ msgid "Administrators"
+#~ msgstr "系统管理员维护"
+
+#~ msgid "Log of Administration"
+#~ msgstr "系统管理日志"
+
+#~ msgid "Cancel order"
+#~ msgstr "取消查询条件"
+
+#~ msgid "Upgrade"
+#~ msgstr "升级固件"
+
+#~ msgid "Reboot"
+#~ msgstr "重新启动机器"
+
+#~ msgid "Clear data"
+#~ msgstr "清除设备上的所有数据"
+
+#~ msgid "reset admin password "
+#~ msgstr "重置设备上的管理员密码"
+
+#~ msgid "no"
+#~ msgstr "否"
+
+#~ msgid "yes"
+#~ msgstr "是"
+
+#~ msgid "Transfer employee to device"
+#~ msgstr "传送人员到设备"
+
+#~ msgid "Transfer employee to a device"
+#~ msgstr "传送人员到设备"
+
+#~ msgid "Delete employee from a device"
+#~ msgstr "从设备中删除人员"
+
+#~ msgid "supervisor"
+#~ msgstr "超级管理员"
+
+#~ msgid "password"
+#~ msgstr "密码"
+
+#~ msgid "Eating end"
+#~ msgstr "就餐结束"
+
+#~ msgid "add user"
+#~ msgstr "添加 用户"
+
+#~ msgid "user"
+#~ msgstr "用户"
+
+#~ msgid "input message"
+#~ msgstr "录入信息"
+
+#~ msgid "Transmit employee to the device"
+#~ msgstr "传送数据到设备"
+
+#~ msgid "Change the employee's device"
+#~ msgstr "转移人员数据到新设备"
+
+#~ msgid "Backup Device Data"
+#~ msgstr "备份登记数据到其他设备"
+
+#~ msgid "Resent Transactions"
+#~ msgstr "重新传送设备上的考勤记录"
+
+#~ msgid "Update Info "
+#~ msgstr "检查更新设备信息"
+
+#~ msgid "Check New Data"
+#~ msgstr "立即检查并传送数据"
+
+#~ msgid "Set Auto Poweroff"
+#~ msgstr "设置自动关机"
+
+#~ msgid "Recover Data"
+#~ msgstr "恢复设备上的人员数据"
+
+#~ msgid "To the attendance of a name"
+#~ msgstr "给考勤机取一个名字"
+
+#~ msgid "all"
+#~ msgstr "全部"
+
+# update by wjw 2011-06-13
+# msgid "Personal SMS"
+# msgstr "个人短信息"
+
+#~ msgid "transaction documents"
+#~ msgstr "考勤记录文件"
+
+#~ msgid "Fingerprint template document"
+#~ msgstr "指纹模版文件"
+
+#~ msgid "add "
+#~ msgstr "增加"
+
+#~ msgid "Attendance machine options â"
+#~ msgstr "考勤机选项"
+
+#~ msgid "No. "
+#~ msgstr "编号为"
+
+#~ msgid "more"
+#~ msgstr "更多"
+
+#~ msgid "designated areas"
+#~ msgstr "指定范围"
+
+#~ msgid "depart number"
+#~ msgstr "部门编号"
+
+#~ msgid "fixed time transmission"
+#~ msgstr "传送数据定时"
+
+#~ msgid ""
+#~ "Setting attendance for a moment from the plane started to accept the use "
+#~ "of staff by fingerprint attendance. Hh: mm (hours: minutes) format, with "
+#~ "a number of time between the semicolon (;) separately"
+#~ msgstr ""
+#~ "用于设定考勤机从某个时刻起开始接受使用人员按指纹考勤. hh:mm (时:分)格式, "
+#~ "多个时间之间用分号(;)分开"
+
+#~ msgid ""
+#~ "Setting attendance for the machine from a designated time, the number of "
+#~ "minutes can be continued acceptance of the use of fingerprint attendance "
+#~ "by staff"
+#~ msgstr ""
+#~ "用于设定考勤机从指定时刻开始, 持续多少分钟可以接受使用人员按指纹考勤"
+
+#~ msgid ""
+#~ "Attendance choice of the host city (prefectural-class city), and "
+#~ "attendance in the machine idle time can display the local weather forecast"
+#~ msgstr "选择考勤机所在城市（地级市），考勤机在空闲时刻可以显示当地天气预报"
+
+#~ msgid "ordinary users"
+#~ msgstr "普通用户"
+
+#~ msgid "num"
+#~ msgstr "号码"
+
+#~ msgid "mobile telephone"
+#~ msgstr "移动电话 "
+
+#~ msgid "submit content"
+#~ msgstr "提交内容"
+
+#~ msgid "data record num"
+#~ msgstr "数据记录数"
+
+#~ msgid "misdata"
+#~ msgstr "错误数据"
+
+#~ msgid "to the equipment under an order log"
+#~ msgstr "向设备下发命令日志"
+
+#~ msgid "Short personal information"
+#~ msgstr "个人短信息"
+
+#~ msgid "information content"
+#~ msgstr "信息内容"
+
+#~ msgid "information Parameters"
+#~ msgstr "信息参数"
+
+#~ msgid "Executive operation"
+#~ msgstr "执行操作"
+
+#~ msgid "Administrators log operation"
+#~ msgstr "管理员操作日志"
+
+#~ msgid "Successful restart machinesï¼"
+#~ msgstr "成功重新启动机器"
+
+#~ msgid "View and restart equipment"
+#~ msgstr "查找并重新启动设备"
+
+#~ msgid ""
+#~ "Below the equipment more than half an hour does not connect with the "
+#~ "server </p><p>"
+#~ msgstr "下面的设备超过半小时没有同服务器连接</p><p>"
+
+#~ msgid "Server Version"
+#~ msgstr "服务器版本号"
+
+#~ msgid "Personnel fingerprint"
+#~ msgstr "人员指纹"
+
+#~ msgid "del personnel"
+#~ msgstr "删除人员"
+
+#~ msgid "Remove attendance record"
+#~ msgstr "清除考勤记录"
+
+#~ msgid "restart procedures"
+#~ msgstr "程序重新启动"
+
+#~ msgid "The implementation of internal order"
+#~ msgstr "执行内部命令"
+
+#~ msgid "home"
+#~ msgstr "首页"
+
+#~ msgid "select Attendance Machine"
+#~ msgstr "选择考勤机"
+
+#~ msgid "user name"
+#~ msgstr "用户名"
+
+#~ msgid "confirm password"
+#~ msgstr "确认口令："
+
+#~ msgid "Enquiries attendance record"
+#~ msgstr "考勤记录查询"
+
+#~ msgid "Attendance machine operators"
+#~ msgstr "考勤机操作员"
+
+#~ msgid "real time monitor "
+#~ msgstr "实时记录监控"
+
+#~ msgid "public information manager"
+#~ msgstr "公共信息管理"
+
+#~ msgid "customize message"
+#~ msgstr "信息定制服务"
+
+#~ msgid "data manager"
+#~ msgstr "数据维护"
+
+#~ msgid "department manager"
+#~ msgstr "部门管理"
+
+#~ msgid "user manager"
+#~ msgstr "使用人员管理"
+
+#~ msgid "record manager"
+#~ msgstr "签到记录查询"
+
+#~ msgid "leading-in U_data"
+#~ msgstr "导入U盘数据"
+
+#~ msgid "device update data"
+#~ msgstr "设备上传数据"
+
+#~ msgid "server download command"
+#~ msgstr "服务器下发命令"
+
+#~ msgid "admin manager "
+#~ msgstr "系统管理员维护"
+
+#~ msgid "system manager log"
+#~ msgstr "系统管理日志"
+
+#~ msgid "are you sure clear all data"
+#~ msgstr "确信要删除全部数据吗"
+
+#~ msgid "filter"
+#~ msgstr "过滤"
+
+#~ msgid "filtering"
+#~ msgstr "进行过滤"
+
+#~ msgid "cancel seq"
+#~ msgstr "取消排序"
+
+#~ msgid "record page"
+#~ msgstr "记录分页"
+
+#~ msgid "Copies of personnel information"
+#~ msgstr "拷贝人员信息"
+
+#~ msgid "Personnel data transfer to the new equipment"
+#~ msgstr "转移人员数据到新设备"
+
+#~ msgid "According to the paper assigned personnel to the list of attendance"
+#~ msgstr "根据列表文件分派人员到考勤机"
+
+#~ msgid "According to the list of files to delete the attendance officers"
+#~ msgstr "根据列表文件删除考勤机上的人员"
+
+#~ msgid "firmware version"
+#~ msgstr "固件版本"
+
+#~ msgid "user/fingerprint/record"
+#~ msgstr "人员/指纹/记录数"
+
+#~ msgid "stop"
+#~ msgstr "停用"
+
+#~ msgid "pause use"
+#~ msgstr "暂停使用"
+
+#~ msgid "recover use"
+#~ msgstr "恢复使用"
+
+#~ msgid "retransfer device record"
+#~ msgstr "重新传送设备上的考勤记录"
+
+#~ msgid "set auto close"
+#~ msgstr "设置自动关机"
+
+#~ msgid "Subdirectory in the corresponding models of memory firmware file"
+#~ msgstr "子目录内存在相应机型的固件文件"
+
+#~ msgid "clear device record "
+#~ msgstr "清除设备上的考勤记录"
+
+#~ msgid "monitor status"
+#~ msgstr "状态监控"
+
+#~ msgid "refresh interval time"
+#~ msgstr "刷新间隔时间"
+
+#~ msgid "input device ip "
+#~ msgstr "请输入考勤机的IP地址"
+
+#~ msgid " new record"
+#~ msgstr "条新记录"
+
+#~ msgid "Attendance equipment choice"
+#~ msgstr "选择考勤设备"
+
+#~ msgid "set communicate password "
+#~ msgstr "设置通信密码"
+
+#~ msgid ""
+#~ "%(object)s with this %(type)s already exists for the given %(field)s."
+#~ msgstr "带有这个 %(type)s 的 %(object)s 对于给定的 %(field)s 已经存在了。"
+
+#~ msgid "and"
+#~ msgstr "和"
+
+#~ msgid "Separate multiple IDs with commas."
+#~ msgstr "用逗号分隔多个ID。"
+
+#~ msgid ""
+#~ "Hold down \"Control\", or \"Command\" on a Mac, to select more than one."
+#~ msgstr "按下 \"Control\"，或者在Mac上按 \"Command\" 来选择多个值。"
+
+#~ msgid "Please enter valid %(self)s IDs. The value %(value)r is invalid."
+#~ msgid_plural ""
+#~ "Please enter valid %(self)s IDs. The values %(value)r are invalid."
+#~ msgstr[0] "请输入有效的 %(self)s ID。值 %(value)r 无效。"
+
+#~ msgid "This value must be an integer."
+#~ msgstr "这个值必须是一个整数。"
+
+#~ msgid "This value must be either True or False."
+#~ msgstr "这个值必须是 True 或 False。"
+
+#~ msgid "This field cannot be null."
+#~ msgstr "这个值不能为 null。"
+
+#~ msgid "Enter a valid date in YYYY-MM-DD format."
+#~ msgstr "输入一个 YYYY-MM-DD 格式的有效日期。"
+
+#~ msgid "Enter a valid date/time in YYYY-MM-DD HH:MM format."
+#~ msgstr "输入一个 YYYY-MM-DD HH:MM 格式的有效日期/时间。"
+
+#~ msgid "Enter a valid filename."
+#~ msgstr "输入一个有效的文件名。"
+
+#~ msgid "This value must be either None, True or False."
+#~ msgstr "这个值必须是 None, True 或 False。"
+
+#~ msgid "Arabic"
+#~ msgstr "阿拉伯语"
+
+#~ msgid "Bengali"
+#~ msgstr "孟加拉语"
+
+#~ msgid "Catalan"
+#~ msgstr "加泰罗尼亚语"
+
+#~ msgid "Czech"
+#~ msgstr "捷克语"
+
+#~ msgid "Welsh"
+#~ msgstr "威尔士语"
+
+#~ msgid "Danish"
+#~ msgstr "丹麦语"
+
+#~ msgid "German"
+#~ msgstr "德语"
+
+#~ msgid "Greek"
+#~ msgstr "希腊语"
+
+#~ msgid "Spanish"
+#~ msgstr "西班牙语"
+
+#~ msgid "Argentinean Spanish"
+#~ msgstr "阿根廷的西班牙语"
+
+#~ msgid "Finnish"
+#~ msgstr "芬兰语"
+
+#~ msgid "French"
+#~ msgstr "法语"
+
+#~ msgid "Galician"
+#~ msgstr "加利西亚语"
+
+#~ msgid "Hungarian"
+#~ msgstr "匈牙利语"
+
+#~ msgid "Hebrew"
+#~ msgstr "希伯来语"
+
+#~ msgid "Icelandic"
+#~ msgstr "冰岛语"
+
+#~ msgid "Italian"
+#~ msgstr "意大利语"
+
+#~ msgid "Japanese"
+#~ msgstr "日语"
+
+#~ msgid "Kannada"
+#~ msgstr "埃纳德语"
+
+#~ msgid "Latvian"
+#~ msgstr "拉脱维亚语"
+
+#~ msgid "Macedonian"
+#~ msgstr "马其顿语"
+
+#~ msgid "Dutch"
+#~ msgstr "荷兰语"
+
+#~ msgid "Norwegian"
+#~ msgstr "挪威语"
+
+#~ msgid "Polish"
+#~ msgstr "波兰语"
+
+#~ msgid "Portugese"
+#~ msgstr "葡萄牙语"
+
+#~ msgid "Brazilian"
+#~ msgstr "巴西语"
+
+#~ msgid "Romanian"
+#~ msgstr "罗马尼亚语"
+
+#~ msgid "Russian"
+#~ msgstr "俄语"
+
+#~ msgid "Slovak"
+#~ msgstr "斯洛伐克语"
+
+#~ msgid "Slovenian"
+#~ msgstr "斯洛文尼亚语"
+
+#~ msgid "Serbian"
+#~ msgstr "塞尔维亚语"
+
+#~ msgid "Swedish"
+#~ msgstr "瑞典语"
+
+#~ msgid "Telugu"
+#~ msgstr "泰卢固语"
+
+#~ msgid "Turkish"
+#~ msgstr "土耳其语"
+
+#~ msgid "Ukrainian"
+#~ msgstr "乌克兰语"
+
+#~ msgid "Traditional Chinese"
+#~ msgstr "正体中文"
+
+#~ msgid "Tuesday"
+#~ msgstr "星期二"
+
+#~ msgid "Wednesday"
+#~ msgstr "星期三"
+
+#~ msgid "Thursday"
+#~ msgstr "星期四"
+
+#~ msgid "Friday"
+#~ msgstr "星期五"
+
+#~ msgid "Saturday"
+#~ msgstr "星期六"
+
+#~ msgid "Sunday"
+#~ msgstr "星期日"
+
+#~ msgid "January"
+#~ msgstr "一月"
+
+#~ msgid "February"
+#~ msgstr "二月"
+
+#~ msgid "April"
+#~ msgstr "四月"
+
+#~ msgid "May"
+#~ msgstr "五月"
+
+#~ msgid "June"
+#~ msgstr "六月"
+
+#~ msgid "July"
+#~ msgstr "七月"
+
+#~ msgid "August"
+#~ msgstr "八月"
+
+#~ msgid "September"
+#~ msgstr "九月"
+
+#~ msgid "October"
+#~ msgstr "十月"
+
+#~ msgid "November"
+#~ msgstr "十一月"
+
+#~ msgid "December"
+#~ msgstr "十二月"
+
+#~ msgid "jan"
+#~ msgstr "一月"
+
+#~ msgid "feb"
+#~ msgstr "二月"
+
+#~ msgid "mar"
+#~ msgstr "三月"
+
+#~ msgid "apr"
+#~ msgstr "四月"
+
+#~ msgid "may"
+#~ msgstr "五月"
+
+#~ msgid "jun"
+#~ msgstr "六月"
+
+#~ msgid "jul"
+#~ msgstr "七月"
+
+#~ msgid "aug"
+#~ msgstr "八月"
+
+#~ msgid "oct"
+#~ msgstr "十月"
+
+#~ msgid "Jan."
+#~ msgstr "一月"
+
+#~ msgid "Feb."
+#~ msgstr "二月"
+
+#~ msgid "Aug."
+#~ msgstr "八月"
+
+#~ msgid "Oct."
+#~ msgstr "十月"
+
+#~ msgid "Dec."
+#~ msgstr "十二月"
+
+#~ msgid "p.m."
+#~ msgstr "p.m."
+
+#~ msgid "a.m."
+#~ msgstr "a.m."
+
+#~ msgid "PM"
+#~ msgstr "PM"
+
+#~ msgid "AM"
+#~ msgstr "AM"
+
+#~ msgid "midnight"
+#~ msgstr "午夜"
+
+#~ msgid "DATE_FORMAT"
+#~ msgstr "DATE_FORMAT"
+
+#~ msgid "TIME_FORMAT"
+#~ msgstr "TIME_FORMAT"
+
+#~ msgid "YEAR_MONTH_FORMAT"
+#~ msgstr "YEAR_MONTH_FORMAT"
+
+#~ msgid "MONTH_DAY_FORMAT"
+#~ msgstr "MONTH_DAY_FORMAT"
+
+#~ msgid "Ensure your text is less than %s character."
+#~ msgid_plural "Ensure your text is less than %s characters."
+#~ msgstr[0] "确保你输入的文本少于 %s 个字符。"
+
+#~ msgid "Line breaks are not allowed here."
+#~ msgstr "这里不允许换行符。"
+
+#~ msgid "Select a valid choice; '%(data)s' is not in %(choices)s."
+#~ msgstr "选择一个有效的选项： '%(data)s' 不在 %(choices)s 中。"
+
+#~ msgid "No file was submitted. Check the encoding type on the form."
+#~ msgstr "未提交文件。请检查表单的编码类型。"
+
+#~ msgid "The submitted file is empty."
+#~ msgstr "所提交的是空文件。"
+
+#~ msgid "Enter a whole number between -32,768 and 32,767."
+#~ msgstr "输入在 -32,768 与 32,767 之间的一个整数。"
+
+#~ msgid "Enter a positive number."
+#~ msgstr "输入正整数。"
+
+#~ msgid "Enter a whole number between 0 and 32,767."
+#~ msgstr "输入在 0 到 32,767 之间的一个整数。"
+
+#~ msgid "Enter a zip code in the format XXXX."
+#~ msgstr "以 XXXX 的格式输入一个邮政编码。"
+
+#~ msgid "Enter a valid Norwegian social security number."
+#~ msgstr "请输入一个有效的挪威社会保障号码。"
+
+#~ msgid "Enter a zip code in the format XXXXX."
+#~ msgstr "以 XXXXX 的格式输入一个邮政编码。"
+
+#~ msgid "Enter a postal code in the format XXXXXXX or XXX-XXXX."
+#~ msgstr "以 XXXXXXX 或 XXX-XXXX 的格式输入一个邮政编码。"
+
+#~ msgid "Hokkaido"
+#~ msgstr "北海道"
+
+#~ msgid "Aomori"
+#~ msgstr "青森"
+
+#~ msgid "Iwate"
+#~ msgstr "岩手"
+
+#~ msgid "Miyagi"
+#~ msgstr "宫城"
+
+#~ msgid "Akita"
+#~ msgstr "秋田"
+
+#~ msgid "Yamagata"
+#~ msgstr "山形"
+
+#~ msgid "Fukushima"
+#~ msgstr "福岛"
+
+#~ msgid "Ibaraki"
+#~ msgstr "茨城"
+
+#~ msgid "Tochigi"
+#~ msgstr "枥木"
+
+#~ msgid "Gunma"
+#~ msgstr "群马"
+
+#~ msgid "Saitama"
+#~ msgstr "埼玉"
+
+#~ msgid "Chiba"
+#~ msgstr "千叶"
+
+#~ msgid "Tokyo"
+#~ msgstr "东京"
+
+#~ msgid "Kanagawa"
+#~ msgstr "神奈川"
+
+#~ msgid "Yamanashi"
+#~ msgstr "山梨"
+
+#~ msgid "Nagano"
+#~ msgstr "长野"
+
+#~ msgid "Niigata"
+#~ msgstr "新舄"
+
+#~ msgid "Toyama"
+#~ msgstr "富山"
+
+#~ msgid "Ishikawa"
+#~ msgstr "石川"
+
+#~ msgid "Fukui"
+#~ msgstr "福井"
+
+#~ msgid "Gifu"
+#~ msgstr "岐阜"
+
+#~ msgid "Shizuoka"
+#~ msgstr "静冈"
+
+#~ msgid "Aichi"
+#~ msgstr "爱知"
+
+#~ msgid "Mie"
+#~ msgstr "三重"
+
+#~ msgid "Shiga"
+#~ msgstr "滋贺"
+
+#~ msgid "Kyoto"
+#~ msgstr "京都"
+
+#~ msgid "Osaka"
+#~ msgstr "大坂"
+
+#~ msgid "Hyogo"
+#~ msgstr "兵库"
+
+#~ msgid "Nara"
+#~ msgstr "奈良"
+
+#~ msgid "Wakayama"
+#~ msgstr "和歌山"
+
+#~ msgid "Tottori"
+#~ msgstr "鸟取"
+
+#~ msgid "Shimane"
+#~ msgstr "岛根"
+
+#~ msgid "Okayama"
+#~ msgstr "冈山"
+
+#~ msgid "Hiroshima"
+#~ msgstr "广岛"
+
+#~ msgid "Yamaguchi"
+#~ msgstr "山口"
+
+#~ msgid "Tokushima"
+#~ msgstr "德岛"
+
+#~ msgid "Kagawa"
+#~ msgstr "香川"
+
+#~ msgid "Ehime"
+#~ msgstr "爱媛"
+
+#~ msgid "Kochi"
+#~ msgstr "高知"
+
+#~ msgid "Fukuoka"
+#~ msgstr "福冈"
+
+#~ msgid "Saga"
+#~ msgstr "佐贺"
+
+#~ msgid "Nagasaki"
+#~ msgstr "长崎"
+
+#~ msgid "Kumamoto"
+#~ msgstr "熊本"
+
+#~ msgid "Oita"
+#~ msgstr "大分"
+
+#~ msgid "Miyazaki"
+#~ msgstr "宫崎"
+
+#~ msgid "Kagoshima"
+#~ msgstr "鹿儿岛"
+
+#~ msgid "Okinawa"
+#~ msgstr "冲绳岛"
+
+#~ msgid "Enter a zip code in the format XXXXX-XXX."
+#~ msgstr "以 XXXXX-XXX 的格式输入一个邮政编码。"
+
+#~ msgid "Phone numbers must be in XX-XXXX-XXXX format."
+#~ msgstr "电话号码必须为 XXX-XXX-XXXX 格式。"
+
+#~ msgid "Enter a valid Finnish social security number."
+#~ msgstr "输入一个有效的芬兰社会保障号码。"
+
+#~ msgid ""
+#~ "Enter a postcode. A space is required between the two postcode parts."
+#~ msgstr "输入一个邮政编码。前后两个部分之间必须有一个空格。"
+
+#~ msgid ""
+#~ "Enter a valid German identity card number in XXXXXXXXXXX-XXXXXXX-XXXXXXX-"
+#~ "X format"
+#~ msgstr ""
+#~ "以 XXXXXXXXXXX-XXXXXXX-XXXXXXX-X 的格式输入一个有效的德国身份证号码。"
+
+#~ msgid "Baden-Wuerttemberg"
+#~ msgstr "巴登符腾堡州"
+
+#~ msgid "Bavaria"
+#~ msgstr "巴伐利亚"
+
+#~ msgid "Berlin"
+#~ msgstr "柏林"
+
+#~ msgid "Brandenburg"
+#~ msgstr "勃兰登堡"
+
+#~ msgid "Bremen"
+#~ msgstr "不来梅"
+
+#~ msgid "Hamburg"
+#~ msgstr "汉堡"
+
+#~ msgid "Hessen"
+#~ msgstr "黑森州"
+
+#~ msgid "Mecklenburg-Western Pomerania"
+#~ msgstr "梅克伦堡-西部米拉尼亚"
+
+#~ msgid "Lower Saxony"
+#~ msgstr "下萨克森"
+
+#~ msgid "North Rhine-Westphalia"
+#~ msgstr "北莱茵-威斯特法伦州"
+
+#~ msgid "Rhineland-Palatinate"
+#~ msgstr "莱茵河法耳茨地区"
+
+#~ msgid "Saarland"
+#~ msgstr "萨尔州"
+
+#~ msgid "Saxony"
+#~ msgstr "萨克森"
+
+#~ msgid "Saxony-Anhalt"
+#~ msgstr "萨克森-安哈尔特"
+
+#~ msgid "Schleswig-Holstein"
+#~ msgstr "石勒苏益格-荷尔斯泰因"
+
+#~ msgid "Thuringia"
+#~ msgstr "图林根州"
+
+#~ msgid "Enter a zip code in the format XXXXX or XXXXX-XXXX."
+#~ msgstr "以 XXXXX 或 XXXXX-XXX 的格式输入一个邮政编码。"
+
+#~ msgid "Enter a valid U.S. Social Security number in XXX-XX-XXXX format."
+#~ msgstr "以 XXX-XX-XXXX 的格式输入一个有效的美国社会保障号码。"
+
+#~ msgid "session key"
+#~ msgstr "会话密钥"
+
+#~ msgid "sessions"
+#~ msgstr "会话"
+
+#~ msgid "The two password fields didn't match."
+#~ msgstr "两个口令字段不一致。"
+
+#~ msgid "A user with that username already exists."
+#~ msgstr "已存在一位使用该名字的用户。"
+
+#~ msgid ""
+#~ "Your Web browser doesn't appear to have cookies enabled. Cookies are "
+#~ "required for logging in."
+#~ msgstr "你的浏览器好象不允许使用cookie。登录需要使用cookie。"
+
+#~ msgid ""
+#~ "Please enter a correct username and password. Note that both fields are "
+#~ "case-sensitive."
+#~ msgstr "请输入正确的用户名和口令。请注意两者都是大小写敏感的。"
+
+#~ msgid "This account is inactive."
+#~ msgstr "该帐号未激活。"
+
+#~ msgid ""
+#~ "That e-mail address doesn't have an associated user account. Are you sure "
+#~ "you've registered?"
+#~ msgstr "该电子邮件地址没有关联任何用户帐号。你确定已经注册过了？"
+
+#~ msgid "The two 'new password' fields didn't match."
+#~ msgstr "两个'新口令'字段不一致。"
+
+#~ msgid "codename"
+#~ msgstr "代码名称"
+
+#~ msgid "groups"
+#~ msgstr "组"
+
+#~ msgid ""
+#~ "Required. 30 characters or fewer. Alphanumeric characters only (letters, "
+#~ "digits and underscores)."
+#~ msgstr "必填。不多于30个字符。只能用字母数字（字母、数字和下横线）"
+
+#~ msgid "e-mail address"
+#~ msgstr "e-mail 地址"
+
+#~ msgid ""
+#~ "Use '[algo]$[salt]$[hexdigest]' or use the <a href=\"password/\">change "
+#~ "password form</a>."
+#~ msgstr ""
+#~ "使用 '[algo]$[salt]$[hexdigest]' 或使用 <a href=\"password/\">修改密码表单"
+#~ "</a>"
+
+#~ msgid "Designates whether the user can log into the admin site."
+#~ msgstr "指明用户是否可以登录，未选中时表示禁止该用户帐号。"
+
+#~ msgid ""
+#~ "Designates whether this user can log into the Django admin. Unselect this "
+#~ "instead of deleting accounts."
+#~ msgstr "指明用户是否可以登录到这个管理站点。以反选代替删除帐号。"
+
+#~ msgid ""
+#~ "Designates that this user has all permissions without explicitly "
+#~ "assigning them."
+#~ msgstr "超级用户具有所有的权限，不受任何限制。"
+
+#~ msgid "last login"
+#~ msgstr "上次登录"
+
+#~ msgid "date joined"
+#~ msgstr "加入日期"
+
+#~ msgid ""
+#~ "In addition to the permissions manually assigned, this user will also get "
+#~ "all permissions granted to each group he/she is in."
+#~ msgstr "除了手工设置权限以外，用户也会从其所在组获得赋予该组的所有权限。"
+
+#~ msgid "users"
+#~ msgstr "用户"
+
+#~ msgid "th"
+#~ msgstr "th"
+
+#~ msgid "nd"
+#~ msgstr "nd"
+
+#~ msgid "rd"
+#~ msgstr "rd"
+
+#~ msgid "%(value).1f million"
+#~ msgid_plural "%(value).1f million"
+#~ msgstr[0] "%(value).1f 百万"
+
+#~ msgid "%(value).1f billion"
+#~ msgid_plural "%(value).1f billion"
+#~ msgstr[0] "%(value).1f 十亿"
+
+#~ msgid "%(value).1f trillion"
+#~ msgid_plural "%(value).1f trillion"
+#~ msgstr[0] "%(value).1f 万亿"
+
+#~ msgid "two"
+#~ msgstr "二"
+
+#~ msgid "three"
+#~ msgstr "三"
+
+#~ msgid "four"
+#~ msgstr "四"
+
+#~ msgid "five"
+#~ msgstr "五"
+
+#~ msgid "six"
+#~ msgstr "六"
+
+#~ msgid "seven"
+#~ msgstr "七"
+
+#~ msgid "python model class name"
+#~ msgstr "python 模型类名"
+
+#~ msgid "content types"
+#~ msgstr "内容类型"
+
+#~ msgid "redirect from"
+#~ msgstr "重定向自"
+
+#~ msgid ""
+#~ "This should be an absolute path, excluding the domain name. Example: '/"
+#~ "events/search/'."
+#~ msgstr "应该是一个绝对路径，不包括域名。例如：'/events/search/'。"
+
+#~ msgid "redirect to"
+#~ msgstr "重定向到"
+
+#~ msgid ""
+#~ "This can be either an absolute path (as above) or a full URL starting "
+#~ "with 'http://'."
+#~ msgstr "可以是绝对路径（同上）或以'http://'起始的全URL。"
+
+#~ msgid "redirects"
+#~ msgstr "重定向"
+
+#~ msgid "URL"
+#~ msgstr "URL"
+
+#~ msgid ""
+#~ "Example: '/about/contact/'. Make sure to have leading and trailing "
+#~ "slashes."
+#~ msgstr "例如：'/about/contact/'。请确保前导和结尾的斜杠。"
+
+#~ msgid "enable comments"
+#~ msgstr "允许评论"
+
+#~ msgid ""
+#~ "Example: 'flatpages/contact_page.html'. If this isn't provided, the "
+#~ "system will use 'flatpages/default.html'."
+#~ msgstr ""
+#~ "例如：'flatpages/contact_page.html'。若未提供，系统将使用'flatpages/"
+#~ "default.html'。"
+
+#~ msgid ""
+#~ "If this is checked, only logged-in users will be able to view the page."
+#~ msgstr "如果被选中，仅登录用户才可以查看此页。"
+
+#~ msgid "flat page"
+#~ msgstr "简单页面"
+
+#~ msgid "flat pages"
+#~ msgstr "简单页面"
+
+#~ msgid "headline"
+#~ msgstr "大字标题"
+
+#~ msgid "comment"
+#~ msgstr "评论"
+
+#~ msgid "rating #2"
+#~ msgstr "等级 #2"
+
+#~ msgid "rating #3"
+#~ msgstr "等级 #3"
+
+#~ msgid "rating #4"
+#~ msgstr "等级 #4"
+
+#~ msgid "rating #5"
+#~ msgstr "等级 #5"
+
+#~ msgid "rating #6"
+#~ msgstr "等级 #6"
+
+#~ msgid "rating #7"
+#~ msgstr "等级 #7"
+
+#~ msgid "rating #8"
+#~ msgstr "等级 #8"
+
+#~ msgid "is valid rating"
+#~ msgstr "是有效等级"
+
+#~ msgid "date/time submitted"
+#~ msgstr "日期/时间已提交"
+
+#~ msgid "is public"
+#~ msgstr "公开"
+
+#~ msgid "is removed"
+#~ msgstr "已删除"
+
+#~ msgid ""
+#~ "Check this box if the comment is inappropriate. A \"This comment has been "
+#~ "removed\" message will be displayed instead."
+#~ msgstr ""
+#~ "若评论内容不妥，则选中这个检查框。该评论将被一条\"此评论已经被删除\"的消息"
+#~ "所替换。"
+
+#~ msgid "comments"
+#~ msgstr "评论"
+
+#~ msgid "Content object"
+#~ msgstr "内容对象"
+
+#~ msgid ""
+#~ "Posted by %(user)s at %(date)s\n"
+#~ "\n"
+#~ "%(comment)s\n"
+#~ "\n"
+#~ "http://%(domain)s%(url)s"
+#~ msgstr ""
+#~ "由 %(user)s 在 %(date)s 张贴\n"
+#~ "\n"
+#~ "%(comment)s\n"
+#~ "\n"
+#~ "http://%(domain)s%(url)s"
+
+#~ msgid "ip address"
+#~ msgstr "IP 地址"
+
+#~ msgid "approved by staff"
+#~ msgstr "由团队批准"
+
+#~ msgid "free comment"
+#~ msgstr "自由评论"
+
+#~ msgid "free comments"
+#~ msgstr "自由评论"
+
+#~ msgid "score date"
+#~ msgstr "得分日期"
+
+#~ msgid "karma score"
+#~ msgstr "Karma 得分"
+
+#~ msgid "karma scores"
+#~ msgstr "Karma 得分"
+
+#~ msgid "%(score)d rating by %(user)s"
+#~ msgstr "被 %(user)s 评为 %(score)d"
+
+#~ msgid ""
+#~ "This comment was flagged by %(user)s:\n"
+#~ "\n"
+#~ "%(text)s"
+#~ msgstr ""
+#~ "此评论由 %(user)s 标记:\n"
+#~ "\n"
+#~ "%(text)s"
+
+#~ msgid "flag date"
+#~ msgstr "标记日期"
+
+#~ msgid "user flags"
+#~ msgstr "用户标志"
+
+#~ msgid "Flag by %r"
+#~ msgstr "由 %r 标记"
+
+#~ msgid "moderator deletion"
+#~ msgstr "管理员删除"
+
+#~ msgid "moderator deletions"
+#~ msgstr "管理员删除"
+
+#~ msgid "Moderator deletion by %r"
+#~ msgstr "被管理员 %r 删除"
+
+#~ msgid "Forgotten your password?"
+#~ msgstr "忘记了你的口令？"
+
+#~ msgid "Post a photo"
+#~ msgstr "上传一张照片"
+
+#~ msgid "Comment:"
+#~ msgstr "评论："
+
+#~ msgid "Preview comment"
+#~ msgstr "预览评论"
+
+#~ msgid "Your name:"
+#~ msgstr "你的名字："
+
+#~ msgid "Anonymous users cannot vote"
+#~ msgstr "匿名用户不能投票"
+
+#~ msgid "Invalid comment ID"
+#~ msgstr "无效评论ID"
+
+#~ msgid "No voting for yourself"
+#~ msgstr "不能给自已投票"
+
+#~ msgid ""
+#~ "This rating is required because you've entered at least one other rating."
+#~ msgstr "该等级必填，因为你已经输入了至少一个等级。"
+
+#~ msgid ""
+#~ "This comment was posted by a user who has posted fewer than %(count)s "
+#~ "comment:\n"
+#~ "\n"
+#~ "%(text)s"
+#~ msgid_plural ""
+#~ "This comment was posted by a user who has posted fewer than %(count)s "
+#~ "comments:\n"
+#~ "\n"
+#~ "%(text)s"
+#~ msgstr[0] ""
+#~ "此评论由一个发表过少于 %(count)s 条评论的用户张贴:\n"
+#~ "\n"
+#~ "%(text)s"
+
+#~ msgid ""
+#~ "This comment was posted by a sketchy user:\n"
+#~ "\n"
+#~ "%(text)s"
+#~ msgstr ""
+#~ "此评论由一个粗率的用户张贴：\n"
+#~ "\n"
+#~ "%(text)s"
+
+#~ msgid "Only POSTs are allowed"
+#~ msgstr "只允许 POST"
+
+#~ msgid "One or more of the required fields wasn't submitted"
+#~ msgstr "一个或多个必填字段没有提交"
+
+#~ msgid "Somebody tampered with the comment form (security violation)"
+#~ msgstr "有人通过评论表单篡改（安全侵害）"
+
+#~ msgid ""
+#~ "The comment form had an invalid 'target' parameter -- the object ID was "
+#~ "invalid"
+#~ msgstr "评论表单有一个无效的 'target' 参数 -- 对象 ID 无效"
+
+#~ msgid "The comment form didn't provide either 'preview' or 'post'"
+#~ msgstr "评论表单无法提供 '预览' 或 '张贴' 功能"
+
+#~ msgid "sites"
+#~ msgstr "站点"
+
+#~ msgid ""
+#~ "<h3>By %s:</h3>\n"
+#~ "<ul>\n"
+#~ msgstr ""
+#~ "<h3>以 %s:</h3>\n"
+#~ "<ul>\n"
+
+#~ msgid "object id"
+#~ msgstr "对象id"
+
+#~ msgid "object repr"
+#~ msgstr "对象表示"
+
+#~ msgid "action flag"
+#~ msgstr "动作标志"
+
+#~ msgid "log entry"
+#~ msgstr "日志记录"
+
+#~ msgid "log entries"
+#~ msgstr "日志记录"
+
+#~ msgid "All dates"
+#~ msgstr "所有日期"
+
+#~ msgid "Bookmarklets"
+#~ msgstr "书签"
+
+#~ msgid "Documentation bookmarklets"
+#~ msgstr "文档书签"
+
+#~ msgid ""
+#~ "\n"
+#~ "<p class=\"help\">To install bookmarklets, drag the link to your "
+#~ "bookmarks\n"
+#~ "toolbar, or right-click the link and add it to your bookmarks. Now you "
+#~ "can\n"
+#~ "select the bookmarklet from any page in the site.  Note that some of "
+#~ "these\n"
+#~ "bookmarklets require you to be viewing the site from a computer "
+#~ "designated\n"
+#~ "as \"internal\" (talk to your system administrator if you aren't sure if\n"
+#~ "your computer is \"internal\").</p>\n"
+#~ msgstr ""
+#~ "\n"
+#~ "<p class=\"help\">为了安装书签，将链接拖到你的书签工具条，\n"
+#~ "或者鼠标右击链接，添加到你的书签中。现在你可以从这个站\n"
+#~ "点的任何页面选择书签。注意，其中某些书签要求你在一台\n"
+#~ "被指定为\"内部\"的计算机上查看（如果不确定你的计算机\n"
+#~ "是否为\"内部\"的，不妨跟你的系统管理员沟通一下）。</p>\n"
+
+#~ msgid "Documentation for this page"
+#~ msgstr "关于本页面的文档"
+
+#~ msgid ""
+#~ "Jumps you from any page to the documentation for the view that generates "
+#~ "that page."
+#~ msgstr "从任何页面跳转到生成该页面的view文档。"
+
+#~ msgid "Show object ID"
+#~ msgstr "显示对象 ID"
+
+#~ msgid ""
+#~ "Shows the content-type and unique ID for pages that represent a single "
+#~ "object."
+#~ msgstr "为那些展现单个对象的页面，显示 content-type 和唯一ID。"
+
+#~ msgid "Edit this object (current window)"
+#~ msgstr "编辑该对象(当前窗口)"
+
+#~ msgid "Jumps to the admin page for pages that represent a single object."
+#~ msgstr "跳转到用于展现单个对象的页面的管理页。"
+
+#~ msgid "Edit this object (new window)"
+#~ msgstr "编辑该对象(新窗口)"
+
+#~ msgid "As above, but opens the admin page in a new window."
+#~ msgstr "同上，但在新窗口中打开管理页面。"
+
+#~ msgid "Currently:"
+#~ msgstr "当前："
+
+#~ msgid "Change:"
+#~ msgstr "改动："
+
+#~ msgid "Date:"
+#~ msgstr "日期："
+
+#~ msgid "The %(name)s \"%(obj)s\" was added successfully."
+#~ msgstr "%(name)s \"%(obj)s\" 添加成功。"
+
+#~ msgid "You may edit it again below."
+#~ msgstr "你可以在下面再次编辑它。"
+
+#~ msgid "You may add another %s below."
+#~ msgstr "你可以在下面增加另一个 %s 。"
+
+#~ msgid "Added %s."
+#~ msgstr "%s 已增加。"
+
+#~ msgid "Changed %s."
+#~ msgstr "已修改 %s 。"
+
+#~ msgid "Deleted %s."
+#~ msgstr "%s 已删除。"
+
+#~ msgid "No fields changed."
+#~ msgstr "没有字段被修改。"
+
+#~ msgid "The %(name)s \"%(obj)s\" was changed successfully."
+#~ msgstr "%(name)s \"%(obj)s\" 修改成功。"
+
+#~ msgid ""
+#~ "The %(name)s \"%(obj)s\" was added successfully. You may edit it again "
+#~ "below."
+#~ msgstr "%(name)s \"%(obj)s\" 添加成功。你可以在下面再次编辑它。"
+
+#~ msgid "One or more %(fieldname)s in %(name)s: %(obj)s"
+#~ msgstr "一个或多个 %(fieldname)s 在 %(name)s 中: %(obj)s"
+
+#~ msgid "One or more %(fieldname)s in %(name)s:"
+#~ msgstr "一个或多个 %(fieldname)s 在 %(name)s 中:"
+
+#~ msgid "The %(name)s \"%(obj)s\" was deleted successfully."
+#~ msgstr "%(name)s \"%(obj)s\" 删除成功。"
+
+#~ msgid "Are you sure?"
+#~ msgstr "你确认吗？"
+
+#~ msgid "Change history: %s"
+#~ msgstr "变更历史： %s"
+
+#~ msgid "Select %s"
+#~ msgstr "选择 %s"
+
+#~ msgid "Select %s to change"
+#~ msgstr "选择 %s 来修改"
+
+#~ msgid ""
+#~ "Please log in again, because your session has expired. Don't worry: Your "
+#~ "submission has been saved."
+#~ msgstr "请重新登录，因为你的会话已经过期。不用担心：你的提交已保存。"
+
+#~ msgid ""
+#~ "Looks like your browser isn't configured to accept cookies. Please enable "
+#~ "cookies, reload this page, and try again."
+#~ msgstr ""
+#~ "似乎你的浏览器没有配置为接受 cookie 。请允许 cookie，重新装入本页面，再试"
+#~ "一次。"
+
+#~ msgid "Usernames cannot contain the '@' character."
+#~ msgstr "用户名不能包含 '@' 字符。"
+
+#~ msgid "Your e-mail address is not your username. Try '%s' instead."
+#~ msgstr "你的 e-mail 地址不是你的用户名。换 '%s' 试试。"
+
+#~ msgid "tag:"
+#~ msgstr "标签："
+
+#~ msgid "Model %(name)r not found in app %(label)r"
+#~ msgstr "在应用 %(label)r 里找不到模型 %(name)r"
+
+#~ msgid "the related `%(label)s.%(type)s` object"
+#~ msgstr "相关的 `%(label)s.%(type)s` 对象"
+
+#~ msgid "related `%(label)s.%(name)s` objects"
+#~ msgstr "相关的 `%(label)s.%(name)s` 对象"
+
+#~ msgid "all %s"
+#~ msgstr "所有 %s"
+
+#~ msgid "number of %s"
+#~ msgstr "%s 的数量"
+
+#~ msgid "Fields on %s objects"
+#~ msgstr "%s 对象的字段"
+
+#~ msgid "Integer"
+#~ msgstr "整数"
+
+#~ msgid "Boolean (Either True or False)"
+#~ msgstr "布尔(True或False)"
+
+#~ msgid "String (up to %(maxlength)s)"
+#~ msgstr "字符串(最长 %(maxlength)s)"
+
+#~ msgid "Comma-separated integers"
+#~ msgstr "逗号分隔的整数"
+
+#~ msgid "Date (without time)"
+#~ msgstr "日期(无时间)"
+
+#~ msgid "Date (with time)"
+#~ msgstr "日期(带时间)"
+
+#~ msgid "File path"
+#~ msgstr "文件路径"
+
+#~ msgid "Boolean (Either True, False or None)"
+#~ msgstr "布尔值(True, False或None)"
+
+#~ msgid "Relation to parent model"
+#~ msgstr "与父模型的关系"
+
+#~ msgid "U.S. state (two uppercase letters)"
+#~ msgstr "美国州名(两个大写字母)"
+
+#~ msgid "XML text"
+#~ msgstr "XML 文本"
+
+#~ msgid "%s does not appear to be a urlpattern object"
+#~ msgstr "%s 似乎不是一个 urlpattern 对象"
+
+#~ msgid "Change password: %s"
+#~ msgstr "修改口令：%s"
+
+#~ msgid "Ensure this value has at most %d characters."
+#~ msgstr "确保你输入的文本至多 %d 个字符。"
+
+#~ msgid "Ensure this value has at least %d characters."
+#~ msgstr "确保你输入的文本至少 %d 个字符。"
+
+#~ msgid "Enter a whole number."
+#~ msgstr "输入整数。"
+
+#~ msgid "Ensure this value is less than or equal to %s."
+#~ msgstr "这个值必须小于或等于 %s。"
+
+#~ msgid "Ensure this value is greater than or equal to %s."
+#~ msgstr "这个值必须小于或等于 %s。"
+
+#~ msgid "Enter a valid date."
+#~ msgstr "输入一个有效的日期。"
+
+#~ msgid "Enter a valid time."
+#~ msgstr "输入一个有效的时间。"
+
+#~ msgid "Enter a valid date/time."
+#~ msgstr "输入一个有效的日期/时间。"
+
+#~ msgid "Enter a valid value."
+#~ msgstr "输入一个有效的值。"
+
+#~ msgid "Enter a valid e-mail address."
+#~ msgstr "输入一个有效的 e-mail 地址。"
+
+#~ msgid "Enter a valid URL."
+#~ msgstr "输入一个有效的 URL。"
+
+#~ msgid "This URL appears to be a broken link."
+#~ msgstr "URL %s 似乎是一个已损坏的链接。"
+
+#~ msgid ""
+#~ "Select a valid choice. That choice is not one of the available choices."
+#~ msgstr "选择一个有效的选项： 该选择不在可用的选项中。"
+
+#~ msgid "Enter a list of values."
+#~ msgstr "输入一系列值。"
+
+#~ msgid "Select a valid choice. %s is not one of the available choices."
+#~ msgstr "选择一个有效的选项： '%s' 不在可用的选项中。"
+
+#~ msgid "yes,no,maybe"
+#~ msgstr "是、否、也许"
+
+#~ msgid "The %(verbose_name)s was created successfully."
+#~ msgstr "%(verbose_name)s 创建成功。"
+
+#~ msgid "The %(verbose_name)s was updated successfully."
+#~ msgstr "%(verbose_name)s 更新成功。"
+
+#~ msgid "The %(verbose_name)s was deleted."
+#~ msgstr "%(verbose_name)s 已被删除。"
+
+#~ msgid "This value must contain only letters, numbers and underscores."
+#~ msgstr "该值只能包含字母、数字和下划线。"
+
+#~ msgid ""
+#~ "This value must contain only letters, numbers, underscores, dashes or "
+#~ "slashes."
+#~ msgstr "该值只能包含字母、数字、下划线、反斜线和斜线。"
+
+#~ msgid ""
+#~ "This value must contain only letters, numbers, underscores or hyphens."
+#~ msgstr "该值只能包含字母、数字和下划线。"
+
+#~ msgid "Uppercase letters are not allowed here."
+#~ msgstr "这里不允许大写字母。"
+
+#~ msgid "Lowercase letters are not allowed here."
+#~ msgstr "这里不允许小写字母。"
+
+#~ msgid "Enter only digits separated by commas."
+#~ msgstr "只能输入用逗号分隔的数字。"
+
+#~ msgid "Enter valid e-mail addresses separated by commas."
+#~ msgstr "输入用逗号分隔的有效 e-mail 地址。"
+
+#~ msgid "Empty values are not allowed here."
+#~ msgstr "这里不允许输入空值。"
+
+#~ msgid "Non-numeric characters aren't allowed here."
+#~ msgstr "这里不允许非数字字符。"
+
+#~ msgid "This value can't be comprised solely of digits."
+#~ msgstr "该值不能全部由数字组成。"
+
+#~ msgid "Only alphabetical characters are allowed here."
+#~ msgstr "这里只允许字母。"
+
+#~ msgid "Year must be 1900 or later."
+#~ msgstr "年份必须为1900之后。"
+
+#~ msgid "Invalid date: %s"
+#~ msgstr "无效日期: %s"
+
+#~ msgid "Enter a valid time in HH:MM format."
+#~ msgstr "输入一个 HH:MM 格式的有效时间。"
+
+#~ msgid ""
+#~ "Upload a valid image. The file you uploaded was either not an image or a "
+#~ "corrupted image."
+#~ msgstr "请上传一张有效的图片。您所上传的文件不是图片或者是已损坏的图片。"
+
+#~ msgid "The URL %s does not point to a valid image."
+#~ msgstr "URL %s 所指向的并非有效图片。"
+
+#~ msgid "Phone numbers must be in XXX-XXX-XXXX format. \"%s\" is invalid."
+#~ msgstr "电话号码必须为 XXX-XXX-XXXX 格式。\"%s\"是无效的。"
+
+#~ msgid "The URL %s does not point to a valid QuickTime video."
+#~ msgstr "URL %s 所指向的并非有效 QuickTime 视频。"
+
+#~ msgid "A valid URL is required."
+#~ msgstr "需要一个有效的 URL。"
+
+#~ msgid ""
+#~ "Valid HTML is required. Specific errors are:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "需要有效的 HTML。详细的错误是：\n"
+#~ "%s"
+
+#~ msgid "Badly formed XML: %s"
+#~ msgstr "格式错误的 XML: %s"
+
+#~ msgid "Invalid URL: %s"
+#~ msgstr "无效 URL: %s"
+
+#~ msgid "The URL %s is a broken link."
+#~ msgstr "URL %s 是一个损坏的链接。"
+
+#~ msgid "Enter a valid U.S. state abbreviation."
+#~ msgstr "输入一个有效的美国州名缩写。"
+
+#~ msgid "Watch your mouth! The word %s is not allowed here."
+#~ msgid_plural "Watch your mouth! The words %s are not allowed here."
+#~ msgstr[0] "注意言论！%s 不允许在这里出现。"
+
+#~ msgid "This field must match the '%s' field."
+#~ msgstr "这个字段必须与 '%s' 字段相匹配。"
+
+#~ msgid "Please enter something for at least one field."
+#~ msgstr "请至少在一个字段上输入些什么。"
+
+#~ msgid "Please enter both fields or leave them both empty."
+#~ msgstr "请输入两个字段或者两个字段都空着。"
+
+#~ msgid "This field must be given if %(field)s is %(value)s"
+#~ msgstr "如果 %(field)s 是 %(value)s 时这个字段必须给出"
+
+#~ msgid "This field must be given if %(field)s is not %(value)s"
+#~ msgstr "如果 %(field)s 不是 %(value)s 时这个字段必须给出"
+
+#~ msgid "Duplicate values are not allowed."
+#~ msgstr "不允许重复值。"
+
+#~ msgid "This value must be between %(lower)s and %(upper)s."
+#~ msgstr "这个值必须介于 %(lower)s 和 %(upper)s 之间。"
+
+#~ msgid "This value must be at least %s."
+#~ msgstr "这个值必须至少为 %s"
+
+#~ msgid "This value must be a power of %s."
+#~ msgstr "这个值必须是 %s 的乘方。"
+
+#~ msgid "Please enter a valid decimal number."
+#~ msgstr "请输入一个有效的小数。"
+
+#~ msgid "Please enter a valid decimal number with at most %s total digit."
+#~ msgid_plural ""
+#~ "Please enter a valid decimal number with at most %s total digits."
+#~ msgstr[0] "请输入一个有效的小数，最多 %s 个数字。 "
+
+#~ msgid ""
+#~ "Please enter a valid decimal number with a whole part of at most %s digit."
+#~ msgid_plural ""
+#~ "Please enter a valid decimal number with a whole part of at most %s "
+#~ "digits."
+#~ msgstr[0] "请输入一个有效的小数，最多 %s 个数字。"
+
+#~ msgid "Please enter a valid decimal number with at most %s decimal place."
+#~ msgid_plural ""
+#~ "Please enter a valid decimal number with at most %s decimal places."
+#~ msgstr[0] "请输入一个有效的小数，最多 %s 个小数位。 "
+
+#~ msgid "Make sure your uploaded file is at least %s bytes big."
+#~ msgstr "请确保你上传的文件至少 %s 字节大。"
+
+#~ msgid "Make sure your uploaded file is at most %s bytes big."
+#~ msgstr "请确保你上传的文件至多 %s 字节大。"
+
+#~ msgid "The format for this field is wrong."
+#~ msgstr "该字段的格式不正确。"
+
+#~ msgid "This field is invalid."
+#~ msgstr "该字段无效。"
+
+#~ msgid "Could not retrieve anything from %s."
+#~ msgstr "不能从 %s 得到任何东西。"
+
+#~ msgid ""
+#~ "The URL %(url)s returned the invalid Content-Type header '%(contenttype)"
+#~ "s'."
+#~ msgstr "URL %(url)s 返回了无效的 Content-Type 头 '%(contenttype)s'。"
+
+#~ msgid ""
+#~ "Please close the unclosed %(tag)s tag from line %(line)s. (Line starts "
+#~ "with \"%(start)s\".)"
+#~ msgstr ""
+#~ "请关闭还处于打开状态的 %(tag)s 标签从第 %(line)s 行。(行开始于 \"%(start)s"
+#~ "\"。)"
+
+#~ msgid ""
+#~ "Some text starting on line %(line)s is not allowed in that context. (Line "
+#~ "starts with \"%(start)s\".)"
+#~ msgstr ""
+#~ "从 %(line)s 行开始的一些文本，不允许出现在上下文中。(行开始于 \"%(start)s"
+#~ "\"。)"
+
+#~ msgid ""
+#~ "\"%(attr)s\" on line %(line)s is an invalid attribute. (Line starts with "
+#~ "\"%(start)s\".)"
+#~ msgstr ""
+#~ "在 %(line)s 行的\"%(attr)s\"是无效的属性。(行开始于 \"%(start)s\"。)"
+
+#~ msgid ""
+#~ "\"<%(tag)s>\" on line %(line)s is an invalid tag. (Line starts with \"%"
+#~ "(start)s\".)"
+#~ msgstr ""
+#~ "在 %(line)s 行的\"<%(tag)s>\"是无效的标签。(行开始于 \"%(start)s\"。)"
+
+#~ msgid ""
+#~ "A tag on line %(line)s is missing one or more required attributes. (Line "
+#~ "starts with \"%(start)s\".)"
+#~ msgstr ""
+#~ "在行 %(line)s 的标签少了一个或多个必填的属性。(行开始于 \"%(start)s\"。)"
+
+#~ msgid ""
+#~ "The \"%(attr)s\" attribute on line %(line)s has an invalid value. (Line "
+#~ "starts with \"%(start)s\".)"
+#~ msgstr ""
+#~ "在行 %(line)s 的\"%(attr)s\"属性有一个无效的值。(行开始于 \"%(start)s\"。)"
+
+# add by wjw 2011-06-13
+msgid "UserWorkCodeToDevice"
+msgstr "工种"
+
+msgid "send message to dev"
+msgstr "发送公共短消息"
+
+msgid "send message to employee"
+msgstr "发送私人短消息"
+
+msgid "new message"
+msgstr "新短消息"
+
+msgid "WorkCodeName"
+msgstr "工种名称"
+
+msgid "WorkCodeID"
+msgstr "编号"
+
+msgid "Public SMS"
+msgstr "公共短消息"
+
+msgid "Personal SMS"
+msgstr "个人短信息"
+
+msgid "UserRealtime"
+msgstr "人员"
+
+msgid "userrealtime"
+msgstr "人员"
+
+msgid "workcode notice"
+msgstr "用于设置工种内容. xx,xx,xx... (格式), 多个工作名称之间用分号(,)分开"
+
+#msgid "send message to employee"
+#msgstr "发送私人短消息"
+
+msgid "send message to device"
+msgstr "发送公共短消息"
+
+#add by liupan
+msgid "This Device has no pictures!"
+msgstr "该设备未上传考勤照片！"
+
+msgid "Transfer to the device templately"
+msgstr "临时调拨人员到设备"
+
+msgid "Clear all employee"
+msgstr "删除全部用户"
+
+msgid "Upgrade by u-pack"
+msgstr "使用U盘升级包升级"

@@ -1,0 +1,29 @@
+{% extends "data_list.html" %}
+{% load iclock_tags %}
+{% load i18n %}
+{% block tblHeader %}
+options.disableCols=[0,6,7];
+options.canAdd=false;
+options.canEdit=false;
+fieldHeaders=["{{ cl.FieldName.SN }}", "<th>{%trans "Command content"%}</th>", "{{ cl.FieldName.CmdCommitTime }}", "{{ cl.FieldName.CmdTransTime }}", "{{ cl.FieldName.CmdOverTime }}", "{{ cl.FieldName.CmdReturn }}"];
+
+function strOfData(data)
+{
+	return "{%trans "at"%} "+data[3]+" {%trans "to device "%} "+(data[1].split("(")[0])+"{%trans "send command"%} "+data[2].split("<")[0];
+}
+
+function getRet(data)
+{
+	if(data[7]=="") return removeNone(data[6]);
+	return "<a href='"+data[7]+"'>"+removeNone(data[6])+"</a>"; 
+}
+
+{% endblock %}
+
+{% block rowdata %}
+{% for item in latest_item_list %}[{{item.id}}, "{{ item.Device }}", "{{ item.CmdContent|cmdShowStr }}", "{{ item.CmdCommitTime|shortTime }}","{{ item.CmdTransTime|shortTime }}", "{{ item.CmdOverTime|shortTime }}", "{{ item.CmdReturn }}", "{{ item.fileURL }}", getRet]{%if not forloop.last%},{%endif%}
+{% endfor %}
+{% endblock %}
+
+
+

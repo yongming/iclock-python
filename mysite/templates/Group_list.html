@@ -1,0 +1,10 @@
+{% extends "data_list.html" %}
+{% block tblHeader %}
+{% load i18n %}
+fieldHeaders=["<th abbr='id'>{% trans 'GroupID' %}</th>","{{ cl.FieldName.name }}"
+];
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.id }}","{{ item.name }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}

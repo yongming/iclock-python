@@ -1,0 +1,42 @@
+{% extends "data_list.html" %}
+{% load i18n %}
+{% load iclock_tags %}
+{% block tblHeader %}
+options.showStyle=true;
+fieldHeaders=["{{ cl.FieldName.DeptID }}","{{ cl.FieldName.DeptName }}", "{{ cl.FieldName.parent }}", "<th>{% trans "view" %}</th>"];
+function getLogLink(data)
+{
+	return "<a title='{% trans "Show the use of employee of the department" %}' href='../employee/?DeptID__DeptID__exact="+data[0]+"'>{% trans "employee" %}</a>";
+}
+function strOfData(data)
+{
+	return data[0]+" "+data[1];
+}
+
+function ActionHint(action, aName)
+{
+	if(aName=="{% trans "delete" %}")
+		return ", \n{% trans "The operation will also remove these department-affiliated employee data" %}"
+	return ""
+}
+
+function delAllHint()
+{
+	return "{% trans "Convinced that you want to delete all units" %}?\n{% trans "The operation will also remove these department-affiliated personnel data" %}!";
+}
+
+$(function(){
+	setTimeout(function() {		
+		$("#delete_data").attr("title", "{% trans "Delete the following departments will delete all the staff information" %}");
+	},600);
+	$("#id_show_style").html('{% trans "Style:"%}<input type="radio" name="showStyle" value="0" checked/>{% trans "Table style" %}'
+					+'<input type="radio" name="showStyle" value="1" alt="tree"/>{% trans "Tree style" %}&nbsp;&nbsp;')
+})
+
+{% endblock %}
+
+{% block rowdata %}
+    {% for item in latest_item_list %}
+		[{{item.DeptID}}, "{{ item.DeptName }}", "{{ item.Parent }}", getLogLink]{%if not forloop.last%},{%endif%}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,90 @@
+{% load iclock_tags %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ LANGUAGE_CODE }}" xml:lang="{{ LANGUAGE_CODE }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+<script src="{{ MEDIA_URL }}/jslib/i18n.js"></script>
+<script src="{{ MEDIA_URL }}/jslib/jquery.js"></script>
+<script src="{{ MEDIA_URL }}/jslib/jquery.plus.js"></script>
+<script src="{{ MEDIA_URL }}/jslib/jquery.perciformes.js"></script>
+<script src="{{ MEDIA_URL }}/jslib/dept-emp.treeview.js"></script>
+<script src="{{ MEDIA_URL }}/jslib/jquery.treeview.js"></script>
+<script src="{{ MEDIA_URL }}/jslib/pg.js"></script>
+<script src="{{ MEDIA_URL }}/jslib/i18n_{{ LANGUAGE_CODE }}.js"></script>
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/jquery.treeview.css" />
+<link rel="stylesheet" id='css_base' type="text/css" href="{% block stylesheet %}/media/css/base.css{% endblock %}" />
+<link rel="stylesheet" id='css_sf' type="text/css" href="{{ MEDIA_URL }}/css/sf.css" />
+{% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{{ MEDIA_URL }}/css/rtl.css{% endblock %}" />{% endif %}
+{% block extrastyle %}{% endblock %}
+{% block extrahead %}{% endblock %}
+{% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
+
+</head>
+{% load i18n %}
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}" >
+<div id="container">
+{% block login_top %}{% endblock %}
+
+    {% if not is_popup %}
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        {% block branding %}{% endblock %}
+        </div>
+
+        {% if user.is_authenticated and user.is_staff %}
+        <div id="user-tools" >{% trans 'Welcome,' %} <strong>{{ login_username }}</strong>. {% block userlinks %} / 
+		<a href="{% if iclock_url_rel %}{{ iclock_url_rel }}{% else %}..{% endif %}/accounts/password_change/">{% trans 'Change password' %}</a> / 
+		<a href="{% if iclock_url_rel %}{{ iclock_url_rel }}{% else %}..{% endif %}/accounts/logout/">{% trans 'Log out' %}</a>&nbsp;&nbsp;<!--[<a href="/media/help/index.html">{% trans 'help' %}</a>]--><span id="liupan">{% version %}</span>
+	{% endblock %}
+	</div>
+
+		 <div>		
+	<form action="{% if iclock_url_rel %}{{ iclock_url_rel }}{% else %}..{% endif %}/i18n/setlang/" method="post" style="float: right; margin-top: -30px; display: block;position:absolute;right:10px;">
+<select name="language" style="padding: 0px; padding-left: 5px; width:150px !important;" onchange="if(this.value!='0') this.form.submit()">
+<option value="0" selected>{% trans '--- Language ---' %}</option>
+{% for lang in LANGUAGES %}
+<option value="{{ lang.0 }}">{{ lang.1 }}</option>
+{% endfor %}
+</select>
+</form>
+</div>		
+{% endif %}
+
+	{% block nav-global %}{% endblock %}
+    </div>
+    <!-- END Header -->
+
+    {% block breadcrumbs %}
+<!--    <div class="breadcrumbs">
+    <a href="/">{% trans 'Home' %}</a>{% if title %} &rsaquo; {{ title|escape }}{% endif %}</div>
+-->
+   {% endblock %}
+    {% endif %}
+    <table>
+    <tr>
+    <td height=10></td></tr></table>
+        {% if  messages %}
+        <ul class="messagelist">{% for message in messages %}<li>{{ message|escape }}</li>{% endfor %}</ul>
+        {% endif %}
+
+    
+    <!-- Content -->
+    <div id="content" class="{% block coltype %}colM{% endblock %}">
+        {% block pretitle %}{% endblock %}
+        {% block content_title %}{% if title %}<h1>{{ title|escape }}</h1>{% endif %}{% endblock %}
+        {% block object-tools %}{% endblock %}
+        {% block content %}{{ content }}{% endblock %}
+        {% block sidebar %}{% endblock %}
+        <br class="clear" />
+    </div>
+    <!-- END Content -->
+    {% block footer %}{% endblock %}
+
+</div>
+
+<!-- END Container -->
+<div class="copyright" style="display: none"><a href='http://www.zksoftware.com/'>版权所有: ZKSoftware Inc. 2010,2011<br />Version {% version %}</a></div>
+</body>
+</html>
+

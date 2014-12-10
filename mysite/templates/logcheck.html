@@ -1,0 +1,111 @@
+{% extends "base_site.html" %}
+{% block extrastyle %}
+{% load i18n %}
+<style>
+table th,td{
+border-bottom: 1px solid #1E1E1E;
+background:#000;	  
+color:#ffffff;
+}
+table th{
+color:#b0ffff;
+background:#206688;
+}
+</style>
+{% endblock %}
+{% block extrahead %}
+<script>
+
+maxLine=500;
+
+function formatLine(data)
+{
+	return "<tr><td>"+data.id+"</td>"+"<td>"+data.PIN+"</td>"
+		+"<td>"+data.EName+"</td>"+"<td>"+data.TTime+"</td>"
+		+"<td>"+data.State+"</td>"+"<td>"+data.Verify+"</td>"
+		+"<td>"+data.Device+"</td></tr>";
+}
+
+function refreshLines(data)
+{
+	var tbl=$("#tblLogList tr");
+	var tblLen=tbl.length;
+	var remove=tblLen+data.length-maxLine;
+	for(var i=0; i<remove; i++) $(tbl[tblLen-1-i]).remove();
+	if(remove>0) tblLen-=remove;
+	if(tblLen<=0)
+	{
+		var lines=[]
+		for(var i=0; i<data.length && i<maxLine; i++) lines.push(formatLine(data[i]));
+		$("#tblLogList").html(lines.join("\n"));
+		return;
+	}
+	for(var i=0; i<data.length; i++)
+		$(tbl[0]).before(formatLine(data[i]));
+}
+
+lastId=0;
+
+function checkTime(i)
+{
+	if (i<10) 
+  		{i="0" + i}
+	return i
+}
+
+function timeStr()
+{
+	var today=new Date()
+	var h=today.getHours()
+	var m=today.getMinutes()
+	var s=today.getSeconds()
+	return checkTime(h)+":"+checkTime(m)+":"+checkTime(s)
+}
+
+function getNewTrans()
+{
+	$.ajax({type: "GET", 
+			url: "?lastid="+lastId, 
+			dataType:"json",
+			success: function(data){
+					if(data.ret>0)
+					{	
+						$("#net_info").html(timeStr()+": {%trans "get"%} "+(data.ret)+" {%trans " new transaction"%}")
+						lastId=data.lastId;
+						refreshLines(data.data);
+					}
+					else
+						$("#net_info").html(timeStr()+":{%trans "no new records"%}")
+					setTimeout("getNewTrans()", 2000);
+				},
+			error: function(obj, msg, exc){
+					$("#net_info").html(timeStr()+"{%trans "access to the latest data errors"%}："+obj+", MSG="+msg);
+					setTimeout("getNewTrans()", 20000);
+				}
+			});
+}
+
+$(function(){
+	$().ajaxStart(function(){
+		$("#id_loading").show();
+		});
+	getNewTrans();
+})
+</script>
+{% endblock %}
+
+{% block content %}
+
+<p id="net_info"></p>
+
+<table><tr><th>{%trans 'id'%}</th><th>{%trans 'PIN'%}</th><th>{%trans 'EName'%}</th>
+	<th>{%trans 'Time'%}</th><th>{%trans 'State'%}</th>
+	<th>{%trans 'Verification'%}</th><th>{%trans 'Device'%}</th></tr>
+</thead>
+<tbody id="tblLogList">
+</tbody>
+</table>
+<br />
+<p>&nbsp;</p>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "data_edit.html" %}
+{% load i18n %}
+{% block addjs %}
+
+function setBackDev()
+{
+	var v=$("#md_slt").val();
+	if(v!=$("#id_SN").val())
+		$("#id_BackupDev").val(v);
+	else
+		alert("{%trans "don't set backup"%}");
+}
+
+$(function(){
+$('#id_DeptID').after('<a href="../../department/_new_/" class="add-another" id="add_id_DeptID" onclick="return showAddAnotherPopup(this);"> <img src="/media/img/icon_addlink.gif" width="10" height="10" alt="{% trans "Add Another" %}"/></a>');
+
+$('#id_edit_form').validate({
+	rules: {
+		"Alias": {"maxLength":20},
+		"TransInterval":{"digits":true,"maxLength":8},
+		"LogStamp":{"digits":true},
+		"OpLogStamp":{"digits":true}
+	}});
+var o=$('#id_LastActivity')
+$("#id_BackupDev").after('<a id="id_sltBDev" href="#">[{%trans "Set"%}]</a>&nbsp;&nbsp; <a id="id_sltBDevClear" href="#">[{%trans "Clear"%}]</a>')
+if(o.length>0) o[0].readOnly=true;
+var o=$("#id_Info");
+if(o.length>0) $(o[0].parentNode.parentNode).css("display","none")
+
+$("#id_sltBDev").click(function(){
+	createDialog(setBackDev, setBackDev, "../miniData?key=SN", "{%trans "Auto backup data"%}", "{%trans "device"%}", 350);
+});
+
+$("#id_sltBDevClear").click(function(){
+	$("#id_BackupDev").val("");
+	return false;
+});
+
+});
+
+{% endblock %}
+

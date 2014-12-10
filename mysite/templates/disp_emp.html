@@ -1,0 +1,94 @@
+{% extends "base_site.html" %}
+{% load i18n %}
+{% block content %}
+<script type="text/javascript">
+function checkFileName()
+{
+	var fileName = document.frmComebackDb.fileUpload.value;
+	var postfix = fileName.substring(fileName.length - 4);
+	if (postfix != ".txt" && postfix !=".TXT")
+	{
+		alert("{%trans "Please select .txt file!"%}");
+		return false;
+	}
+	else
+	{
+		return true;
+	}	
+}	
+</script>
+<form id='frmComebackDb'name='frmComebackDb' method='POST' enctype='multipart/form-data'>
+<div class='container' style='margin-top:30px; width:420px;'>	
+	<div>
+		<label for=fileUpload >{%trans "Upload file location:"%}</label><br/ >
+		<input type='file' class='text' value='' name='fileUpload' id='fileUpload'/>
+	</div>
+	<p>&nbsp;</p>
+	<div>
+		<input name='submit' value='{%trans "Submit"%}' type='submit' class='button first' onClick='return checkFileName();'/>
+		<input name='quit' value='{%trans "return"%}' type='button' class='button' onClick='window.close();'/>	
+	</div>
+</div>
+</form>
+
+<table width="100%" border="2" style="margin-top: 20px; background-color: #EDF3FE; float: left;">
+<tr><td>
+<ul><h2>{%trans "List upload the file format:"%}</h2>      <!--#上传列表文件格式说明：-->
+<li>{%trans "List upload file is a text file, can have more line:"%}</li><!--#上传列表文件是一个文本文件，可以有多行；-->
+{% ifequal task "username" %}
+<li>{%trans "List of file every line, there are three fields, that is, PIN,  name and device, each field with tabs between (TAB keys) separate:"%}</li><!--#列表文件的每一行，有三个字段，即人员工号、姓名和考勤机，每个字段之间用制表符(TAB键)分隔。-->
+{% endifequal %}
+{% ifnotequal task "username" %}
+<li>{%trans "List of file every line, there are two fields, that is, PIN, and device, between the two fields with tabs (TAB key) separate:"%}</li><!--#列表文件的每一行，有两个字段，即人员工号和考勤机，两个字段之间用制表符(TAB键)分隔。-->
+{% endifnotequal %}
+<li>{%trans "device can be the Serial number, it can also be a device name (IP address):"%}</li><!--#考勤机可以是序列号，也可以是机器名称（IP地址）；-->
+<li>{%trans "device may not specify for field:"%}</li><!--#考勤机字段可以不指定；-->
+{% ifequal task "userinfo" %}
+<li>{%trans "Assigned employee, if not in the database for the number of employee, the first add the new employee in the database:"%}</li<!--#分派人员时，若数据库中没有该号码的人员，则首先在数据库中新增该人员；-->
+<li>{%trans "Assigned employee, if there is no specify device, only add the new employee in the database, not assigned to any device:"%}</li><!--#分派人员时，若没有指定考勤机，则仅仅在数据库中新增该人员，不分配到任何考勤机。-->
+{% endifequal %}
+{% ifequal task "deluser" %}
+<li>{%trans "Delete the employee, if there is no specify device,the employee will be left(The column of 'Left' is 'Yes'):"%}</li>
+<!--  li>{%trans "Delete the employee, if there is no specify device,not only delete the new employee in the database, and also  delete employee in the  register device and backup device:"%}#删除人员时，若没有指定考勤机，则不仅在数据库中删除该人员，也同时在登记考勤机和备份考勤机中删除该人员。-->
+
+{% endifequal %}
+{% ifequal task "username" %}
+<li>{%trans "Send names, if there are no specific device, the employee sent to the register device and backup device:"%}</li><!--#传送人员姓名时，若没有指定考勤机，则传送到该人员登记的考勤机和备份的考勤机；-->
+<li>{%trans "Send names, if there are no specific names, the first from the database to find the names of the employee sent to the device:"%}</li><!--#传送人员姓名时，若没有指定姓名，则首先从数据库中查找到该人员的姓名再传送到考勤机；-->
+<li>{%trans "If the specific name, but the name and inconsistencies in the database, or the database did not name, first name insert into the database:"%}</li><!--#若指定了姓名，但与数据库中姓名不一致，或数据库中没有姓名，则先把姓名写入数据库；-->
+<li>{%trans "If the specified number of employee in the database does not exist, the first in the database to join the employee:"%}</li><!--#若指定编号的员工在数据库中不存在，则先在数据库中加入该员工。-->
+{% endifequal %}
+</ul>
+{% ifequal task "deluser" %}
+<h2>{%trans "Delete employee column :"%}</h2><!--#删除人员列表示 例：-->
+<pre>
+0025000001	10.171.23.12	<!--#删除设备 10.171.23.12 上的 0025000001 号人员-->
+0025000852	10.171.23.12	<!--#删除设备 10.171.23.12 上的 0025000852 号人员
+0000000395			<!--#删除数据库中 0000000395 号人员，并从其登记设备和备份设备上删除-->
+0000000222	007120982721	<!--#在序列号为 007120982721 的设备上删除 0000000222 号人员	-->
+8091801922			<!--#删除数据库中 8091801922 号人员，并从其登记设备和备份设备上删除-->
+</pre>
+{% endifequal %}
+
+{% ifequal task "userinfo" %}
+<h2>{%trans "Assigned employee column:"%}</h2><!--#分派人员列表示例：-->
+<pre>
+0025000001	10.171.23.12	<!--#把 0025000001 号人员的信息及其指纹传送到设备 10.171.23.12 上，若数据库中0025000001号人员不存在则添加--> 
+0025000852	10.171.23.12	<!--#把 0025000852 号人员的信息及其指纹传送到设备 10.171.23.12 上，若数据库中0025000852号人员不存在则添加-->
+0000000395			<!--#若数据库中0000000395号人员不存在，则往数据库中添加一个号码为 0000000395 的人员
+0000000222	007120982721	<!--#把 0000000222 号人员的信息及其指纹传送到序列号为 007120982721 的设备上，若数据库中 0000000222 号人员不存在则添加-->
+8091801922		<!--	#若数据库中8091801922号人员不存在，则往数据库中添加一个号码为 8091801922 的人员-->
+</pre>
+{% endifequal %}
+{% ifequal task "username" %}
+<h2>{%trans "Send employee name:"%}</h2><!--#传送人员姓名 列表示例：-->
+<pre>
+0025000001	李明	10.171.23.12	<!--#把 0025000001 号人员的信息的姓名设为“李明”，并把传送到设备 10.171.23.12 上-->
+0000000222	vance	007120982721	<!--#把 0000000222 号人员的数据库中的姓名传送到序列号为 007120982721 的设备上-->
+0000000395	王小兵		<!--#把 0000000395号人员的姓名设为王小兵，并传送到其登记设备和备份设备上-->
+
+{% endifequal %}
+</td></tr>
+</table>
+
+{% endblock %}

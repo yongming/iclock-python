@@ -1,0 +1,70 @@
+{% extends "base_site.html" %}
+{% load iclock_tags %}
+{% load i18n %}
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+	<a href="/">{%trans "Home"%}</a> &rsaquo;
+	{%trans "Set Options"%}
+</div>
+<div style="float: right; margin: -18px 5px; width: 700px; text-align: right;"><span style="margin-right: 150px;">{% version %}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<form action="/i18n/setlang/" method="post" style="float: right; margin-top: -19px; display: block;">
+<select name="language" style="padding: 0px; padding-left: 5px;" onchange="if(this.value!='0') this.form.submit()">
+<option value="0" selected>{% trans '--- Language ---' %}</option>
+{% for lang in LANGUAGES %}
+<option value="{{ lang.0 }}">{{ lang.1 }}</option>
+{% endfor %}
+</select>
+</form>
+</div>
+<br/><br/><h1>&nbsp;&nbsp;&nbsp;{%trans "Set Options"%}</h1>
+{% endblock %}
+
+{% block extrahead %}
+<link href="/media/css/forms.css" type="text/css" rel="stylesheet">
+<style>
+</style>
+<script src="{{ MEDIA_URL }}/jslib/pg.js"></script>
+
+{% endblock %}
+
+{% block content %}
+<br />
+<form id="form1" action="" method="POST" enctype="multipart/form-data">
+<table width="800px" border="1">
+<tr><th>{% trans "Web Port:" %}</th><td><input type="text" name="WebPort"  value="{{WebPort}}"></td></tr>
+<tr><th>{% trans "Database Engine:" %}</th><td><select name="DbEngine" size=1 style="padding: 0px; padding-left: 5px;" >
+{% for engine in DBEC %}
+<option value="{{ engine }}" {% ifequal engine DbEngine %} selected="selected" {% endifequal %}>{{ engine }}</option>
+{% endfor %}
+</select></td></tr>
+<tr><th>{% trans "Database Name:" %}</th><td><input type="text" name="DatabaseName"  value="{{DatabaseName}}"></td></tr>
+<tr><th>{% trans "Database User:" %}</th><td><input type="text" name="DatabaseUser"  value="{{DatabaseUser}}"></td></tr>
+<tr><th>{% trans "Database Password:" %}</th><td><input type="text" name="DatabasePassword" value="{{DatabasePassword}}"></td></tr>
+<tr><th>{% trans "Database Port:" %}</th><td><input type="text" name="DatabasePort"  value="{{DatabasePort}}"></td></tr>
+<tr><th>{% trans "Database Host:" %}</th><td><input type="text" name="DatabaseHost"  value="{{DatabaseHost}}"></td></tr>
+<tr><th>{% trans "PIN Width:" %}</th><td><input type="text" name="PIN_WIDTH"  value="{{PIN_WIDTH}}"></td></tr>
+<tr><th>{% trans "Encryp:" %}</th><td><select name="ENCRYPT" size=1 style="padding: 0px; padding-left: 5px;" >
+{% for encryp in YN %}
+<option value="{{ encryp.0 }}" {% ifequal encryp.0  ENCRYPT %}  selected="selected" {{encryp.1}} {% endifequal %}>{{ encryp.1 }}</option>
+{% endfor %}
+</select></td></tr>
+<tr><th>{% trans "Page Limit:" %}</th><td><input type="text" name="PAGE_LIMIT"  value="{{PAGE_LIMIT}}"></td></tr>
+<tr><th>{% trans "Realtime:" %}</th><td><select name="REALTIME" size=1 style="padding: 0px; padding-left: 5px;" >
+{% for realtime in YN %}
+<option value="{{ realtime.0 }}" {% ifequal realtime.0 REALTIME %} selected="selected" {{realtime.1}}  {% endifequal %}>{{ realtime.1 }}</option>
+{% endfor %}
+</select></td></tr>
+<tr><th>{% trans "Auto Registry:" %}</th><td><select name="AUTO_REG" size=1 style="padding: 0px; padding-left: 5px;" >
+{% for auto_reg in YN %}
+<option value="{{ auto_reg.0 }}" {% ifequal auto_reg.0 AUTO_REG %} selected="selected" {{auto_reg.1}} {% endifequal %}>{{ auto_reg.1 }}</option>
+{% endfor %}
+</select></td></tr>
+<tr ><th>&nbsp;&nbsp;</th>
+<tr ><th>&nbsp;&nbsp;</th>
+<td><input type="submit" value="{%trans "Submit"%}"> &nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="submit" value="{%trans "Return"%}" onclick="window.history.back(); return false;"></td>
+</tr>
+</table>
+</form>
+{% endblock %}
+

@@ -1,0 +1,3177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Django\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-08-29 19:59+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: <csk@zksoftware.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\authurls.py:40 .\authurls.py:56 
+
+msgid "Delete out-of-date records, are you sure?"
+msgstr "Delete out-of-date records, are you sure?"
+
+msgid "Delete before _days_ days, out-of-date records, are you sure?"
+msgstr "Delete before _days_ days, out-of-date records, are you sure?"
+
+msgid "Delete out-of-date records"
+msgstr "Delete Out-of-date"
+
+msgid "Login"
+msgstr "Login"
+
+#: .\authurls.py:41 
+
+msgid "Invalid Username or Password, please try again."
+msgstr "Invalid Username or Password, please try again."
+
+#: .\authurls.py:57 
+
+msgid "No permission to do anything!"
+msgstr "No permission to do anything!"
+
+#: .\iclocklocale.py:69 .\iclocklocale.py:80 
+
+#, python-format
+msgid "Staff %s"
+msgstr "Staff %s"
+
+#: .\settings.py:84 
+
+msgid "English"
+msgstr "English"
+
+#: .\settings.py:85 
+
+msgid "Simplified Chinese"
+msgstr "Simplified Chinese"
+
+#: .\iclock\admin_detail_view.py:50 
+
+msgid "Reset password"
+msgstr ""
+
+#: .\iclock\admin_detail_view.py:51 .\iclock\models.py:426 
+
+#: .\iclock\models.py:608 .\templates\admin\auth\user\add_form.html.py:18
+#: .\templates\admin\auth\user\change_password.html.py:34
+msgid "Password"
+msgstr ""
+
+#: .\iclock\admin_detail_view.py:53 
+
+msgid "Password again"
+msgstr ""
+
+#: .\iclock\admin_detail_view.py:74 
+
+msgid "Must be same as Password"
+msgstr ""
+
+#: .\iclock\admin_detail_view.py:78 
+
+msgid "The length must be great than 4"
+msgstr ""
+
+#: .\iclock\admin_detail_view.py:125 
+
+#, python-format
+msgid "Keyword \"%(object_name)s\" Data do not exist!"
+msgstr ""
+
+#: .\iclock\admin_detail_view.py:129 
+
+msgid "No permission"
+msgstr ""
+
+#: .\iclock\admin_detail_view.py:142 .\iclock\dataview.py:171 
+
+msgid "new"
+msgstr ""
+
+#: .\iclock\datamisc.py:26 
+
+msgid "male"
+msgstr ""
+
+#: .\iclock\datamisc.py:26 
+
+msgid "female"
+msgstr ""
+
+#: .\iclock\datamisc.py:51 
+
+msgid "Export data"
+msgstr ""
+
+#: .\iclock\datamisc.py:51 
+
+msgid "Specified data format does not exist or do not support!"
+msgstr ""
+
+#: .\iclock\dataproc.py:279 
+
+#, python-format
+msgid ""
+"The Firmware version of device %(object_name)s is unknownï¼cannot to be "
+"upgraded!"
+msgstr ""
+
+#: .\iclock\dataproc.py:290 
+
+#, python-format
+msgid ""
+"The firmware file '%(object_name)s' does not exist, can not upgrade firmware "
+"for %(esc_name)s!"
+msgstr ""
+
+#: .\iclock\datautils.py:301 
+
+msgid "You do not have the permission!"
+msgstr ""
+
+#: .\iclock\dataview.py:71 
+
+msgid "clear"
+msgstr ""
+
+#: .\iclock\dataview.py:71 .\iclock\filterspecs.py:70 
+
+#: .\iclock\filterspecs.py:100 .\iclock\filterspecs.py:156
+#: .\iclock\filterspecs.py:182 .\templates\iclock_list.html.py:88
+#: .\templates\iclock_list.html.py:212 .\templates\iclock_list.html.py:278
+msgid "All"
+msgstr ""
+
+#: .\iclock\dataview.py:157 
+
+msgid "Duplicated"
+msgstr ""
+
+#: .\iclock\dataview.py:210 
+
+#, python-format
+msgid "Keyword \"%(object_name)s\" can not to be changed!"
+msgstr ""
+
+#: .\iclock\dataview.py:230 .\templates\Group_edit.html.py:95 
+
+#: .\templates\Group_edit.html.py:114 .\templates\Group_edit.html.py:130
+msgid "Modify"
+msgstr ""
+
+#: .\iclock\dataview.py:317 
+
+#, python-format
+msgid "Device options \"%s\" Unavailable!"
+msgstr ""
+
+#: .\iclock\dataview.py:336 .\iclock\dataview.py:342 .\iclock\dataview.py:348
+#: .\iclock\dataview.py:356 .\iclock\dataview.py:362 .\iclock\taskview.py:39
+#: .\iclock\taskview.py:78
+msgid "Designated device does not exist!"
+msgstr ""
+
+#: .\iclock\dataview.py:373 
+
+#, python-format
+msgid "%s %s does not exist!"
+msgstr ""
+
+#: .\iclock\dataview.py:378 
+
+#, python-format
+msgid "Does not support this feature: \"action=%(object_name)s\""
+msgstr ""
+
+#: .\iclock\dataview.py:392 .\iclock\genmsgview.py:74 
+
+#: .\iclock\genmsgview.py:87
+msgid "Error"
+msgstr ""
+
+#: .\iclock\dataview.py:392 .\iclock\genmsgview.py:74 
+
+#: .\iclock\genmsgview.py:87
+msgid "The server is not installed information services module!"
+msgstr ""
+
+#: .\iclock\desfiles.py:67 
+
+#, python-format
+msgid "%(i)d attendance record."
+msgstr ""
+
+#: .\iclock\expview.py:320 
+
+msgid "Automatically Data Export Definition"
+msgstr ""
+
+#: .\iclock\filterspecs.py:87 
+
+msgid "More ..."
+msgstr ""
+
+#: .\iclock\filterspecs.py:121 
+
+msgid "Any date"
+msgstr ""
+
+#: .\iclock\filterspecs.py:122 
+
+msgid "Today"
+msgstr ""
+
+#: .\iclock\filterspecs.py:125 
+
+msgid "Past 7 days"
+msgstr ""
+
+#: .\iclock\filterspecs.py:127 
+
+msgid "This month"
+msgstr ""
+
+#: .\iclock\filterspecs.py:129 
+
+msgid "This year"
+msgstr ""
+
+#: .\iclock\filterspecs.py:130 
+
+msgid "Range ..."
+msgstr ""
+
+#: .\iclock\filterspecs.py:156 .\iclock\models.py:108 
+
+msgid "Yes"
+msgstr ""
+
+#: .\iclock\filterspecs.py:156 .\iclock\models.py:108 
+
+msgid "No"
+msgstr ""
+
+#: .\iclock\filterspecs.py:163 
+
+msgid "Unknown"
+msgstr ""
+
+#: .\iclock\genmsgview.py:71 
+
+msgid "Generating Messages"
+msgstr ""
+
+#: .\iclock\importdata.py:20 
+
+#, python-format
+msgid "<a href='/iclock/tmp/%s'> %d record(s) is duplicated or invalid."
+msgstr ""
+
+#: .\iclock\importdata.py:24 
+
+#, python-format
+msgid "Inserted %(object_num)d successfully"
+msgstr ""
+
+#: .\iclock\importdata.py:25 
+
+#, python-format
+msgid "Updated %(object_num)d successfully"
+msgstr ""
+
+#: .\iclock\importdata.py:26 
+
+#, python-format
+msgid " %(object_num)d already exists in the database"
+msgstr ""
+
+#: .\iclock\importdata.py:28 
+
+#, python-format
+msgid "In the data files %(object_num)d  %(object_name)s "
+msgstr ""
+
+#: .\iclock\importdata.py:65 .\iclock\importdata.py:69 
+
+#: .\iclock\importdata.py:190
+msgid "fail"
+msgstr ""
+
+#: .\iclock\importdata.py:65 
+
+msgid "<h1> Data upload failure </h1>. <br/> A device must be provided."
+msgstr ""
+
+#: .\iclock\importdata.py:69 
+
+#, python-format
+msgid ""
+"<h1> Data upload failure </h1>. <br/> You have no permission to upload data "
+"to device %(object_name)s "
+msgstr ""
+
+#: .\iclock\importdata.py:91 .\iclock\importdata.py:146 
+
+#: .\iclock\importdata.py:151
+msgid "fail "
+msgstr ""
+
+#: .\iclock\importdata.py:91 
+
+#, python-format
+msgid ""
+"<h1> Data upload failure </h1> <br/> Empployee information from the data "
+"file is not from device %(object_name)s"
+msgstr ""
+
+#: .\iclock\importdata.py:126 
+
+msgid "user information"
+msgstr ""
+
+#: .\iclock\importdata.py:129 .\iclock\importdata.py:181 
+
+#: .\iclock\importdata.py:216 .\iclock\importdata.py:219
+msgid "Import data"
+msgstr ""
+
+#: .\iclock\importdata.py:130 
+
+msgid ""
+"Employee information does not match the data, select the correct employee "
+"information data file"
+msgstr ""
+
+#: .\iclock\importdata.py:146 
+
+#, python-format
+msgid ""
+"<h1> Data upload failure </ h1>, <br /> staff fingerprint data files are not "
+"from the attendance of %(object_name)s"
+msgstr ""
+
+#: .\iclock\importdata.py:152 
+
+msgid ""
+"<h1> Data upload failure </ h1>, <br /> If the fingerprint template to "
+"upload, please also upload their associated user information!"
+msgstr ""
+
+#: .\iclock\importdata.py:178 
+
+msgid "Fingerprint template"
+msgstr ""
+
+#: .\iclock\importdata.py:182 
+
+#, python-format
+msgid ""
+"<h1>Upload data success</h1><br /><br />%(object_name)s<br /><h1>Data Import "
+"failure</h1><br /><br />Fingerprint template does not match the data or data "
+"file is empty, please select the correct <b>fingerprint template </b>data "
+"files"
+msgstr ""
+
+#: .\iclock\importdata.py:190 
+
+msgid "Upload data failure"
+msgstr ""
+
+#: .\iclock\importdata.py:190 
+
+msgid "Attendance record attendance data files are not from the device"
+msgstr ""
+
+#: .\iclock\importdata.py:213 .\templates\employee_list.html.py:5 
+
+msgid "Transactions"
+msgstr ""
+
+#: .\iclock\importdata.py:217 .\iclock\importdata.py:219 
+
+msgid "Data Import Results"
+msgstr ""
+
+#: .\iclock\importdata.py:217 
+
+msgid "Data Import failure"
+msgstr ""
+
+#: .\iclock\importdata.py:217 
+
+msgid ""
+"Transactions does not match data, Please select the correct <b>transaction</"
+"b> data file!"
+msgstr ""
+
+#: .\iclock\importdata.py:223 
+
+msgid "error"
+msgstr ""
+
+#: .\iclock\importdata.py:223 
+
+msgid "The server is not installed U-disk data import module!"
+msgstr ""
+
+#: .\iclock\importdata.py:227 
+
+msgid "Import U-disk data files"
+msgstr ""
+
+#: .\iclock\models.py:18 .\templates\employee_list.html.py:183 
+
+msgid "department"
+msgstr ""
+
+#: .\iclock\models.py:19 
+
+msgid "department name"
+msgstr ""
+
+#: .\iclock\models.py:20 
+
+msgid "department number"
+msgstr ""
+
+#: .\iclock\models.py:42 
+
+msgid "parent"
+msgstr ""
+
+#: .\iclock\models.py:83 
+
+msgid "Nested department parent"
+msgstr ""
+
+#: .\iclock\models.py:232 
+
+msgid "serial number"
+msgstr ""
+
+#: .\iclock\models.py:232 
+
+msgid ""
+"Should be set with the device, on the device, access management menu \"Sys "
+"Info\" / \"Dev Info\" / \"Serial Num\" could be found"
+msgstr ""
+
+#: .\iclock\models.py:234 
+
+msgid "last activity"
+msgstr ""
+
+#: .\iclock\models.py:235 .\iclock\models.py:806 
+
+msgid "transfer time"
+msgstr ""
+
+#: .\iclock\models.py:235 
+
+msgid ""
+"Setting device for a moment from the plane started to send checks to the new "
+"data server. Hh: mm (hours: minutes) format, with a number of time between "
+"the semicolon (;) separately"
+msgstr ""
+
+#: .\iclock\models.py:236 
+
+msgid "interval"
+msgstr ""
+
+#: .\iclock\models.py:236 
+
+msgid ""
+"Device set for each interval to check how many minutes to send new data "
+"server"
+msgstr ""
+
+#: .\iclock\models.py:237 
+
+msgid "trans record stamp"
+msgstr ""
+
+#: .\iclock\models.py:237 
+
+msgid ""
+"Logo for the latest device to the server send the transactions timestamps"
+msgstr ""
+
+#: .\iclock\models.py:238 
+
+msgid "trans OP stamp"
+msgstr ""
+
+#: .\iclock\models.py:238 
+
+msgid ""
+"Marking device for the server to the employee data transfer as timestamps"
+msgstr ""
+
+#: .\iclock\models.py:239 
+
+msgid "device name"
+msgstr ""
+
+#: .\iclock\models.py:239 
+
+msgid "Device of a name"
+msgstr ""
+
+#: .\iclock\models.py:241 
+
+msgid "update flag"
+msgstr ""
+
+#: .\iclock\models.py:241 
+
+msgid "To identify what kind of data should be transfered to the server"
+msgstr ""
+
+#: .\iclock\models.py:242 
+
+msgid "style"
+msgstr ""
+
+#: .\iclock\models.py:244 
+
+msgid "FWVersion"
+msgstr ""
+
+#: .\iclock\models.py:245 
+
+msgid "FPCount"
+msgstr ""
+
+#: .\iclock\models.py:246 
+
+msgid "TransactionCount"
+msgstr ""
+
+#: .\iclock\models.py:247 
+
+msgid "UserCount"
+msgstr ""
+
+#: .\iclock\models.py:248 
+
+msgid "MainTime"
+msgstr ""
+
+#: .\iclock\models.py:249 
+
+msgid "MaxFingerCount"
+msgstr ""
+
+#: .\iclock\models.py:250 
+
+msgid "MaxAttLogCount"
+msgstr ""
+
+#: .\iclock\models.py:251 
+
+msgid "DeviceName"
+msgstr ""
+
+#: .\iclock\models.py:252 
+
+msgid "AlgVer"
+msgstr ""
+
+#: .\iclock\models.py:253 
+
+msgid "FlashSize"
+msgstr ""
+
+#: .\iclock\models.py:254 
+
+msgid "FreeFlashSize"
+msgstr ""
+
+#: .\iclock\models.py:255 
+
+msgid "Language"
+msgstr ""
+
+#: .\iclock\models.py:256 
+
+msgid "VOLUME"
+msgstr ""
+
+#: .\iclock\models.py:257 
+
+msgid "DtFmt"
+msgstr ""
+
+#: .\iclock\models.py:258 
+
+msgid "IPAddress"
+msgstr ""
+
+#: .\iclock\models.py:259 
+
+msgid "IsTFT"
+msgstr ""
+
+#: .\iclock\models.py:260 
+
+msgid "Platform"
+msgstr ""
+
+#: .\iclock\models.py:261 
+
+msgid "Brightness"
+msgstr ""
+
+#: .\iclock\models.py:262 
+
+msgid "Auto backup data to"
+msgstr ""
+
+#: .\iclock\models.py:263 
+
+msgid "OEMVendor"
+msgstr ""
+
+#: .\iclock\models.py:264 
+
+msgid "city"
+msgstr ""
+
+#: .\iclock\models.py:264 
+
+msgid "the host city"
+msgstr ""
+
+#: .\iclock\models.py:265 
+
+msgid "Access Function"
+msgstr ""
+
+#: .\iclock\models.py:333 .\iclock\models.py:636 .\iclock\models.py:743 
+
+#: .\iclock\models.py:770 .\iclock\models.py:802 .\iclock\models.py:892
+#: .\templates\devlog_list.html.py:10 .\templates\dlogcheck.html.py:38
+#: .\templates\employee_edit.html.py:37 .\templates\employee_list.html.py:16
+#: .\templates\employee_list.html.py:169 .\templates\employee_list.html.py:181
+#: .\templates\iclock_edit.html.py:31 .\templates\iclock_list.html.py:169
+#: .\templates\upload.html.py:23
+msgid "device"
+msgstr ""
+
+#: .\iclock\models.py:360 .\templates\User_list.html.py:7 
+
+msgid "granted department"
+msgstr ""
+
+#: .\iclock\models.py:366 
+
+msgid "admin granted department"
+msgstr ""
+
+#: .\iclock\models.py:392 
+
+msgid "Male"
+msgstr ""
+
+#: .\iclock\models.py:393 
+
+msgid "Female"
+msgstr ""
+
+#: .\iclock\models.py:398 
+
+msgid "Normal"
+msgstr ""
+
+#: .\iclock\models.py:399 
+
+msgid "Registrar"
+msgstr ""
+
+#: .\iclock\models.py:400 
+
+msgid "Administrator"
+msgstr ""
+
+#: .\iclock\models.py:401 .\templates\User_list.html.py:7 
+
+msgid "Supervisor"
+msgstr ""
+
+#: .\iclock\models.py:423 .\templates\dlogcheck.html.py:38 
+
+#: .\templates\logcheck.html.py:41 .\templates\transaction_list.html.py:8
+msgid "PIN"
+msgstr ""
+
+#: .\iclock\models.py:425 
+
+msgid "name"
+msgstr ""
+
+#: .\iclock\models.py:427 
+
+msgid "ID Card"
+msgstr ""
+
+#: .\iclock\models.py:428 
+
+msgid "privilege"
+msgstr ""
+
+#: .\iclock\models.py:429 
+
+msgid "Access Group"
+msgstr ""
+
+#: .\iclock\models.py:430 
+
+msgid "Access Timezone"
+msgstr ""
+
+#: .\iclock\models.py:431 
+
+msgid "sex"
+msgstr ""
+
+#: .\iclock\models.py:432 
+
+msgid "birthday"
+msgstr ""
+
+#: .\iclock\models.py:433 
+
+msgid "address"
+msgstr ""
+
+#: .\iclock\models.py:434 
+
+msgid "postcode"
+msgstr ""
+
+#: .\iclock\models.py:435 
+
+msgid "office phone"
+msgstr ""
+
+#: .\iclock\models.py:436 
+
+msgid "home phone"
+msgstr ""
+
+#: .\iclock\models.py:437 
+
+msgid "mobile"
+msgstr ""
+
+#: .\iclock\models.py:438 
+
+msgid "nationality"
+msgstr ""
+
+#: .\iclock\models.py:439 
+
+msgid "title"
+msgstr ""
+
+#: .\iclock\models.py:440 
+
+msgid "registration device"
+msgstr ""
+
+#: .\iclock\models.py:441 
+
+msgid "social insurance num"
+msgstr ""
+
+#: .\iclock\models.py:442 .\iclock\models.py:582 
+
+msgid "refresh time"
+msgstr ""
+
+#: .\iclock\models.py:443 
+
+msgid "participate in the working date"
+msgstr ""
+
+#: .\iclock\models.py:457 
+
+msgid "left"
+msgstr ""
+
+#: .\iclock\models.py:490 
+
+#, python-format
+msgid "Employee PIN %s not found"
+msgstr ""
+
+#: .\iclock\models.py:509 
+
+#, python-format
+msgid "Duplicated Employee PIN: %s"
+msgstr ""
+
+#: .\iclock\models.py:536 .\iclock\models.py:632 
+
+#: .\templates\department_list.html.py:7
+msgid "employee"
+msgstr ""
+
+#: .\iclock\models.py:603 
+
+msgid "fingerprint"
+msgstr ""
+
+#: .\iclock\models.py:607 .\iclock\models.py:610 
+
+msgid "Card"
+msgstr ""
+
+#: .\iclock\models.py:609 .\iclock\templatetags\iclock_tags.py:128 
+
+msgid "Fingerprint"
+msgstr ""
+
+#: .\iclock\models.py:611 
+
+msgid "Other"
+msgstr ""
+
+#: .\iclock\models.py:615 .\iclock\models.py:621 
+
+msgid "Check in"
+msgstr ""
+
+#: .\iclock\models.py:616 .\iclock\models.py:622 
+
+msgid "Check out"
+msgstr ""
+
+#: .\iclock\models.py:617 
+
+msgid "Meal start"
+msgstr ""
+
+#: .\iclock\models.py:618 
+
+msgid "Meal end"
+msgstr ""
+
+#: .\iclock\models.py:619 .\iclock\models.py:623 
+
+msgid "Break in"
+msgstr ""
+
+#: .\iclock\models.py:620 .\iclock\models.py:624 
+
+msgid "Break out"
+msgstr ""
+
+#: .\iclock\models.py:625 
+
+msgid "Overtime in"
+msgstr ""
+
+#: .\iclock\models.py:626 
+
+msgid "Overtime out"
+msgstr ""
+
+#: .\iclock\models.py:627 
+
+msgid "Test Data"
+msgstr ""
+
+#: .\iclock\models.py:633 .\iclock\models.py:746 .\iclock\models.py:910 
+
+#: .\templates\dlogcheck.html.py:38
+msgid "time"
+msgstr ""
+
+#: .\iclock\models.py:634 
+
+msgid "state"
+msgstr ""
+
+#: .\iclock\models.py:635 
+
+msgid "verification"
+msgstr ""
+
+#: .\iclock\models.py:638 
+
+msgid "work code"
+msgstr ""
+
+#: .\iclock\models.py:639 
+
+msgid "Reserved"
+msgstr ""
+
+#: .\iclock\models.py:647 .\templates\iclock_list.html.py:16 
+
+#: .\templates\transaction_list.html.py:12
+msgid "transaction"
+msgstr ""
+
+#: .\iclock\models.py:648 
+
+msgid "transactions"
+msgstr ""
+
+#: .\iclock\models.py:656 
+
+msgid "open"
+msgstr ""
+
+#: .\iclock\models.py:657 
+
+msgid "shutdown"
+msgstr ""
+
+#: .\iclock\models.py:658 
+
+msgid "validation failure"
+msgstr ""
+
+#: .\iclock\models.py:659 
+
+msgid "alarm"
+msgstr ""
+
+#: .\iclock\models.py:660 
+
+msgid "enter the menu"
+msgstr ""
+
+#: .\iclock\models.py:661 
+
+msgid "change settings"
+msgstr ""
+
+#: .\iclock\models.py:662 
+
+msgid "registration fingerprint"
+msgstr ""
+
+#: .\iclock\models.py:663 
+
+msgid "registration password"
+msgstr ""
+
+#: .\iclock\models.py:664 
+
+msgid "HID card registration"
+msgstr ""
+
+#: .\iclock\models.py:665 
+
+msgid "delete User"
+msgstr ""
+
+#: .\iclock\models.py:666 
+
+msgid "delete fingerprints"
+msgstr ""
+
+#: .\iclock\models.py:667 
+
+msgid "delete the password"
+msgstr ""
+
+#: .\iclock\models.py:668 
+
+msgid "delete RF card"
+msgstr ""
+
+#: .\iclock\models.py:669 
+
+msgid "remove data"
+msgstr ""
+
+#: .\iclock\models.py:670 
+
+msgid "MF create cards"
+msgstr ""
+
+#: .\iclock\models.py:671 .\iclock\models.py:672 
+
+msgid "MF registration cards"
+msgstr ""
+
+#: .\iclock\models.py:673 
+
+msgid "MF registration card deleted"
+msgstr ""
+
+#: .\iclock\models.py:674 
+
+msgid "MF clearance card content"
+msgstr ""
+
+#: .\iclock\models.py:675 
+
+msgid "moved to the registration card data"
+msgstr ""
+
+#: .\iclock\models.py:676 
+
+msgid "the data in the card copied to the machine"
+msgstr ""
+
+#: .\iclock\models.py:677 
+
+msgid "set time"
+msgstr ""
+
+#: .\iclock\models.py:678 
+
+msgid "restore factory settings"
+msgstr ""
+
+#: .\iclock\models.py:679 
+
+msgid "delete records access"
+msgstr ""
+
+#: .\iclock\models.py:680 
+
+msgid "remove administrator rights"
+msgstr ""
+
+#: .\iclock\models.py:681 
+
+msgid "group set up to amend Access"
+msgstr ""
+
+#: .\iclock\models.py:682 
+
+msgid "modify user access control settings"
+msgstr ""
+
+#: .\iclock\models.py:683 
+
+msgid "access time to amend paragraph"
+msgstr ""
+
+#: .\iclock\models.py:684 
+
+msgid "amend unlock Portfolio"
+msgstr ""
+
+#: .\iclock\models.py:685 
+
+msgid "unlock"
+msgstr ""
+
+#: .\iclock\models.py:686 
+
+msgid "registration of new users"
+msgstr ""
+
+#: .\iclock\models.py:687 
+
+msgid "fingerprint attribute changes"
+msgstr ""
+
+#: .\iclock\models.py:688 
+
+msgid "stress alarm"
+msgstr ""
+
+#: .\iclock\models.py:729 
+
+msgid "Door Close Detected"
+msgstr ""
+
+#: .\iclock\models.py:730 
+
+msgid "Door Open Detected"
+msgstr ""
+
+#: .\iclock\models.py:731 
+
+msgid "Machine Been Broken"
+msgstr ""
+
+#: .\iclock\models.py:732 
+
+msgid "Out Door Button"
+msgstr ""
+
+#: .\iclock\models.py:733 
+
+msgid "Door Broken Accidentally"
+msgstr ""
+
+#: .\iclock\models.py:734 
+
+msgid "Alarm Cancelled"
+msgstr ""
+
+#: .\iclock\models.py:744 
+
+msgid "device administrator"
+msgstr ""
+
+#: .\iclock\models.py:745 
+
+msgid "Operation"
+msgstr ""
+
+#: .\iclock\models.py:747 
+
+msgid "Object"
+msgstr ""
+
+#: .\iclock\models.py:748 
+
+msgid "Parameter1"
+msgstr ""
+
+#: .\iclock\models.py:749 
+
+msgid "Parameter2"
+msgstr ""
+
+#: .\iclock\models.py:750 
+
+msgid "Parameter3"
+msgstr ""
+
+#: .\iclock\models.py:762 
+
+msgid "devive operation log"
+msgstr ""
+
+#: .\iclock\models.py:763 
+
+msgid "device operation logs"
+msgstr ""
+
+#: .\iclock\models.py:771 .\iclock\models.py:912 
+
+msgid "data"
+msgstr ""
+
+#: .\iclock\models.py:772 .\iclock\models.py:914 
+
+msgid "object"
+msgstr ""
+
+#: .\iclock\models.py:773 
+
+msgid "record count"
+msgstr ""
+
+#: .\iclock\models.py:774 
+
+msgid "error count"
+msgstr ""
+
+#: .\iclock\models.py:775 
+
+msgid "upload time"
+msgstr ""
+
+#: .\iclock\models.py:784 
+
+msgid "log of data from device"
+msgstr ""
+
+#: .\iclock\models.py:804 
+
+msgid "command content"
+msgstr ""
+
+#: .\iclock\models.py:805 
+
+msgid "submit time"
+msgstr ""
+
+#: .\iclock\models.py:807 
+
+msgid "return time"
+msgstr ""
+
+#: .\iclock\models.py:808 
+
+msgid "return value"
+msgstr ""
+
+#: .\iclock\models.py:809 .\iclock\models.py:911 
+
+msgid "administrator"
+msgstr ""
+
+#: .\iclock\models.py:830 
+
+msgid "log of command to device"
+msgstr ""
+
+#: .\iclock\models.py:859 .\iclock\models.py:868 
+
+msgid "News Channel"
+msgstr ""
+
+#: .\iclock\models.py:860 .\iclock\models.py:869 
+
+msgid "Company Notice"
+msgstr ""
+
+#: .\iclock\models.py:861 
+
+msgid "Notice System"
+msgstr ""
+
+#: .\iclock\models.py:862 
+
+msgid "Companies short message"
+msgstr ""
+
+#: .\iclock\models.py:866 
+
+msgid "Weather Forecast"
+msgstr ""
+
+#: .\iclock\models.py:867 
+
+msgid "Employee SMS"
+msgstr ""
+
+#: .\iclock\models.py:870 
+
+msgid "System Notice"
+msgstr ""
+
+#: .\iclock\models.py:871 
+
+msgid "Companies SMS"
+msgstr ""
+
+#: .\iclock\models.py:875 .\iclock\models.py:893 
+
+msgid "type"
+msgstr ""
+
+#: .\iclock\models.py:876 .\iclock\models.py:894 
+
+msgid "take effect"
+msgstr ""
+
+#: .\iclock\models.py:877 .\iclock\models.py:895 
+
+msgid "out-of-service"
+msgstr ""
+
+#: .\iclock\models.py:878 
+
+msgid "Content"
+msgstr ""
+
+#: .\iclock\models.py:879 
+
+msgid "picture"
+msgstr ""
+
+#: .\iclock\models.py:880 
+
+msgid "company/department"
+msgstr ""
+
+#: .\iclock\models.py:881 .\iclock\models.py:896 
+
+msgid "parameter"
+msgstr ""
+
+#: .\iclock\models.py:887 
+
+# update by wjw 2011-06-13
+#msgid "public information"
+#msgstr ""
+msgid "public information"
+msgstr "Configuration of SMS content"
+
+#: .\iclock\models.py:897 
+
+msgid "content"
+msgstr ""
+
+#: .\iclock\models.py:898 
+
+msgid "recently service"
+msgstr ""
+
+#: .\iclock\models.py:906 
+
+# update by wjw 2011-06-13
+#msgid "information subscription"
+#msgstr ""
+msgid "information subscription"
+msgstr "SMS's been send"
+
+#: .\iclock\models.py:913 
+
+msgid "operation"
+msgstr ""
+
+#: .\iclock\models.py:915 
+
+msgid "amount"
+msgstr ""
+
+#: .\iclock\models.py:921 
+
+msgid "administration log"
+msgstr ""
+
+#: .\iclock\models.py:922 
+
+msgid "administration logs"
+msgstr ""
+
+#: .\iclock\models.py:1307 
+
+#, python-format
+msgid "Can browse %s"
+msgstr ""
+
+#: .\iclock\setoption.py:22 
+
+msgid "YES"
+msgstr ""
+
+#: .\iclock\setoption.py:23 
+
+msgid "NO"
+msgstr ""
+
+#: .\iclock\setoption.py:28 
+
+msgid "You must change options from your website!"
+msgstr ""
+
+#: .\iclock\setoption.py:48 
+
+msgid "Set options OK!"
+msgstr ""
+
+#: .\iclock\taskview.py:29 
+
+#, python-format
+msgid "No permission to do on device %s!"
+msgstr ""
+
+#: .\iclock\taskview.py:36 
+
+#, python-format
+msgid "No permission to download employee data to device %s!"
+msgstr ""
+
+#: .\iclock\taskview.py:41 
+
+msgid "Not specified a device!"
+msgstr ""
+
+#: .\iclock\taskview.py:69 .\iclock\taskview.py:71 
+
+msgid "Designated employee does not exist!"
+msgstr ""
+
+#: .\iclock\taskview.py:75 
+
+#, python-format
+msgid "No permission to deete the employee's in device %s"
+msgstr ""
+
+#: .\iclock\taskview.py:81 
+
+#, python-format
+msgid ""
+"Not specified a device, and no permission to delete employee from device %s."
+msgstr ""
+
+#: .\iclock\taskview.py:83 
+
+msgid "Not specified a device, and the employee has no a enrollment device."
+msgstr ""
+
+#: .\iclock\taskview.py:103 
+
+#, python-format
+msgid "%s is not a valid PIN."
+msgstr ""
+
+#: .\iclock\taskview.py:124 
+
+msgid ""
+"Not specified a valid device, or the employee has no a enrollment device!"
+msgstr ""
+
+#: .\iclock\taskview.py:126 
+
+msgid "The employee no in the database."
+msgstr ""
+
+#: .\iclock\taskview.py:148 
+
+msgid "Delete employee from device"
+msgstr ""
+
+#: .\iclock\taskview.py:149 
+
+msgid "Download employee's name to device"
+msgstr ""
+
+#: .\iclock\taskview.py:150 
+
+msgid "Dispatch employee to device"
+msgstr ""
+
+#: .\iclock\taskview.py:189 
+
+#, python-format
+msgid ""
+"%s employee's data is ready to transfer, but following record(s) is missing:"
+msgstr ""
+
+#: .\iclock\taskview.py:191 
+
+msgid "There are wrong: "
+msgstr ""
+
+#: .\iclock\taskview.py:195 
+
+#, python-format
+msgid "%s employee(s) data is ready to transfer."
+msgstr ""
+
+#: .\iclock\taskview.py:208 
+
+msgid "Dispatch employee data to device"
+msgstr ""
+
+#: .\iclock\taskview.py:235 
+
+msgid "Upload employee list"
+msgstr ""
+
+#: .\iclock\taskview.py:268 
+
+#, python-format
+msgid "%(object)s employee has been successfully!"
+msgstr ""
+
+#: .\iclock\taskview.py:274 
+
+msgid "Delete the employee(s) in device"
+msgstr ""
+
+#: .\iclock\taskview.py:279 
+
+msgid "Server upgrades"
+msgstr ""
+
+#: .\iclock\taskview.py:319 
+
+msgid "Restart device successfully: "
+msgstr ""
+
+#: .\iclock\taskview.py:319 
+
+#, python-format
+msgid ""
+"Its size and standard firmware(%(object_name)s) is inconsistent, Need to "
+"upgrade firmware If there is no automatic inspection later firmware update, "
+"or manually upgrade firmware"
+msgstr ""
+
+#: .\iclock\taskview.py:321 
+
+msgid "Failure to restart device:"
+msgstr ""
+
+#: .\iclock\taskview.py:323 
+
+msgid "Please enter the IP address of the device"
+msgstr ""
+
+#: .\iclock\taskview.py:324 
+
+msgid "Restart device"
+msgstr ""
+
+#: .\iclock\taskview.py:331 
+
+msgid "Automatically check sluggish device"
+msgstr ""
+
+#: .\iclock\taskview.py:331 
+
+msgid ""
+"The device(s) does not connect with the server more than half and an hour: </"
+"p><p>"
+msgstr ""
+
+#: .\iclock\taskview.py:331 
+
+msgid ""
+"The system will connect and re-start the following device automaticly: </"
+"p><p>"
+msgstr ""
+
+#: .\iclock\weatherview.py:27 
+
+msgid "device:"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:127 
+
+msgid "Personnel information"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:129 
+
+msgid "Del employee"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:130 
+
+msgid "Del fingerprint"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:131 
+
+msgid "Check the server configuration"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:132 
+
+msgid "Updated device information on the server"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:133 
+
+msgid "Remove transaction"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:134 
+
+msgid "restart device"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:135 
+
+msgid "reboot device"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:136 
+
+msgid "Check and upload the new data"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:137 
+
+msgid "Send file to the device"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:138 
+
+msgid "Get file from the equipment"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:139 
+
+msgid "Run a device shell command"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:140 
+
+msgid "Change configuration"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:141 
+
+msgid "Clear all data"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:142 .\templates\Group_edit.html.py:145
+#: .\templates\iclock_list.html.py:187
+msgid "Output unlock signal"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:143 .\templates\Group_edit.html.py:146
+#: .\templates\iclock_list.html.py:188
+msgid "Terminate alarm signal"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:150 
+
+msgid "Unknown command"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:157 
+
+msgid "Transaction"
+msgstr ""
+
+#: .\iclock\templatetags\iclock_tags.py:158 
+
+msgid "employee info/fingerprint "
+msgstr ""
+
+#: .\templates\404.html.py:4 .\templates\404.html.py:8 
+
+#: .\templates\admin\404.html.py:4 .\templates\admin\404.html.py:8
+msgid "Page not found"
+msgstr ""
+
+#: .\templates\404.html.py:10 
+
+msgid "Sorry,you have no the permission or the page doesn't exist!"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:84 
+
+msgid " iclock "
+msgstr ""
+
+#: .\templates\Group_edit.html.py:93 .\templates\Group_edit.html.py:112 
+
+#: .\templates\Group_edit.html.py:128 .\templates\data_edit.html.py:8
+#: .\templates\admin\change_form.html.py:15 .\templates\admin\index.html.py:28
+msgid "Add"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:94 .\templates\Group_edit.html.py:113 
+
+#: .\templates\Group_edit.html.py:129
+msgid "Browse"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:96 .\templates\Group_edit.html.py:116 
+
+#: .\templates\Group_edit.html.py:134
+#: .\templates\admin\delete_confirmation.html.py:9
+#: .\templates\admin\submit_line.html.py:3
+msgid "Delete"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:99 
+
+msgid " department "
+msgstr ""
+
+#: .\templates\Group_edit.html.py:99 
+
+msgid " employee "
+msgstr ""
+
+#: .\templates\Group_edit.html.py:100 
+
+msgid " device "
+msgstr ""
+
+#: .\templates\Group_edit.html.py:100 
+
+msgid " transaction "
+msgstr ""
+
+#: .\templates\Group_edit.html.py:101 
+
+msgid " administration log "
+msgstr ""
+
+#: .\templates\Group_edit.html.py:102 
+
+msgid " information subscription "
+msgstr ""
+
+#: .\templates\Group_edit.html.py:103 
+
+msgid " public information "
+msgstr ""
+
+#: .\templates\Group_edit.html.py:105 
+
+msgid " log of command to device "
+msgstr ""
+
+#: .\templates\Group_edit.html.py:106 
+
+msgid " log of data from device "
+msgstr ""
+
+#: .\templates\Group_edit.html.py:107 
+
+msgid " operation log "
+msgstr ""
+
+#: .\templates\Group_edit.html.py:115 .\templates\employee_list.html.py:191 
+
+msgid "Delete employee from the device"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:117 .\templates\employee_list.html.py:192 
+
+msgid "Employee leave"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:118 .\templates\employee_list.html.py:193 
+
+msgid "Move employee to a new device"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:119 .\templates\employee_list.html.py:183 
+
+#: .\templates\employee_list.html.py:194
+msgid "Change employee's department"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:120 .\templates\employee_list.html.py:190 
+
+msgid "Transfer to the device temporarily"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:121 .\templates\employee_list.html.py:16 
+
+#: .\templates\employee_list.html.py:169 .\templates\employee_list.html.py:174
+#: .\templates\employee_list.html.py:189
+msgid "Transfer employee to the device"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:131 .\templates\iclock_list.html.py:181 
+
+msgid "Clear data in device"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:132 .\templates\iclock_list.html.py:182 
+
+msgid "Clear transactions in device"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:133 
+
+msgid "Copy data between device"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:135 .\templates\iclock_list.html.py:184 
+
+msgid "Set power suspend"
+msgstr "Set power suspend(1~999minutes)"
+
+msgid "set power suspend"
+msgstr "Set power suspend"
+
+#: .\templates\Group_edit.html.py:136 .\templates\iclock_list.html.py:178 
+
+msgid "Refresh device information"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:137 .\templates\iclock_list.html.py:180 
+
+msgid "Upload new data"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:138 
+
+msgid "Pause device"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:139 .\templates\iclock_list.html.py:179 
+
+msgid "Reboot device"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:140 .\templates\iclock_list.html.py:176 
+
+msgid "Upload data again"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:141 .\templates\iclock_list.html.py:177 
+
+msgid "Upload transactions again"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:142 
+
+msgid "Reset Password in device"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:143 .\templates\iclock_list.html.py:186 
+
+msgid "Restore employee to device"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:144 
+
+msgid "Resume a resumed device"
+msgstr ""
+
+#: .\templates\Group_edit.html.py:147 .\templates\iclock_list.html.py:174 
+
+msgid "Upgrade firmware"
+msgstr ""
+
+#: .\templates\Group_list.html.py:4 
+
+msgid "GroupID"
+msgstr ""
+
+#: .\templates\IclockMsg_list.html.py:15 
+
+msgid "Weather Forecast test"
+msgstr ""
+
+#: .\templates\IclockMsg_list.html.py:16 
+
+msgid "Generating device customized information"
+msgstr ""
+
+#: .\templates\User_list.html.py:7 
+
+msgid "Activate"
+msgstr ""
+
+#: .\templates\User_list.html.py:7 
+
+msgid "Groups"
+msgstr ""
+
+#: .\templates\base.html.py:35 .\templates\admin\base.html.py:28 
+
+msgid "Welcome,"
+msgstr ""
+
+#: .\templates\base.html.py:35 .\templates\admin\base.html.py:28 
+
+#: .\templates\admin\change_form.html.py:10
+#: .\templates\admin\change_list.html.py:5
+#: .\templates\admin\delete_confirmation.html.py:3
+#: .\templates\admin\object_history.html.py:3
+#: .\templates\admin\auth\user\change_password.html.py:9
+#: .\templates\admin\auth\user\change_password.html.py:15
+#: .\templates\admin\auth\user\change_password.html.py:46
+#: .\templates\registration\password_change_done.html.py:3
+#: .\templates\registration\password_change_form.html.py:3
+msgid "Change password"
+msgstr ""
+
+#: .\templates\base.html.py:35 .\templates\admin\base.html.py:28 
+
+#: .\templates\admin\change_form.html.py:10
+#: .\templates\admin\change_list.html.py:5
+#: .\templates\admin\delete_confirmation.html.py:3
+#: .\templates\admin\object_history.html.py:3
+#: .\templates\admin\auth\user\change_password.html.py:9
+#: .\templates\registration\password_change_done.html.py:3
+#: .\templates\registration\password_change_form.html.py:3
+msgid "Log out"
+msgstr ""
+
+#: .\templates\base.html.py:35 
+
+msgid "help"
+msgstr ""
+
+#: .\templates\base.html.py:42 .\templates\setoption.html.py:12 
+
+msgid "--- Language ---"
+msgstr ""
+
+#: .\templates\base.html.py:57 .\templates\data_edit.html.py:6 
+
+#: .\templates\setoption.html.py:6 .\templates\upload.html.py:6
+#: .\templates\admin\500.html.py:4 .\templates\admin\base.html.py:33
+#: .\templates\admin\change_form.html.py:13
+#: .\templates\admin\change_list.html.py:6
+#: .\templates\admin\delete_confirmation.html.py:6
+#: .\templates\admin\invalid_setup.html.py:4
+#: .\templates\admin\object_history.html.py:5
+#: .\templates\admin\auth\user\change_password.html.py:12
+#: .\templates\registration\logged_out.html.py:4
+#: .\templates\registration\password_change_done.html.py:4
+#: .\templates\registration\password_change_form.html.py:4
+#: .\templates\registration\password_reset_done.html.py:4
+#: .\templates\registration\password_reset_form.html.py:4
+msgid "Home"
+msgstr ""
+
+#: .\templates\base_site.html.py:6 .\templates\admin\base_site.html.py:7 
+
+msgid "iClock Automatic Data Master Server"
+msgstr ""
+
+#: .\templates\base_site.html.py:12 .\templates\logcheck.html.py:43 
+
+#: .\templates\upload.html.py:51
+msgid "Device"
+msgstr ""
+
+#: .\templates\base_site.html.py:15 
+
+msgid "Device Maintenance"
+msgstr ""
+
+#: .\templates\base_site.html.py:18 .\templates\base_site.html.py:21 
+
+#: .\templates\iclock_list.html.py:20
+msgid "Transaction Monitor"
+msgstr ""
+
+#: .\templates\base_site.html.py:32 .\templates\iclock_list.html.py:35 
+
+msgid "Data"
+msgstr ""
+
+#: .\templates\base_site.html.py:40 
+
+msgid "Import U_Disk Data"
+msgstr ""
+
+#: .\templates\base_site.html.py:47 .\templates\admin\base_site.html.py:4 
+
+msgid "System"
+msgstr ""
+
+#: .\templates\data_edit.html.py:4 
+
+msgid "detail"
+msgstr ""
+
+#: .\templates\data_edit.html.py:62 .\templates\setoption.html.py:64 
+
+msgid "Submit"
+msgstr ""
+
+#: .\templates\data_edit.html.py:63 .\templates\setoption.html.py:65 
+
+msgid "Return"
+msgstr ""
+
+#: .\templates\data_exp_def.html.py:126 .\templates\upgrade.html.py:18 
+
+msgid "ok"
+msgstr ""
+
+#: .\templates\data_exp_def.html.py:127 .\templates\disp_emp.html.py:29 
+
+#: .\templates\info.html.py:18 .\templates\upgrade.html.py:19
+msgid "return"
+msgstr ""
+
+#: .\templates\data_list.html.py:20 
+
+msgid "Please set a template file"
+msgstr ""
+
+#: .\templates\data_list.html.py:39 
+
+msgid "Clear all data, are you sure?"
+msgstr ""
+
+#: .\templates\data_list.html.py:50 .\templates\data_list.html.py:142 
+
+#: .\templates\filters.html.py:6 .\templates\iclock_list.html.py:275
+#: .\templates\admin\filters.html.py:4
+msgid "Filter"
+msgstr ""
+
+#: .\templates\data_list.html.py:117 .\templates\data_list.html.py:157 
+
+msgid "Export"
+msgstr ""
+
+#: .\templates\data_list.html.py:117 
+
+msgid "list"
+msgstr ""
+
+#: .\templates\data_list.html.py:117 
+
+msgid "format"
+msgstr ""
+
+#: .\templates\data_list.html.py:137 
+
+msgid "Search by:"
+msgstr ""
+
+#: .\templates\data_list.html.py:138 
+
+msgid "Search"
+msgstr ""
+
+#: .\templates\data_list.html.py:160 .\templates\data_list.html.py:162 
+
+msgid "Append"
+msgstr ""
+
+#: .\templates\data_list.html.py:166 .\templates\data_list.html.py:168 
+
+msgid "Clear All"
+msgstr ""
+
+#: .\templates\data_list.html.py:177 
+
+msgid "Operation for selected"
+msgstr ""
+
+#: .\templates\department_list.html.py:4 .\templates\employee_list.html.py:217
+#: 
+
+msgid "view"
+msgstr ""
+
+#: .\templates\department_list.html.py:7 
+
+msgid "Show the use of employee of the department"
+msgstr ""
+
+#: .\templates\department_list.html.py:16 
+
+msgid "delete"
+msgstr ""
+
+#: .\templates\department_list.html.py:17 
+
+msgid ""
+"The operation will also remove these department-affiliated employee data"
+msgstr ""
+
+#: .\templates\department_list.html.py:23 
+
+msgid "Convinced that you want to delete all units"
+msgstr ""
+
+#: .\templates\department_list.html.py:23 
+
+msgid ""
+"The operation will also remove these department-affiliated personnel data"
+msgstr ""
+
+#: .\templates\department_list.html.py:28 
+
+msgid "Delete the following departments will delete all the staff information"
+msgstr ""
+
+#: .\templates\devcmds_list.html.py:10 
+
+msgid "Command content"
+msgstr ""
+
+#: .\templates\devcmds_list.html.py:14 .\templates\devlog_list.html.py:10 
+
+#: .\templates\transaction_list.html.py:12
+msgid "at"
+msgstr ""
+
+#: .\templates\devcmds_list.html.py:14 
+
+msgid "to device "
+msgstr ""
+
+#: .\templates\devcmds_list.html.py:14 
+
+msgid "send command"
+msgstr ""
+
+#: .\templates\devlog_list.html.py:10 
+
+msgid "transfer data log"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:11 
+
+msgid "Please select .txt file!"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:23 
+
+msgid "Upload file location:"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:28 
+
+msgid "OK"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:36 
+
+msgid "List upload the file format:"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:37 
+
+msgid "List upload file is a text file, can have more line:"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:39 
+
+msgid ""
+"List of file every line, there are three fields, that is, PIN,  name and "
+"device, each field with tabs between (TAB keys) separate:"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:42 
+
+msgid ""
+"List of file every line, there are two fields, that is, PIN, and device, "
+"between the two fields with tabs (TAB key) separate:"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:44 
+
+msgid ""
+"device can be the Serial number, it can also be a device name (IP address):"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:45 
+
+msgid "device may not specify for field:"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:47 
+
+msgid ""
+"Assigned employee, if not in the database for the number of employee, the "
+"first add the new employee in the database:"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:48 
+
+msgid ""
+"Assigned employee, if there is no specify device, only add the new employee "
+"in the database, not assigned to any device:"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:51 
+
+msgid ""
+"Delete the employee, if there is no specify device,not only delete the new "
+"employee in the database, and also  delete employee in the  register device "
+"and backup device:"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:54 
+
+msgid ""
+"Send names, if there are no specific device, the employee sent to the "
+"register device and backup device:"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:55 
+
+msgid ""
+"Send names, if there are no specific names, the first from the database to "
+"find the names of the employee sent to the device:"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:56 
+
+msgid ""
+"If the specific name, but the name and inconsistencies in the database, or "
+"the database did not name, first name insert into the database:"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:57 
+
+msgid ""
+"If the specified number of employee in the database does not exist, the "
+"first in the database to join the employee:"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:61 
+
+msgid "Delete employee column :"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:72 
+
+msgid "Assigned employee column:"
+msgstr ""
+
+#: .\templates\disp_emp.html.py:82 
+
+msgid "Send employee name:"
+msgstr ""
+
+#: .\templates\dlogcheck.html.py:38 
+
+msgid "Event"
+msgstr ""
+
+#: .\templates\dlogcheck.html.py:39 
+
+msgid "Param1"
+msgstr ""
+
+#: .\templates\dlogcheck.html.py:39 
+
+msgid "Param2"
+msgstr ""
+
+#: .\templates\dlogcheck.html.py:91 .\templates\logcheck.html.py:89 
+
+msgid "get"
+msgstr ""
+
+#: .\templates\dlogcheck.html.py:91 .\templates\logcheck.html.py:89 
+
+msgid " new transaction"
+msgstr ""
+
+#: .\templates\dlogcheck.html.py:97 .\templates\logcheck.html.py:94 
+
+msgid "no new records"
+msgstr ""
+
+#: .\templates\dlogcheck.html.py:101 .\templates\logcheck.html.py:98 
+
+msgid "access to the latest data errors"
+msgstr ""
+
+#: .\templates\employee_edit.html.py:9 .\templates\iclock_edit.html.py:15 
+
+msgid "Add Another"
+msgstr ""
+
+#: .\templates\employee_edit.html.py:10 
+
+msgid "Date format is "
+msgstr ""
+
+#: .\templates\employee_edit.html.py:10 
+
+msgid "for example"
+msgstr ""
+
+#: .\templates\employee_edit.html.py:35 
+
+msgid "Select a device"
+msgstr ""
+
+#: .\templates\employee_edit.html.py:37 .\templates\upload.html.py:56 
+
+msgid "select device"
+msgstr ""
+
+#: .\templates\employee_list.html.py:6 
+
+msgid ""
+"After the submission of the operation need to be about half a minute or so "
+"of device in the entry into force"
+msgstr ""
+
+#: .\templates\employee_list.html.py:9 
+
+msgid "Sequence of input devices"
+msgstr ""
+
+#: .\templates\employee_list.html.py:21 
+
+msgid "Deleted from the device employee"
+msgstr ""
+
+#: .\templates\employee_list.html.py:21 
+
+msgid "Change employee department"
+msgstr ""
+
+#: .\templates\employee_list.html.py:31 
+
+msgid "Input Department #"
+msgstr ""
+
+#: .\templates\employee_list.html.py:47 
+
+msgid "copy employee information"
+msgstr ""
+
+#: .\templates\employee_list.html.py:50 
+
+msgid "copy the following fields"
+msgstr ""
+
+#: .\templates\employee_list.html.py:53 
+
+msgid "To your choice in front of the other transaction"
+msgstr ""
+
+#: .\templates\employee_list.html.py:82 
+
+msgid "null"
+msgstr ""
+
+#: .\templates\employee_list.html.py:117 
+
+msgid "You have no choice any character, for copying data"
+msgstr ""
+
+#: .\templates\employee_list.html.py:126 
+
+msgid "You have no source of data, select"
+msgstr ""
+
+#: .\templates\employee_list.html.py:137 
+
+msgid "You have to choose at least two employee"
+msgstr ""
+
+#: .\templates\employee_list.html.py:172 
+
+msgid "Transfer employee to the device temporarily"
+msgstr ""
+
+#: .\templates\employee_list.html.py:181 
+
+msgid "Deleted employee from the device"
+msgstr ""
+
+#: .\templates\employee_list.html.py:185 
+
+msgid "Change the employee's registration device"
+msgstr ""
+
+#: .\templates\employee_list.html.py:185 
+
+msgid "new device"
+msgstr ""
+
+#: .\templates\employee_list.html.py:224 
+
+msgid "Upload a dispatch employee list"
+msgstr ""
+
+#: .\templates\employee_list.html.py:225 
+
+msgid "Upload a delete employee list"
+msgstr ""
+
+#: .\templates\filemng.html.py:3 .\templates\filemng.html.py:164 
+
+msgid "File management device"
+msgstr ""
+
+#: .\templates\filemng.html.py:87 
+
+msgid "Main Contents"
+msgstr ""
+
+#: .\templates\filemng.html.py:88 
+
+msgid "directory"
+msgstr ""
+
+#: .\templates\filemng.html.py:89 
+
+msgid "file list"
+msgstr ""
+
+#: .\templates\filemng.html.py:99 
+
+msgid "Show the contents of the documents"
+msgstr ""
+
+#: .\templates\filemng.html.py:100 
+
+msgid "Download files"
+msgstr ""
+
+#: .\templates\filemng.html.py:100 
+
+msgid ""
+"To save the file, please click on the right mouse button links, select 'Save "
+"Target As'"
+msgstr ""
+
+#: .\templates\filemng.html.py:164 
+
+msgid "Download data from the device"
+msgstr ""
+
+#: .\templates\iclock_edit.html.py:11 
+
+msgid "don't set backup"
+msgstr ""
+
+#: .\templates\iclock_edit.html.py:25 
+
+msgid "Set"
+msgstr ""
+
+#: .\templates\iclock_edit.html.py:25 
+
+msgid "Clear"
+msgstr ""
+
+#: .\templates\iclock_edit.html.py:31 
+
+msgid "Auto backup data"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:17 
+
+msgid "Employee"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:18 
+
+msgid "Upload data log"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:19 
+
+msgid "Command log"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:21 
+
+msgid "File management"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:32 
+
+msgid "Status"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:34 
+
+msgid "Firmware"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:34 
+
+msgid "Model"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:35 
+
+msgid "Emp./FP/Trans."
+msgstr ""
+
+#: .\templates\iclock_list.html.py:44 .\templates\iclock_list.html.py:172 
+
+msgid "Pause"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:44 
+
+msgid "Online"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:44 
+
+msgid "Communicating"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:44 
+
+msgid "Offline"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:133 
+
+msgid "please enter"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:150 
+
+msgid "Device will be conducted as follows firmware update"
+msgstr "At the end of the operation will restart your device"
+
+#: .\templates\iclock_list.html.py:150 
+
+msgid "Please ensure that the server installation path"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:151 
+
+msgid "model"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:151 
+
+msgid "The relevant firmware file be stored in its subdirectory"
+msgstr "Please confirm the relevant firmware file be stored in the corresponding subdirectories"
+
+#: .\templates\iclock_list.html.py:169 .\templates\iclock_list.html.py:175 
+
+msgid "Copy device data to"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:173 
+
+msgid "Resume"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:183 
+
+msgid "communicate password"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:183 
+
+msgid "Set communicate password"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:184 
+
+msgid "device auto poweroff time"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:259 
+
+msgid "Auto Refresh"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:260 
+
+msgid "Interval: "
+msgstr ""
+
+#: .\templates\iclock_list.html.py:260 
+
+msgid "s"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:262 
+
+msgid "Tip"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:264 
+
+msgid "Operations, Usually only for the on-line device;"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:265 
+
+msgid ""
+"After operation on the device, It's will take effect after about half minute."
+msgstr ""
+
+#: .\templates\iclock_list.html.py:276 
+
+msgid "Device Status"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:288 
+
+msgid "Input the IP Address of a device: "
+msgstr ""
+
+#: .\templates\iclock_list.html.py:296 
+
+msgid "compulsion reboot device"
+msgstr ""
+
+#: .\templates\iclock_list.html.py:297 
+
+msgid "auto reboot halted device"
+msgstr ""
+
+#: .\templates\logcheck.html.py:41 
+
+msgid "id"
+msgstr ""
+
+#: .\templates\logcheck.html.py:41 .\templates\transaction_list.html.py:8 
+
+msgid "EName"
+msgstr ""
+
+#: .\templates\logcheck.html.py:42 
+
+msgid "Time"
+msgstr ""
+
+#: .\templates\logcheck.html.py:42 
+
+msgid "State"
+msgstr ""
+
+#: .\templates\logcheck.html.py:43 
+
+msgid "Verification"
+msgstr ""
+
+#: .\templates\setoption.html.py:7 .\templates\setoption.html.py:19 
+
+msgid "Set Options"
+msgstr ""
+
+#: .\templates\setoption.html.py:34 
+
+msgid "Web Port:"
+msgstr ""
+
+#: .\templates\setoption.html.py:35 
+
+msgid "Database Engine:"
+msgstr ""
+
+#: .\templates\setoption.html.py:40 
+
+msgid "Database Name:"
+msgstr ""
+
+#: .\templates\setoption.html.py:41 
+
+msgid "Database User:"
+msgstr ""
+
+#: .\templates\setoption.html.py:42 
+
+msgid "Database Password:"
+msgstr ""
+
+#: .\templates\setoption.html.py:43 
+
+msgid "Database Port:"
+msgstr ""
+
+#: .\templates\setoption.html.py:44 
+
+msgid "Database Host:"
+msgstr ""
+
+#: .\templates\setoption.html.py:45 
+
+msgid "PIN Width:"
+msgstr ""
+
+#: .\templates\setoption.html.py:46 
+
+msgid "Encryp:"
+msgstr ""
+
+#: .\templates\setoption.html.py:51 
+
+msgid "Page Limit:"
+msgstr ""
+
+#: .\templates\setoption.html.py:52 
+
+msgid "Realtime:"
+msgstr ""
+
+#: .\templates\setoption.html.py:57 
+
+msgid "Auto Registry:"
+msgstr ""
+
+#: .\templates\upgrade.html.py:10 
+
+msgid "Upload file location"
+msgstr ""
+
+#: .\templates\upload.html.py:7 .\templates\upload.html.py:9 
+
+msgid "U-exported to upload data"
+msgstr ""
+
+#: .\templates\upload.html.py:23 .\templates\upload.html.py:29 
+
+msgid "device choice"
+msgstr ""
+
+#: .\templates\upload.html.py:39 
+
+msgid ""
+"If you plan to upload fingerprint template, users upload information at the "
+"same time"
+msgstr ""
+
+#: .\templates\upload.html.py:51 
+
+msgid "File type"
+msgstr ""
+
+#: .\templates\upload.html.py:51 
+
+msgid "Select file"
+msgstr ""
+
+#: .\templates\upload.html.py:58 
+
+msgid ""
+"Here set to upload data files from the downloaded to the device which "
+"transaction was the U-disk"
+msgstr ""
+
+#: .\templates\upload.html.py:60 
+
+msgid "transaction file"
+msgstr ""
+
+#: .\templates\upload.html.py:64 
+
+msgid "users File"
+msgstr ""
+
+#: .\templates\upload.html.py:68 
+
+msgid "fingerprint template file"
+msgstr ""
+
+#: .\templates\upload.html.py:71 
+
+msgid ""
+"If upload fingerprint template must also upload file related to the user's "
+"information"
+msgstr ""
+
+#: .\templates\upload.html.py:75 
+
+msgid "upload file"
+msgstr ""
+
+#: .\templates\welcome_sys.html.py:3 
+
+msgid "Login System"
+msgstr ""
+
+#: .\templates\welcome_sys.html.py:8 
+
+msgid "Welcome to the iclock system!"
+msgstr ""
+
+#: .\templates\admin\404.html.py:10 
+
+msgid "We're sorry, but the requested page could not be found."
+msgstr ""
+
+#: .\templates\admin\500.html.py:4 
+
+msgid "Server error"
+msgstr ""
+
+#: .\templates\admin\500.html.py:6 
+
+msgid "Server error (500)"
+msgstr ""
+
+#: .\templates\admin\500.html.py:9 
+
+msgid "Server Error <em>(500)</em>"
+msgstr ""
+
+#: .\templates\admin\500.html.py:10 
+
+msgid ""
+"There's been an error. It's been reported to the site administrators via e-"
+"mail and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: .\templates\admin\change_form.html.py:21 
+
+#: .\templates\admin\object_history.html.py:5
+msgid "History"
+msgstr ""
+
+#: .\templates\admin\change_form.html.py:31 
+
+#: .\templates\admin\auth\user\change_password.html.py:24
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\templates\admin\change_form.html.py:49 
+
+msgid "Ordering"
+msgstr ""
+
+#: .\templates\admin\change_form.html.py:52 
+
+msgid "Order:"
+msgstr ""
+
+#: .\templates\admin\change_list.html.py:12 
+
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: .\templates\admin\delete_confirmation.html.py:14 
+
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+
+#: .\templates\admin\delete_confirmation.html.py:21 
+
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+
+#: .\templates\admin\delete_confirmation.html.py:26 
+
+msgid "Yes, I'm sure"
+msgstr ""
+
+#: .\templates\admin\filter.html.py:2 
+
+#, python-format
+msgid " By %(filter_title)s "
+msgstr ""
+
+#: .\templates\admin\index.html.py:17 
+
+#, python-format
+msgid "Models available in the %(name)s application."
+msgstr ""
+
+#: .\templates\admin\index.html.py:18 
+
+#, python-format
+msgid "%(name)s"
+msgstr ""
+
+#: .\templates\admin\index.html.py:40 
+
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: .\templates\admin\index.html.py:59 
+
+msgid "Recent Actions"
+msgstr ""
+
+#: .\templates\admin\index.html.py:60 
+
+msgid "My Actions"
+msgstr ""
+
+#: .\templates\admin\index.html.py:64 
+
+msgid "None available"
+msgstr ""
+
+#: .\templates\admin\invalid_setup.html.py:8 
+
+msgid ""
+"Something's wrong with your database installation. Make sure the appropriate "
+"database tables have been created, and make sure the database is readable by "
+"the appropriate user."
+msgstr ""
+
+#: .\templates\admin\object_history.html.py:18 
+
+msgid "Date/time"
+msgstr ""
+
+#: .\templates\admin\object_history.html.py:19 
+
+msgid "User"
+msgstr ""
+
+#: .\templates\admin\object_history.html.py:20 
+
+msgid "Action"
+msgstr ""
+
+#: .\templates\admin\object_history.html.py:26 
+
+msgid "DATE_WITH_TIME_FULL"
+msgstr "N j, Y, P"
+
+#: .\templates\admin\object_history.html.py:36 
+
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr ""
+
+#: .\templates\admin\pagination.html.py:10 
+
+msgid "Show all"
+msgstr ""
+
+#: .\templates\admin\search_form.html.py:8 
+
+msgid "Go"
+msgstr ""
+
+#: .\templates\admin\search_form.html.py:10 
+
+#, python-format
+msgid "1 result"
+msgid_plural "%(counter)s results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\templates\admin\search_form.html.py:10 
+
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr ""
+
+#: .\templates\admin\submit_line.html.py:4 
+
+msgid "Save as new"
+msgstr ""
+
+#: .\templates\admin\submit_line.html.py:5 
+
+msgid "Save and add another"
+msgstr ""
+
+#: .\templates\admin\submit_line.html.py:6 
+
+msgid "Save and continue editing"
+msgstr ""
+
+#: .\templates\admin\submit_line.html.py:7 
+
+msgid "Save"
+msgstr ""
+
+#: .\templates\admin\auth\user\add_form.html.py:6 
+
+msgid ""
+"First, enter a username and password. Then, you'll be able to edit more user "
+"options."
+msgstr ""
+
+#: .\templates\admin\auth\user\add_form.html.py:12 
+
+msgid "Username"
+msgstr ""
+
+#: .\templates\admin\auth\user\add_form.html.py:23 
+
+#: .\templates\admin\auth\user\change_password.html.py:39
+msgid "Password (again)"
+msgstr ""
+
+#: .\templates\admin\auth\user\add_form.html.py:24 
+
+#: .\templates\admin\auth\user\change_password.html.py:40
+msgid "Enter the same password as above, for verification."
+msgstr ""
+
+#: .\templates\admin\auth\user\change_password.html.py:28 
+
+#, python-format
+msgid "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr ""
+
+#: .\templates\registration\logged_out.html.py:8 
+
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr ""
+
+#: .\templates\registration\logged_out.html.py:10 
+
+msgid "Log in again"
+msgstr ""
+
+#: .\templates\registration\login.html.py:18 
+
+msgid "Invalid username or passowrd, please try again."
+msgstr ""
+
+#: .\templates\registration\login.html.py:22 
+
+msgid "Username:"
+msgstr ""
+
+#: .\templates\registration\login.html.py:25 
+
+msgid "Password:"
+msgstr ""
+
+#: .\templates\registration\login.html.py:30 
+
+msgid "Log in"
+msgstr ""
+
+#: .\templates\registration\password_change_done.html.py:4 
+
+#: .\templates\registration\password_change_form.html.py:4
+#: .\templates\registration\password_change_form.html.py:6
+#: .\templates\registration\password_change_form.html.py:10
+msgid "Password change"
+msgstr ""
+
+#: .\templates\registration\password_change_done.html.py:6 
+
+#: .\templates\registration\password_change_done.html.py:10
+msgid "Password change successful"
+msgstr ""
+
+#: .\templates\registration\password_change_done.html.py:12 
+
+msgid "Your password was changed."
+msgstr ""
+
+#: .\templates\registration\password_change_form.html.py:12 
+
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: .\templates\registration\password_change_form.html.py:18 
+
+msgid "Change my password"
+msgstr ""
+
+#: .\templates\registration\password_reset_done.html.py:4 
+
+#: .\templates\registration\password_reset_form.html.py:4
+#: .\templates\registration\password_reset_form.html.py:6
+#: .\templates\registration\password_reset_form.html.py:10
+msgid "Password reset"
+msgstr ""
+
+#: .\templates\registration\password_reset_done.html.py:6 
+
+#: .\templates\registration\password_reset_done.html.py:10
+msgid "Password reset successful"
+msgstr ""
+
+#: .\templates\registration\password_reset_done.html.py:12 
+
+msgid ""
+"We've e-mailed a new password to the e-mail address you submitted. You "
+"should be receiving it shortly."
+msgstr ""
+
+#: .\templates\registration\password_reset_email.html.py:2 
+
+msgid "You're receiving this e-mail because you requested a password reset"
+msgstr ""
+
+#: .\templates\registration\password_reset_email.html.py:3 
+
+#, python-format
+msgid "for your user account at %(site_name)s"
+msgstr ""
+
+#: .\templates\registration\password_reset_email.html.py:5 
+
+#, python-format
+msgid "Your new password is: %(new_password)s"
+msgstr ""
+
+#: .\templates\registration\password_reset_email.html.py:7 
+
+msgid "Feel free to change this password by going to this page:"
+msgstr ""
+
+#: .\templates\registration\password_reset_email.html.py:11 
+
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: .\templates\registration\password_reset_email.html.py:13 
+
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: .\templates\registration\password_reset_email.html.py:15 
+
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: .\templates\registration\password_reset_form.html.py:12 
+
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll reset "
+"your password and e-mail the new one to you."
+msgstr ""
+
+#: .\templates\registration\password_reset_form.html.py:16 
+
+msgid "E-mail address:"
+msgstr ""
+
+#: .\templates\registration\password_reset_form.html.py:16 
+
+msgid "Reset my password"
+msgstr ""
+
+#~ msgid "æçº¹ç­¾å°æ°æ®éä¿¡ä¸­å¿"
+#~ msgstr "Communication center"
+
+#~ msgid "DATE_FORMAT"
+#~ msgstr "N j, Y"
+
+#~ msgid "DATETIME_FORMAT"
+#~ msgstr "N j, Y, P"
+
+#~ msgid "TIME_FORMAT"
+#~ msgstr "P"
+
+#~ msgid "YEAR_MONTH_FORMAT"
+#~ msgstr "F Y"
+
+#~ msgid "MONTH_DAY_FORMAT"
+#~ msgstr "F j"
+
+# add by wjw 2011-06-13
+msgid "UserWorkCodeToDevice"
+msgstr "Job No"
+
+msgid "send message to dev"
+msgstr "Send Public SMS"
+
+msgid "send message to employee"
+msgstr "Send Personal SMS"
+
+msgid "new message"
+msgstr "New SMS"
+
+msgid "WorkCodeName"
+msgstr "Job's Name "
+
+msgid "WorkCodeID"
+msgstr "Serial No."
+
+msgid "System message"
+msgstr "Public SMS"
+
+msgid "UserRealtime"
+msgstr "employee"
+
+msgid "userrealtime"
+msgstr "employee"
+
+msgid "workcode notice"
+msgstr "Set up the  Job's content. xx,xx,xx ... (format), multiple jobs are separated by a semicolon (,) "
+
+#msgid "send message to employee"
+#msgstr "Send Personal SMS"
+
+msgid "send message to device"
+msgstr "Send Public SMS"
+
+#add by liupan
+msgid "This Device has no pictures!"
+msgstr ""
+
+msgid "Clear all employee"
+msgstr ""
+
+msgid "Upgrade by u-pack"
+msgstr ""

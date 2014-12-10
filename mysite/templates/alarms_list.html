@@ -1,0 +1,21 @@
+{% extends "data_list.html" %}
+{% load iclock_tags %}
+
+{% block tblHeader %}
+fieldHeaders=["{{ cl.FieldName.SN }}", "{{ cl.FieldName.AlarmTime }}", "{{ cl.FieldName.User }}", "{{ cl.FieldName.NoAlarmTime }}", "{{ cl.FieldName.NoAlarmReson }}"];
+options.canEdit=false;
+options.disableCols=["0"];
+
+function strOfData(data)
+{
+	return "考勤机 "+data[1]+" 在 "+data[2]+" 的报警";
+}
+
+{% endblock %}
+
+{% block rowdata %}
+    {% for item in latest_item_list %}
+		[{{ item.id }}, "{{item.SN}}", $t("{{ item.AlarmTime }}"), "{{ item.User }}", "{{ item.NoAlarmTime|shortTime }}","{{ item.NoAlarmReson|escape }}"],
+    {% endfor %}
+{% endblock %}
+

@@ -1,0 +1,49 @@
+{% load iclock_tags %}
+{% load i18n %}
+<script type="text/javascript">
+totalRecCnt_emp={{ item_count }};
+item_from_emp={{ from }}
+page_index_emp={{ page }};
+page_limit_emp={{ limit }};
+page_number_emp={{ page_count }};
+$(function(){
+var page_style=1;
+$("#id_pages").html(getPagers("", item_from_emp-1, totalRecCnt_emp, page_limit_emp, page_index_emp, page_number_emp,page_style));
+$("#id_changelist-search").submit(function(){
+    var v=$("#id_searchbar_emp")[0].value;
+    if(v=='')
+        renderEmpTbl(1);
+    else{
+        $.cookie("q",v,{expires:10})
+        var text=$.ajax({
+                url: "/iclock/data/employee/?ot=0&t=empsInDept.html&DeptID__DeptID__in="+arr_children+"&p="+page_index+"&q="+escape(v),
+                async: false
+                }).responseText;
+            $("#id_emp").html(text);
+
+        }
+    return false;
+    });
+
+});
+</script>
+
+<table style="width: 100%;">
+{% autoescape off %}
+<tr id="id_toolbar_emp"><td id="divPage_emp" colspan="3">
+<form id="id_changelist-search" action="" method="get">
+<div id="line"><!-- DIV needed for valid HTML -->
+<label for="id_searchbar_emp"><img src="/media/img/icon_searchbox.png" alt="Search"/></label>
+<input type="text" title="Search by: Pin,Name" size="10" name="q_emp" value="" id="id_searchbar_emp"/>
+<input type="submit" value="{%trans 'Search'%}"/>
+</div>
+</form>
+</td></tr>
+<tr><td colspan="3">
+<span id="id_pages"></span>({%trans 'Selected:'%} <span id="selected_count">0</span>)
+</td></tr>
+<tr><th><input type='checkbox' id='is_select_all_emp' onclick='check_all_for_row_emp(this.checked);' /></th>{{ cl.FieldName.PIN }}{{  cl.FieldName.EName }}</tr> {% endautoescape %}
+{% for item in latest_item_list %}
+<tr><td><input type='checkbox' class='class_select_emp' onclick='showSelected_emp();'  name='{{ item.EName }}' id='{{ item.id }}' /></td><td>{{ item.PIN  }}</td><td>{{ item.EName }}</td></tr>
+{% endfor %}
+</table>

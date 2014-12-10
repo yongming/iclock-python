@@ -1,0 +1,99 @@
+.nav, .nav ul {
+padding: 0;
+margin: 0;
+list-style: none;
+line-height: 1;
+width:100%;
+background: rgb(0, 102, 136) url('../img/headerbg.png') repeat scroll center top;
+_background: rgb(0, 102, 136) url('../img/headerbg6.png') repeat scroll center top;
+vertical-align:middle;
+z-index: 999;
+}
+.nav a {
+border:1px solid transparent;
+_border:1px solid #0066A6;
+display: block;
+margin: 0;
+padding: 0 10px;
+text-decoration: none;
+color: #fff;
+}
+.nav li a:hover {
+text-decoration: none;
+border: 1px solid #6699CC ;
+
+background: rgb(0, 102, 166) url('../img/headerbg.png') repeat scroll center center;
+_background:  url('../img/headerbg6.png') repeat scroll center center;
+_color: #fff;
+
+}
+
+.nav li {
+float: left;
+list-style: none;
+width: auto;
+font-size: 10pt;
+line-height: 19px;
+background: rgb(0, 102, 136) url('../img/headerbg.png') repeat scroll center top;
+_background: rgb(0, 102, 136) url('../img/headerbg6.png') repeat scroll center top;
+vertical-align:middle;
+}
+.nav li ul a {
+padding: 2px 8px;
+margin: 0;
+
+}
+.nav li ul li {
+width: 100%;
+background: rgb(0, 102, 166);
+vertical-align:middle;
+}
+.nav li ul {
+position: absolute;
+background: #5b80b2;
+width: 19em;
+padding: 1px 1px;
+left: -999em;
+vertical-align:middle;
+}
+.nav li:hover ul, .nav li.sfhover ul {
+left: auto;
+display: block;
+}
+
+
+.nav li.sfHover ul {
+left: auto;
+}
+
+#content_nav {
+clear: left;
+color: #ccc;
+}
+
+/* sfFocus Styles */
+
+.sfFocus {
+background: blue;
+color: #fff;
+}
+
+/* sfActive Styles */
+
+.sfActive {
+background: lime;
+color: #fff;
+}
+
+/* sfTarget Styles */
+
+.sfTarget {
+background: black;
+color: #fff;
+}
+
+
+
+
+
+

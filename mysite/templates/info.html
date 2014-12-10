@@ -1,0 +1,19 @@
+{% extends "base_site.html" %}
+{% block extrastyle %}
+{% load i18n %}
+<style>
+code, pre{
+padding-left:30px;
+}
+</style>
+{% endblock %}
+{% block content %}
+<p>&nbsp;</p>
+{% autoescape off %}
+{{ content }}
+{% endautoescape %} 
+<br />
+<p>&nbsp;</p>
+
+<input type="submit" value="{% trans 'return' %}" onclick="window.history.back(); return false;">
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "data_list.html" %}
+{% load i18n %}
+{% load iclock_tags %}
+{% block tblHeader %}
+options.showStyle=true;
+
+fieldHeaders=["<th abbr='id'>{% trans 'id' %}</th>","<th abbr='UserID__PIN'>{% trans 'PIN' %}</th>","<th abbr='UserID__EName'>{% trans 'EName' %}</th>", "{{ cl.FieldName.TTime }}", "{{ cl.FieldName.State }}", "{{ cl.FieldName.Verify }}", "{{ cl.FieldName.WorkCode }}","{{ cl.FieldName.Reserved }}","{{ cl.FieldName.SN }}", "<th>{%trans "Picture"%}</th>"]
+function strOfData(data)
+{
+	return data[1]+" {% trans "at" %} "+data[3]+" {% trans "transaction" %}";
+}
+
+function getMoreInfo(index){
+	return 	"{% trans "Emp name" %}:"+data[index][2]
+				+"<br />{% trans "department number" %}:"+data[index][3]
+				+"<br />{% trans "department name" %}:"+data[index][4]
+				+"<br />{% trans "Sex" %}:"+(data[index][5]=="None"?"":data[index][5])
+				+"<br />{% trans "Birthday" %}:"+(data[index][6]=="None"?"":data[index][6])
+				+"<br />{% trans "Nationality" %}:"+(data[index][7]=="None"?"":data[index][7])
+				+"<br />{% trans "Title" %}:"+(data[index][8]=="None"?"":data[index][8])
+				+"<br />{% trans "Office phone" %}:"+(data[index][9]=="None"?"":data[index][9])
+				+"<br />{% trans "Mobile" %}:"+(data[index][10]=="None"?"":data[index][10])
+				+"<br />{% trans "Id card" %}:"+data[index][11]
+				+"<br />{% trans "FP" %}:"+data[index][15]
+				+"<br />{% trans "Left" %}:"+data[index][16]
+}
+
+function showBox(data)
+{
+	var html="";
+	if(data.length>0)
+	{
+		for(var i=0;i<data.length;i++)
+		{
+			var img=data[i][9];
+			if(img<"<")
+				img="<img src='/media/img/transaction/noimg.jpg' />";
+			html+="<div id='ic_"+data[i][0]+"' class='AIClockBox'>"
+				+"<div class='iclockButton'>"
+				+"<input type='checkbox' class='class_select' onclick='showSelected();' id='id_row_"+i+"' />"
+				+img+"<br />"+data[i][1]+"&nbsp;"+data[i][2]+"<br />"+data[i][3]
+				+"</div>"
+				+"<div id='tt_"+data[i][0]+"' class='iclockTT'>"
+				+"<span>"+data[i][5]+",&nbsp;&nbsp;&nbsp;&nbsp;"+data[i][4]+"<br/>"
+				+data[i][8]+"<br/>"
+				+"{%trans 'work code'%}: "+data[i][6]+",&nbsp;{%trans 'Reserved'%}: "+data[i][7]+"<br/>"
+				+"</span>"
+				+"</div>"
+				+"</div>"
+		}
+	}
+	else
+		html+="<div class='NoIclock'>{%trans "No Data!" %}</div>"
+	return html;
+
+}
+
+
+{% endblock %}
+
+{% block rowdata %}
+    {% for item in latest_item_list %}
+		[{{item.id}},"{{ item.UserID.PIN }}","{{ item.UserID.EName }}", "{{ item.TTime|shortTime }}", "{{ item.get_State_display }}", "{{ item.get_Verify_display }}", "{{ item.WorkCode }}", "{{ item.Reserved }}", "{{ item.Device }}","{{ item|thumbnailUrl }}"]{%if not forloop.last%},{%endif%}
+    {% endfor %}
+{% endblock %}

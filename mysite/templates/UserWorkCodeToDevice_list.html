@@ -1,0 +1,11 @@
+{% extends "data_list.html" %}
+{% load i18n %}
+{% load iclock_tags %}
+{% block tblHeader %}
+fieldHeaders=["{{ cl.FieldName.ID }}","{{ cl.FieldName.SN }}","{{ cl.FieldName.WorkCodeName }}"
+];
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.ID }}","{{ item.SN }}","{{ item.WorkCodeName }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}

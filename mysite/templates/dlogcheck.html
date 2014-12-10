@@ -1,0 +1,138 @@
+{% extends "base_site.html" %}
+{% block extrastyle %}
+{% load i18n %}
+<style>
+
+table th,td{
+border-bottom: 1px solid #1E1E1E;
+background:#000;	  
+color:#ffffff;
+}
+table th{
+color:#b0ffff;
+background:#206688;
+}
+
+.alarm td{
+color: red;
+}
+
+.trans td{
+color: #00cc00;
+}
+
+
+</style>
+{% endblock %}
+{% block extrahead %}
+<script>
+
+maxLine=500;
+
+function formatLine(data)
+{
+	return "<td>"+data.TTime+"</td>"
+		+"<td>"+data.Device+"</td>"
+		+"<td>"+data.Verify
+		+(data.State?": "+data.State:"")+"</td>"
+		+"<td>"+data.PIN+"</td>"
+		+"<td>"+data.WorkCode+"</td>"
+		+"<td>"+data.Reserved+"</td>";
+}
+
+function dataClass(data)
+{
+	if(data.VC==3) return 'alarm';
+	if(data.T==1) return 'trans';
+	return 'op';
+}
+
+function refreshLines(data)
+{
+	var tbl=document.getElementById("tblLogList");
+	var tblLen=tbl.rows.length;
+	var remove=tblLen+data.length-maxLine;
+	for(var i=0; i<remove; i++) tbl.deleteRow(tblLen-i-1);
+	if(remove>0) tblLen-=remove;
+	if(tblLen<=0)
+	{
+		var lines=[]
+		for(var i=0; i<data.length && i<maxLine; i++) lines.push("<tr class='"+dataClass(data[i])+"'>"+formatLine(data[i])+"</tr>");
+		$(tbl).html(lines.join("\n"));
+		return;
+	}
+	for(var i=0; i<data.length; i++)
+		$(tbl.insertRow(i)).html(formatLine(data[i])).addClass(dataClass(data[i]));
+}
+
+lastId=0;
+lastdid=0;
+begin=0;
+
+function checkTime(i)
+{
+	if (i<10) 
+  		{i="0" + i}
+	return i
+}
+
+function timeStr()
+{
+	var today=new Date()
+	var h=today.getHours()
+	var m=today.getMinutes()
+	var s=today.getSeconds()
+	return checkTime(h)+":"+checkTime(m)+":"+checkTime(s)
+}
+
+function getNewTrans()
+{
+	$.ajax({type: "POST", 
+			url: "?lasttid="+lastId+"&lastdid="+lastdid+"&"+getKeyQuery("SN"), 
+			dataType:"json",
+			success: function(data){
+					if(data.ret>0)
+					{	
+						if(begin)
+							$("#net_info").html(timeStr()+": {%trans "get"%} "+(data.ret)+" {%trans " new transaction"%}")
+						else
+						{
+							begin=1;
+						}
+						lastId=data.lasttId;
+						lastdid=data.lastDId;
+						refreshLines(data.data);
+					}
+					else
+						$("#net_info").html(timeStr()+":{%trans "no new records"%}")
+					setTimeout("getNewTrans()", 3000);
+				},
+			error: function(obj, msg, exc){
+					$("#net_info").html(timeStr()+"{%trans "access to the latest data errors"%}："+obj+", MSG="+msg);
+					setTimeout("getNewTrans()", 10000);
+				}
+			});
+}
+
+$(function(){
+	$().ajaxStart(function(){
+		$("#id_loading").show();
+		});
+	getNewTrans();
+})
+</script>
+{% endblock %}
+
+{% block content %}
+
+<p id="net_info">Starting ... </p>
+<div id="fl">
+<table><thead><tr><th>{% filter capfirst %}{%trans 'time'%}{% endfilter %}</th><th>{% filter capfirst %}{%trans 'device'%}{% endfilter %}</th><th>{%trans 'Event'%}</th><th>{%trans 'PIN'%}/ID</th><th>{%trans 'Param1'%}</th><th>{%trans 'Param2'%}</th></tr></thead>
+<tbody id="tblLogList">
+</tbody>
+</table>				
+</div>
+<br />
+<p>&nbsp;</p>
+
+{% endblock %}

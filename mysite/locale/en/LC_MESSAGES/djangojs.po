@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-04-17 18:00+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\media\jslib\DateTimeShortcuts.js.py:45 
+#: .\media\jslib\DateTimeShortcuts.js.py:79
+msgid "Now"
+msgstr ""
+
+#: .\media\jslib\DateTimeShortcuts.js.py:49 
+msgid "Clock"
+msgstr ""
+
+#: .\media\jslib\DateTimeShortcuts.js.py:76 
+msgid "Choose a time"
+msgstr ""
+
+#: .\media\jslib\DateTimeShortcuts.js.py:80 
+msgid "Midnight"
+msgstr ""
+
+#: .\media\jslib\DateTimeShortcuts.js.py:81 
+msgid "6 a.m."
+msgstr ""
+
+#: .\media\jslib\DateTimeShortcuts.js.py:82 
+msgid "Noon"
+msgstr ""
+
+#: .\media\jslib\DateTimeShortcuts.js.py:86 
+#: .\media\jslib\DateTimeShortcuts.js.py:183
+msgid "Cancel"
+msgstr ""
+
+#: .\media\jslib\DateTimeShortcuts.js.py:128 
+#: .\media\jslib\DateTimeShortcuts.js.py:177
+msgid "Today"
+msgstr ""
+
+#: .\media\jslib\DateTimeShortcuts.js.py:132 
+msgid "Calendar"
+msgstr ""
+
+#: .\media\jslib\DateTimeShortcuts.js.py:175 
+msgid "Yesterday"
+msgstr ""
+
+#: .\media\jslib\DateTimeShortcuts.js.py:179 
+msgid "Tomorrow"
+msgstr ""
+
+#: .\media\jslib\calendar.js.py:24 
+msgid ""
+"January February March April May June July August September October November "
+"December"
+msgstr ""
+
+#: .\media\jslib\calendar.js.py:25 
+msgid "S M T W T F S"
+msgstr ""

@@ -1,0 +1,49 @@
+﻿{% extends "data_edit.html" %}
+{% load i18n %}
+{% block addjs %}
+function setSN() {
+	$("#txtSN").val($("#md_slt").val());
+}
+
+$(function(){
+$('#id_DeptID').after('<a href="../../department/_new_/" class="add-another" id="add_id_DeptID" onclick="return showAddAnotherPopup(this);"> <img src="/media/img/icon_addlink.gif" width="10" height="10" alt="{% trans "Add Another" %}"/></a>');
+$('#id_Image').after('<a href="/admin/photologue/photo/add/?_popup=1" class="add-another" id="add_id_Image" onclick="return showAddAnotherPopup(this);"> <img src="/admin/media/img/admin/icon_addlink.gif" width="10" height="10" alt="Add Another"/></a>');
+$('#id_Birthday').after('&nbsp; <font style="color:black;font-size:12">{%trans 'Date format is '%}"ISO"; {%trans 'for example'%}：1999-01-10/1999-1-11</font>')
+$('#id_Birthday').removeClass('vDateField').addClass('vDateOnlyField').val($('#id_Birthday').val().substring(0,10))
+$('#id_Hiredday').removeClass('vDateField').addClass('vDateOnlyField').val($('#id_Hiredday').val().substring(0,10))
+
+$('#id_edit_form').validate({
+rules: {
+	"PIN": {"digits":true,"minValue":1,"maxLength":14},
+	"Birthday": "dateISO",
+	"PostCode": {"minLength":6,"digits":true},
+	"Tele": {"rangeLength":[7,18],"digits":true},
+	"FPHONE":{"rangeLength":[7,18],"digits":true},
+	"Mobile": {"minLength":4,"maxLength":15,"digits":true},
+	"National": {"rangeLength":[1,8]},
+	"Password": {"digits":true,"maxLength":8}
+}});
+
+	var sn = $("select[@name=SN]").get(0);
+	var old_sn = sn.value;
+	var sn_parent = sn.parentNode;
+	sn_parent.removeChild(sn);
+	sn_parent.innerHTML = '<input type="text" name="SN" id="txtSN" value="' + old_sn + '" readonly /> '
+			+ '&nbsp;&nbsp;<a href="#"" id="aGetSN">[{%trans 'Select a device'%}]</a>';
+	$("#aGetSN").click(function(){
+		createDialog(setSN, setSN, "../../iclock/miniData?key=SN", "{%trans 'select device'%}", "{%trans 'device'%}", 350);
+	});
+
+
+
+});
+{% endblock %}
+
+{% block add_contents %}
+<div style="position:absolute; right:4px; top:100px;">&nbsp;&nbsp;&nbsp;
+{%if instance.getImgUrl %}
+<img src="{{ instance.getImgUrl}}" />
+{%endif%}
+</div>
+
+{% endblock %}

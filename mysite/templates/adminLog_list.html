@@ -1,0 +1,16 @@
+{% extends "data_list.html" %}
+{% load i18n %}
+{% load iclock_tags %}
+{% block tblHeader %}
+fieldHeaders=["{{ cl.FieldName.time }}","{{ cl.FieldName.User }}","{{ cl.FieldName.action }}","{{ cl.FieldName.model }}","{{ cl.FieldName.object }}","{{ cl.FieldName.count }}"
+];
+options.disableCols=["0"]
+options.canEdit=false;
+options.canAdd=false;
+options.canDelete=false;
+
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.id }}","{{ item.time|shortTime }}","{{ item.User }}","{{ item.action }}","{{ item.model }}","{{ item.object }}","{{ item.count }}"],{% endfor %}
+{% endblock %}

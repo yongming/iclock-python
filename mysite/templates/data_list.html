@@ -1,0 +1,418 @@
+{% extends "base_site.html" %}
+{% load iclock_tags %}
+{% load i18n %}
+{% block content_title %}{% endblock %}
+{% block title %}{{ dataOpt.verbose_name|cap }}{% endblock %}
+{% block extrahead %}
+<script src="{{ MEDIA_URL }}/jslib/core.js"></script>
+<script src="{{ MEDIA_URL }}/jslib/calendar.js"></script>
+<script src="{{ MEDIA_URL }}/jslib/DateTimeShortcuts.js"></script>
+<script src="{{ MEDIA_URL }}/jslib/flexigrid.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/flexigrid.css" />
+<link href="{{ MEDIA_URL }}/css/changelists.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/forms.css" />
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/iclockbox.css" />
+<script>
+orderBy="{{ order_by }}";
+options={pagerId:"pages", tblId:"tbl", showSelect: true, canSelectRow:false,showStyle:false,
+	canEdit: {% if request|reqHasPerm:"change" %}true{% else %}false{% endif %},
+	canAdd: {% if request|reqHasPerm:"add" %}true{% else %}false{% endif %},
+	canDelete: {% if request|reqHasPerm:"delete" %}true{% else %}false{% endif %},
+	canSearch: true, keyFieldIndex:"0", title:'{{ dataOpt.verbose_name|cap }}',
+	tblHeader:'{%trans "Please set a template file"%}options.tblHeader'};
+totalRecCnt={{ item_count }};
+item_from={{ from }}
+page_index={{ page }};
+page_limit={{ limit }};
+page_number={{ page_count }};
+dataExportsFormats={ {% for f in cl.getDataExportsFormats %}"{{ f.0 }}":"{{ f.1 }}", {% endfor %} "":""};
+delete dataExportsFormats[""];
+{% autoescape off %}{% block tblHeader %}{% endblock %}{% endautoescape %}
+
+if(typeof fieldHeaders=="object") //["{{ cl.FieldName.SN }}"];
+	options.tblHeader=fieldHeaders.join(" ")
+{% autoescape off %}
+data=[{% block rowdata %}
+"ROW DATA",
+{% endblock %}];
+{% endautoescape %}
+function delAllRec()
+{
+	if(confirm(window.delAllHint?delAllHint():"{%trans 'Clear all data, are you sure?'%}"))
+		window.location.href="_clear_/"
+}
+
+function delOldRec(days)
+{
+	var ret=false;
+	if(days==undefined || days==-1)
+		ret=confirm("{%trans 'Delete out-of-date records, are you sure?'%}");
+	else
+		ret=confirm("{%trans 'Delete before _days_ days, out-of-date records, are you sure?'%}".replace("_days_",days));
+	if(ret) window.location.href="_del_old_/";
+}
+
+function setDataFilter(url, value)
+{
+	if( typeof(value)=="object")
+	{
+		var maxUrlLength=$.browser.msie?2000:(20*1024);
+		while((value.join(",").length>maxUrlLength))
+			value.pop(0);
+	}
+	url=getQueryStr(window.location.href, [url], url+'='+value);
+	window.location.href=url;
+}
+
+function showFilterChoices(s, name)
+{
+	var data=s.split("__")[0]
+	if(data=="UserID")
+		createDlgToUser(s,setDataFilter);
+	else if(data=="DeptID")
+		createDlgToDepartment(s,setDataFilter);
+	else
+		createDialog(s, setDataFilter, "miniData?key="+data, String.format(gettext("Filter by {0}"),name), name, 350, true);
+}
+function createDlgToUser(url)
+{
+
+	var block_html="<div class='dialog' style='width:700px;min-height: 400px;'>"
+					+ 		"<div class='dheader'>{% trans 'Select Employee' %}</div>"
+					+ 		"<div class='dcontent'>"
+					+           "<table width=100%>"
+									+"<tr>"
+									+"<td colspan='3' style='padding: 0;'><div id='show_dept_emp_tree' style='min-height: 200px;'></div></td>"
+									+"<tr><td colspan='3'>"+createSubmitButton()+"</td></tr>"
+									+"<tr><td colspan='3'>&nbsp;</td></tr>"
+					+            "</table>"
+					+       "</div>"
+
+
+	$.blockUI(block_html);
+    getDept_to_show_emp(350);
+	blockUI_center();
+    $("#btnShowOK").click(function(){
+        emp=getSelected_emp();
+        if( typeof(emp)=="object")
+        {
+            var maxUrlLength=$.browser.msie?2000:(20*1024);
+            while((emp.join(",").length>maxUrlLength))
+                emp.pop(0);
+        }
+		if(emp=="")
+			urlStr=window.location.pathname
+		else
+			urlStr=window.location.pathname+"?"+url+"="+emp;
+        window.location.href=urlStr;
+    });
+}
+function createDlgToDepartment(url)
+{
+
+	var block_html="<div class='dialog' style='width:450px;'>"
+					+ 		"<div class='dheader'>"+gettext("Select Department")+"</div>"
+					+ 		"<div class='dcontent'>"
+					+           "<table width=100%>"
+									+"<tr>"
+									+"<td colspan='3'>"
+									+"<div>"
+										+"<div id='id_opt_tree'>"
+										+"<span>"+gettext("Department")+"</span>"
+										+"<a href='#' id='id_expendAll'><img src='/media/img/images/expandAll.png' />&nbsp;&nbsp;"+gettext("Expand")+"</a>&nbsp;&nbsp;"
+										+"<a href='#' id='id_collapseAll'><img src='/media/img/images/collapseAll.png' />&nbsp;&nbsp;"+gettext("Collaspe")+"</a>&nbsp;&nbsp;"
+										+"<a href='#' id='id_refresh'><img src='/media/img/images/refresh.png' />&nbsp;&nbsp;"+gettext("Refresh")+"</a>&nbsp;&nbsp;"
+										+"<input type='checkbox' id='id_contain_chl'/>&nbsp;&nbsp;"+gettext("Contain Children")
+										+"</div>"
+										+"<div id='showTree' style='overflow: auto;height:300px;'></div>"
+									+"</div>"
+									+"</td></tr>"
+									+"<tr><td colspan='3'>"+createSubmitButton()+"</td></tr>"
+									+"<tr><td colspan='3'>&nbsp;</td></tr>"
+					+            "</table>"
+					+       "</div>"
+
+    
+	$.blockUI(block_html);
+	$("#showTree").html(getDeptTree(0,2));
+   	$("#deptBrowser").treeview();
+	$("#id_expendAll").click(function(){
+   		$("#showTree").html(getDeptTree(0,2));
+   		$("#deptBrowser").treeview();
+		contain_child();
+
+   	});
+   	$("#id_collapseAll").click(function(){
+   		$("#showTree").html(getDeptTree(1,2));
+   		$("#deptBrowser").treeview();
+		contain_child();
+
+   	});
+
+   	$("#id_refresh").click(function(){
+   		$("#showTree").html(getDeptTree(0,2));
+   		$("#deptBrowser").treeview();
+		contain_child();
+		
+   	});
+	contain_child();
+	blockUI_center();
+    $("#btnShowOK").click(function(){
+        dept=getSelected_dept();
+        if( typeof(dept)=="object")
+        {
+            var maxUrlLength=$.browser.msie?2000:(20*1024);
+            while((dept.join(",").length>maxUrlLength))
+                dept.pop(0);
+        }
+		if(dept=="")
+			urlStr=window.location.pathname
+		else
+			urlStr=window.location.pathname+"?"+url+"="+dept;
+        window.location.href=urlStr;
+    });
+}
+function contain_child()
+{
+$.each($("#id_contain_chl"),function(){	
+		var ischecked=$.cookie("contain")
+		if(ischecked==1)
+			$(this).attr("checked","checked");
+		else
+			$(this).removeAttr("checked");
+	});
+	$("#id_contain_chl").click(function(){
+		var ischecked=$(this).attr("checked");
+		if(ischecked)
+			ischecked=1;
+		else
+			ischecked=0;
+		$.cookie("contain",ischecked, { expires: 7 });
+	});
+	$(".parent").click(function(){
+		child=$(this).attr("alt");
+		ischecked=$(this).attr("checked")
+		if($("#id_contain_chl").attr("checked")){
+			$.each($(".file input"),function(){
+					if($(this).attr("alt1")==child ) 
+						if(!ischecked)
+							$(this).removeAttr("checked")
+						else
+							$(this).attr("checked","checked")
+			});
+			$.each($(".folder input"),function(){
+				if($(this).attr("alt1")==child ){ 
+					if(!ischecked)
+						$(this).removeAttr("checked")
+					else
+						$(this).attr("checked","checked")
+					child=$(this).attr("alt");
+					ischecked=$(this).attr("checked")
+					$.each($(".file input"),function(){
+						if($(this).attr("alt1")==child ) 
+							if(!ischecked)
+								$(this).removeAttr("checked")
+							else
+								$(this).attr("checked","checked")
+					});
+				}
+			});
+		}
+	});
+
+
+}
+function index_tip_info(obj)
+{
+	var index=$(obj).attr("index");
+	$("#id_tip").html(getMoreInfo(index));
+	var offset=$(obj).offset();
+	if($("#id_tip").css("visibility")=="hidden"){
+		$("#id_tip").css({"z-index":1024,"visibility":"visible","position":"absolute","top":(offset.top+30),"left":(offset.left+30)})
+		$("#id_tip").mouseover(function(){
+			$(this).css({"z-index":1024,"visibility":"visible","position":"absolute","top":(offset.top+30),"left":(offset.left+30)})
+		
+		}).mouseout(function(){
+			$("#id_tip").css("visibility","hidden");
+		});
+	}
+	else
+		$("#id_tip").css("visibility","hidden");
+	
+}
+function tip_info_exit()
+{
+	$("#id_tip").css("visibility","hidden")
+}
+$(function(){
+if(!options.canAdd)$("#id_newrec").attr('disabled','true');
+if(!options.canDelete) $("#id_clearrec").attr('disabled','true');
+if(!options.canSearch) $("#changelist-search").remove();
+if(!options.showStyle) $("#id_show_style").css('display','none');
+{% if cl.getDataExportsFormats %} $("#id_export").show(); {% endif %}
+locations=location+"";
+var searchStr=getKeyQuery("q");
+if(searchStr!="")
+{
+	$("#searchbar").val(unescape(searchStr.substr(2)));
+}
+
+$("#changelist-search").submit(function(){
+	var v=$("#searchbar")[0].value;
+	if(v=='')
+		window.location.href=getQueryStr(locations,["q","p"]);
+	else
+		window.location.href=getQueryStr(locations,["q","p"],"q="+escape(v));
+	return false;
+	});
+var to=$.cookie("show"); 
+$("input[@type=radio]","#id_show_style").each(function(){
+	if(to==$(this).val() && typeof(showBox)=='function')
+		$(this).attr("checked","checked")
+	if($.cookie("depart")=='tree' && to!=0)
+		$(this).attr("checked","checked");
+});
+setShowStyle();
+$("input[@type=radio]","#id_show_style").click(setShowStyle);
+});
+
+function setShowStyle(){
+	var to=$.cookie("show");
+	if($(this).attr("alt")=='tree'){
+		$.cookie("depart", $(this).attr('alt'), { expires: 7 });
+		$.cookie("show", $(this).val(), { expires: 7 });
+	}
+	else if($(this).attr("checked") && $(this).val()!=to){
+		$.cookie("show", $(this).val(), { expires: 7 });
+	}
+	if($.cookie("show")==1 && typeof(showBox)=='function')
+	{
+		$("#id_showTbl").parent().find("#id_showTbl").html('<td colspan="2"><div id="iclockBox" class="box">'+showBox(data)+'</div></td>');
+		renderTbl(data, options);
+		$("#id_select_div").before('<div><input type="checkbox" class="class_select_all" onclick="check_all_for_row(this.checked);" />{% trans "Select All"%}</div>')
+	}
+	else if($.cookie("depart")=='tree' && $.cookie("show")==1)
+	{
+		$("#id_searchbar").css("display","none");
+		$("#id_showTbl").parent().find("#id_showTbl").html('<td colspan="2"><div id="show_dept_emp_tree"></div></td>')
+		getDept_to_show_emp(400);
+	}
+	else
+	{	
+		$("#id_showTbl").parent().find("#id_showTbl").html('<td colspan=2 style="padding: 0px;"><table id="tbl" width="100%" border="1" ></table></div>')
+		renderTbl(data, options);
+	}
+	
+}
+
+function exportData(url, value)
+{
+	url=getQueryStr(window.location.href, [url], url+'='+value);
+	window.location.href=url;
+}
+
+function exportRec()
+{
+	createDialog('f', setDataFilter, dataExportsFormats, "{%trans "Export"%} {{ title }} {%trans "list"%}", "{%trans "format"%}", 350);
+}
+
+
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="module" style="position:relative; width: 100%;">
+<table id="changelist" border="0" style="margin-bottom: 2px; float: left; width: 100%;">
+
+<tr>
+<td>
+<span style="font-size: 15px; padding-right: 20px;"><b>{{ dataOpt.verbose_name|cap }}</b></span>
+</td>
+<td align="right">
+<form method="get" action="" id="changelist-search">
+<div id="id_line"><!-- DIV needed for valid HTML -->
+<span id="id_show_style">
+{% trans "Style:"%}<input type="radio" name="showStyle" value="0" checked />{% trans "Table style" %}
+				<input type="radio" name="showStyle" value="1"/>{% trans "List style" %}&nbsp;&nbsp;
+				
+</span>
+<span id="id_searchbar">
+{% if cl.searchHint %}
+<input type="text" id="searchbar" value="" name="q" size="25" title="{%trans 'Search by:'%} {{ cl.searchHint }}"/>
+<input type="submit" value="" title="{%trans "Search"%}" style="background:url(/media/img/icon_searchbox.png) left 50% no-repeat; padding-left: 20px; padding-right: 5px; border: 0;" />
+{% endif %}
+</span>
+
+</div>
+</form>
+</td>
+ 
+</tr>
+
+<tr id="toolbar">
+
+<td id="divPage" colspan=2>
+<span>
+{% block obj_tools %}
+{% endblock %}
+<input type="button" id="id_export" class="cls_op" onclick="javascript: exportRec();" value="{%trans "Export"%}" style="display: none;" />
+
+{% if request|reqHasPerm:"add" %}
+<input type="button" id="id_newrec" class="cls_op" onclick="javascript: window.location.href='_new_/';" class="addlink" value="{%trans "Append"%}" />
+{% else %}
+<input type="button" id="id_newrec" class="cls_op" class="addlink" value="{%trans "Append"%}" disabled />
+{% endif %}
+{% block clear %}
+{% if request|reqHasPerm:"delete" %}
+<input type="button" id="id_clearrec" class="cls_op" onclick="javascript: delAllRec();" value="{%trans "Clear All"%}" />
+{% else %}
+<input type="button" id="id_clearrec" class="cls_op" value="{%trans "Clear All"%}" disabled />
+{% endif %}
+{% endblock %}
+{% if delOldRecDays %}
+<input id="id_clearrec" class="cls_op" type="button" value="{%trans "Delete out-of-date records"%}" onclick="javascript: delOldRec({{ delOldRecDays }});" />
+{% endif %}
+{% block extraBatchOp %}{% endblock %}
+</span>
+
+<span class="selectedDataOp">
+<div id="id_defSelectDataOp" style="margin-top: 0px; margin-right: 10px;">
+
+</div>
+<div class="nav" id="op_menu_div" style="display: none; margin-top: 3px; margin-left: 10px; ">
+<li  style="background-color: #E6E8EC; border: 1px solid #E6E8EC;"><a href="#" style="color: #000; background-color: #E6E8EC;background:#E6E8EC url(/media/img/selector-add.gif) 3px 50% no-repeat; padding-left: 22px;">{%trans "Operation for selected"%}</a>
+<ul id="op_menu">
+	<li> <a href="#">Test1</a></li>
+</ul>
+</li>
+</div>
+
+</span>
+
+
+<div id="pages" style="position: absolute;display:inline;right:2pt;top:25px;"></div>
+
+
+</td>
+</tr>
+<tr><td colspan="2">
+<span style="float:left;font-size:10pt; margin-top: 6px;"><b>{%trans "Filter By:&nbsp;&nbsp;"%}</b></span>
+<span id="id_filterbar" class="nav">
+{% block filters %}{% filters cl %}{% endblock %}
+</span>
+</td></tr>
+<tr id="id_showTbl"><td colspan=2 style="padding: 0px;">
+  <table id="tbl" width="100%" border="1" >
+  </table></td>
+
+</tr>
+
+</table>
+</div>
+<div id="id_tip" class="tip"></div>
+<br class="clear" />
+
+{% block extraSection %}{% endblock %}
+
+{% endblock %}
+
